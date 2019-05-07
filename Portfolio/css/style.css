@@ -100,10 +100,24 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.user-select-none {
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 [class^="btn-"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   color: #fff;
   display: inline-block;
   height: 40px;
@@ -116,6 +130,10 @@ body {
   text-decoration: none;
   text-align: center;
   z-index: 1;
+  outline: none;
+}
+[class^="btn-"]:focus {
+  outline: none;
 }
 [class^="btn-"]:before,
 [class^="btn-"]:after {
@@ -503,6 +521,12 @@ body {
 h2 {
   font-size: 40px;
   position: relative;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 h2:hover::before {
   -webkit-transform: scale(1) rotate(0deg);
@@ -530,6 +554,12 @@ h2::before {
 }
 h2 span {
   display: inline-block;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: default;
   transition: all 1s ease;
 }
@@ -550,6 +580,12 @@ h2 span.animated {
   display: inline-block;
   cursor: default;
   transition: all 1s ease;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .word:hover {
   color: #08fdd8;
@@ -571,6 +607,12 @@ h2 span.animated {
   -ms-flex-item-align: end;
   align-self: flex-end;
   padding: 0 15px;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .card {
   max-width: 960px;
@@ -620,6 +662,12 @@ h2 span.animated {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   width: 70%;
   height: 450px;
 }
@@ -652,12 +700,24 @@ h2 span.animated {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .overlay-content > h3 {
   font-size: 22px;
   border-bottom: 3px solid #08fdd8;
   background: transparent;
   margin: 20px 0;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .overlay-content ul {
   display: -webkit-box;
@@ -683,6 +743,12 @@ h2 span.animated {
   padding-left: 40px;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .overlay-content ul > li:before {
   content: "—";
@@ -1029,6 +1095,8 @@ h2 span.animated {
   left: 0;
   display: grid;
   display: -ms-grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  -ms-grid-columns: 3fr 3fr 3fr;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1044,9 +1112,6 @@ h2 span.animated {
   transition: all 1s ease-in-out;
 }
 #card-4 .pieces.piece-1 {
-  -ms-grid-row: 1;
-  grid-row: 1;
-  grid-column: -3;
   background-position: 0 0;
 }
 #card-4 .pieces.piece-2 {
@@ -2193,5 +2258,39 @@ h2 span.animated {
   }
   .btn-12:after {
     right: calc(-10px);
+  }
+}
+@media (max-width: 360px) {
+  .card {
+    max-width: 350px;
+  }
+  .card-image {
+    height: 180px;
+  }
+  .card-image > img {
+    height: 180px;
+  }
+  .overlay {
+    height: 180px;
+  }
+  .overlay-content > h3 {
+    font-size: 14px;
+    margin: 7px 0;
+  }
+  .overlay-content ul > li {
+    padding: 2px;
+    padding-left: 80px;
+    font-size: 14px;
+  }
+  .tag {
+    padding: 0 5px;
+  }
+  #card-4 .overlay::before,
+  #card-4 .overlay::after {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
   }
 }
