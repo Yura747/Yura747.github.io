@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>BlagoyArt</title>
+
+	
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<!-- fonsts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+
+	<!-- My links -->
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--  ================= HEADER ==============   -->
+	<header>
+		<div class="header-wrapper">
+			<div class="header-info">
+				<div class="wrapper">
+
+					<a href="index.html" class="logo-link">
+						<div class="logo">
+							<img src="icons/logo.png" alt="No image">
+							<p>Интернет-магазин «Благой арт»</p>
+						</div>
+					</a>
+
+					<form>
+						<div class="search-wrapper">
+							<input type="text" name="search" id="search" placeholder="Введите название или артикул"  maxlength="50">
+							<button type="submit" class="loop"></button>
+						</div>
+					</form>
+					<div class="contact-info">
+						<div class="contact-phone">
+							<p>+7 (800) 707-81-39</p>
+						</div>
+						<div class="timetable">
+							<p>ПН-ПТ с 9:00 до 18:00</p>
+							<p>Доставка по РФ и СНГ</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navigation">
+				<div class="wrapper">
+					<nav class="desctop">
+						<ul>
+							<li class="catalog">
+								<a href="#">
+									<span class="before">
+										<img src="icons/menu.png" alt="No image">
+									</span> каталог товаров
+									<span class="after"><img src="icons/down.png" alt="No image"> </span>
+								</a>
+								<div class="drop-menu-wrapper">
+									<ul class="drop-menu">
+										<li class="drop-right"><a href="#">Свадебная бижутерия</a>
+											<ul>
+												<li class="list-title"><a href="#">Мужская бижутерия</a></li>
+												<li><a href="#">Браслеты</a></li>
+												<li><a href="#">Кулоны</a></li>
+												<li><a href="#">Зажимы и запонки</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Аксессуары для волос</a></li>
+										<li><a href="#">Броши</a></li>
+										<li class="drop-right"><a href="#">Мужские аксессуары</a>
+											<ul>
+												<li class="list-title"><a href="#">Мужская бижутерия</a></li>
+												<li><a href="#">Браслеты</a></li>
+												<li><a href="#">Кулоны</a></li>
+												<li><a href="#">Зажимы и запонки</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Клатчи</a></li>
+										<li><a href="#">Детская бижутерия</a></li>
+										<li><a href="#">Демонстрационное оборудование</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">условия работы</a></li>
+							<li><a href="#">скидки</a></li>
+							<li><a href="#">оплата и доставка</a></li>						
+							<li><a href="#">документы</a></li>
+							<li><a href="#">контакты</a></li>
+						</ul>
+					</nav>
+					<div class="products">
+						<div class="products-wrapper">
+							<a href="#" class="purchases">
+								<span class="shopping-trolley">
+									<img src="icons/shopping-trolley.png" alt="No image">
+								</span>
+								<span class="products-quantity">10</span>
+								товаров / <span id="sum">56 789</span> P
+							</a>
+						</div>
+						<div class="login-wrapper">
+							<a href="" class="login">
+								<span><img src="icons/user.png" alt="No image"></span>
+								войти
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="mobile">
+				<ul>
+					<li id="hamburger"><a href=""><img src="icons/mobile/mobile-menu.png" alt="No image"></a></li>
+					<li><a href=""><img src="icons/mobile/home.png" alt="No image"></a></li>
+					<li><a href=""><img src="icons/mobile/search.png" alt="No image"></a></li>
+					<li><a href=""><img src="icons/mobile/buy.png" alt="No image"></a></li>
+					<li><a href=""><img src="icons/mobile/user.png" alt="No image"></a></li>
+					<li><a href=""><img src="icons/mobile/phone.png" alt="No image"></a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+<!--  ================= CONTENT ==============   -->
+	<main>
+		<section class="main-slider">
+			<div class="slider-wrapper">
+				<div class="slider">
+					<div class="slide" align="center">
+						<div class="image" style="background-image: url(img/bg.png); background-position: bottom">
+							<div class="overlay-wrapper">
+								<div class="overlay">
+									<div class="advertisement">
+										<p>Новая коллекция</p>
+										<p>SWAROVSKI уже здесь!</p> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide" align="center">
+						<div class="image" style="background-image: url(img/bg2.jpg); background-position: center">
+							<div class="overlay-wrapper">
+								<div class="overlay">
+									<div class="advertisement">
+										<p>Новая коллекция</p>
+										<p>SWAROVSKI уже здесь!</p> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide" align="center">
+						<div class="image" style="background-image: url(img/bg3.jpg); background-position: center">
+							<div class="overlay-wrapper">
+								<div class="overlay">
+									<div class="advertisement">
+										<p>Новая коллекция</p>
+										<p>SWAROVSKI уже здесь!</p> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="all-products">
+			<div class="wrapper">
+				<div class="cards-wrapper">
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img1.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1" maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img2.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img3.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img4.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img5.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img6.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img7.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img8.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img9.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img10.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img11.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<img src="img/content/img12.jpg" alt="No image">
+						</div>
+						<div class="card-footer">
+							<p>Наименование продукта: название</p>
+							<p>Цена: <span>1000грн</span></p>
+							<div class="buy-it-wr">
+								<div class="products-number">
+									<div class="products-counter-wr">
+										<input type="text" class="products-counter" value="1"  maxlength="4">
+										<div class="plus-minus-wr">
+											<a href="#" class="plus">+</a>
+											<a href="#" class="minus">-</a>
+										</div>
+									</div>
+								</div>
+								<div class="button-wr">
+									<div class="button">
+										<a href="#">
+											<img src="icons/shopping-trolley.png" alt="No image">
+											Купить
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="why-we">
+			<div class="wrapper">
+				<div class="why-we-wrapper-inner">
+					<h3>Почему мы ?</h3>
+					<div class="icons-wr">
+						<div class="icon">
+							<img src="icons/icon_1.png" alt="No image">
+							<p>Доступные цены</p>
+						</div>
+						<div class="icon">
+							<img src="icons/icon_2.png" alt="No image">
+							<p>Любой удобный для Вас способ оплаты</p>
+						</div>
+						<div class="icon">
+							<img src="icons/icon_3.png" alt="No image">
+							<p>Быстрый и удобный способ доставки</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about-us">
+			<div class="wrapper">
+				<div class="text-wrapper">
+					<h3>Интернет-магазин красивой 
+						и стильной бижутерии оптом</h3>
+						<p>Женские украшения – это не просто аксессуары,
+							которые принято надевать по торжественному 
+							поводу. Интернет-магазин «Blagoy Art» 
+							предлагает лучшую ювелирную бижутерию оптом. 
+							Красивое кольцо, брошь или серьги являются 
+							тем самым волшебным инструментом, при 
+							помощи которого представительницы 
+							прекрасного пола, без преувеличения, 
+							озвучивают музыку своей души.
+						</p>
+						<p>
+							Эти, на первый взгляд, скромные украшения, 
+							давно стали достойной заменой изделиям 
+							из драгоценных камней и металлов. 
+							Украшения отличного качества и 
+							оригинального дизайна выбирают звезды 
+							шоу-бизнеса и подростки, деловые люди и 
+							представители богемы. Заказывайте 
+							аксессуары оптом: вносите изюминку 
+							в свой образ без лишних финансовых затрат.
+						</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="wrapper">
+			<div class="icons">
+				<i class="fab fa-facebook-f"></i> 
+				<i class="fab fa-twitter"></i>
+				<i class="fab fa-pinterest"></i>
+				<i class="fab fa-google-plus-square"></i>
+			</div>
+		</div>
+	</footer>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>	
+</body>
+</html>
