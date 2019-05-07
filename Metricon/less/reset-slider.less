@@ -1,0 +1,117 @@
+// out: ../css/reset-slider.css
+
+
+.tns-outer {
+    .tns-controls {
+        button {
+            position: absolute;
+            width: 40px;
+            height: 64px;
+            top: calc(~"50% - 32px");
+            z-index: 30;
+            font-size: 0px;
+            border: none;
+            outline: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            display: inline-block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        [data-controls='prev'] {
+            left: 30px;
+            background-image: url(../icons/arrow-left.png);
+            &:hover {
+                background-image: url(../icons/arrow-left-hover.png)
+            }
+        }
+        [data-controls='next'] {
+            right: 30px;
+            background-image: url(../icons/arrow-right.png);
+            &:hover {
+                background-image: url(../icons/arrow-right-hover.png)
+             }
+        }
+    }
+    .tns-nav {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 30px;
+        text-align: center;
+        z-index: 2;
+        .tns-nav-active {
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.6);
+        }
+        button {
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            background-color: #000;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;
+            outline: none;
+            &:hover {
+                background-color: #f26b08;
+             }
+        }
+    }
+}
+
+
+
+
+
+// -------------------          MEDIA         -------------------
+
+@media (max-width: 600px) {
+    .tns-outer {
+        .tns-controls {
+            button {
+                width: 30px;
+                height: 44px;
+                top: calc(~"50% - 22px");
+                background-size: cover;
+            }
+        }
+        .tns-nav {
+            button {
+                width: 15px;
+                height: 15px;
+                margin: 0 3px;
+            }
+        }
+    }   
+}
+
+@media (max-width: 360px) {
+    .tns-outer {
+        .tns-controls {
+            button {
+                // width: 30px;
+                // height: 44px;
+                // top: calc(~"50% - 22px");
+                // background-size: cover;
+            }
+            [data-controls='prev'] {
+                left: 15px;
+            }
+            [data-controls='next'] {
+                right: 15px;
+            }
+        }
+        .tns-nav {
+            button {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }   
+}
