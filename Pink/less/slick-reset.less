@@ -1,0 +1,225 @@
+@yellow: #f8d603;
+
+
+.slider-wrapper {
+    max-width: 400px;
+    max-height: 700px;
+    .slider {
+    //  position: relative;
+     width: 100%;
+     height: 100%;
+     max-width: 333px;
+     max-height: 468px;
+         .slide {
+            width: 21vw;
+            height: 30vw;
+            max-width: 333px;
+            max-height: 468px;
+            outline: none;
+                .slider-image {
+                    outline: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                }
+         }
+         .slick-arrow {
+             position: absolute;
+             top: calc(~"50% - 15px");
+             -webkit-transform: translateY(-50%);         
+             -ms-transform: translateY(-50%);         
+             transform: translateY(-50%);
+             z-index: 2;
+             background-size: 15px 15px;
+             background-position: center;
+             background-repeat: no-repeat;
+             height: 30px;
+             width: 30px;
+             border-radius: 100%;
+             display: inline-block;
+             -webkit-box-shadow: none;
+                     box-shadow: none;
+             -webkit-user-select: none;
+             -moz-user-select: none;
+             -ms-user-select: none;
+                     user-select: none;
+             outline: none;
+             font-size: 0px;
+             cursor: pointer;
+             padding: 10px 0;
+             background-color: transparent;
+             border: 1px solid rgb(102, 102, 102);
+             &:hover {
+                border: 1px solid #fff;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                        user-select: none;
+             }
+         }
+         .slick-prev {
+             background-image: url(../icons/arrow-left.png);
+             &:hover {
+                background-image: url(../icons/arrow-left-hover.png)
+             }
+             left: -25%;
+             top: 50%;
+         }
+         .slick-next {
+             background-image: url(../icons/arrow-right.png);
+             &:hover {
+                background-image: url(../icons/arrow-right-hover.png)
+             }
+             right: -25%;
+             top: 50%;
+         }
+         .slick-dots {
+             position: absolute;
+             bottom: -50px;
+             left: 0;
+             right: 0;
+             text-align: center;
+              >li {
+                 list-style: none;
+                 display: inline-block;
+                 > button {
+                     -webkit-box-shadow: none;
+                     box-shadow: none;
+                     height: 10px;
+                     width: 8px;
+                     background-color: @yellow;
+                     border-radius: 100%;
+                     cursor: pointer;
+                     border: none;
+                     display: inline-block;
+                     font-size: 0px;
+                     margin: 0 5px;
+                     outline: none;
+                 }
+             }
+             > li.slick-active > button {
+                 background-color: @yellow;
+             }
+         }
+    }
+    .slick-dotted {
+        width: 21vw;
+        height: 30vw;
+    }
+}
+
+
+@media (max-width:1200px) {
+    .slider-wrapper {
+        .slider {
+             .slide {
+                    .slider-image {
+                    }
+             }
+             .slick-arrow {
+             }
+             .slick-prev {
+                 left: -6vw;
+             }
+             .slick-next {
+                 right: -6vw;
+             }
+             .slick-dots {
+                  >li {
+                     > button {
+                     }
+                 }
+                 > li.slick-active > button {
+                 }
+             }
+        }
+    }
+
+}
+
+@media (max-width:960px) {
+    .slider-wrapper {
+        .slider {
+             .slide {
+                    .slider-image {
+                    }
+             }
+             .slick-arrow {
+             }
+             .slick-prev {
+                 left: -8vw;
+             }
+             .slick-next {
+                 right: -8vw;
+             }
+             .slick-dots {
+                  >li {
+                     > button {
+                     }
+                 }
+                 > li.slick-active > button {
+                 }
+             }
+        }
+    }
+
+}
+
+
+@media (max-width:599px) {
+    .slider-wrapper {
+        .slider {
+        //  position: relative;
+         width: 100%;
+         height: 100%;
+             .slide {
+                width: 54vw;
+                height: 76.5vw;
+                    .slider-image {
+                        // width: 100%;
+                        // height: 100%;
+                    }
+             }
+             .slick-arrow {
+                 top: calc(~"50% - 8vw");
+                 background-size: 6vw 6vw;
+                 height: 12vw;
+                 width: 12vw;
+                //  font-size: 0px;
+                //  padding: 10px 0;
+             }
+             .slick-prev {
+                 left: -12%;
+                 top: 120%;
+             }
+             .slick-next {
+                 right: -12%;
+                 top: 120%;
+             }
+             .slick-dots {
+                 bottom: -23%;
+                  >li {
+                     > button {
+                        height: 4vw;
+                        width: 4vw;
+                        margin: 0 1vw;
+                     }
+                 }
+                 > li.slick-active > button {
+                     background-color: @yellow;
+                 }
+             }
+        }
+        .slick-dotted {
+            // width: 325px;
+            // height: 460px;
+            width: 54vw;
+            height: 76.5vw;
+        }
+    }
+}
