@@ -1,0 +1,35 @@
+/* html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Tahoma";
+}
+h1, h2, h3, h4, h5, h6, ul, li, a, span, div, p {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	color: #000;
+	font-family: "Tahoma";
+	text-decoration: none;
+	list-style: none;
+	font-weight: normal;
+} */
+
+
+
+.text-aos h1 {
+text-align: center;
+margin-left: 250px;
+margin-right: 250px;
+}
+
+.aos-slide{
+    text-align: center;
+}
+
+.aos-slide .image img{
+    width: 700px;
+    height: 700px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+}
