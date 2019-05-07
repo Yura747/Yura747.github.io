@@ -1,0 +1,31 @@
+<div class="loop-overlay"></div>
+
+
+
+	   .loop-overlay {
+                position: absolute;
+                background-color: lightgray;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                top: 2px;
+                left: 19px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.2s;
+                transform: scale(0.5);
+                &.active {
+                    opacity: 0.3;
+                    visibility: visible;
+                    transform: scale(1);
+                }
+            }
+
+
+$('.loop').click(function() {
+    $('.loop-overlay').addClass('active');
+});
+
+$('.loop-overlay').click(function() {
+    $(this).removeClass('active');
+});

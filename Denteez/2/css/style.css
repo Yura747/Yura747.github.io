@@ -1,0 +1,545 @@
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url('../fonts/ProximaNova-Light.eot');
+  src: url('../fonts/ProximaNova-Light.eot?iefix') format('eot'), url('../fonts/ProximaNova-Light.woff') format('woff'), url('../fonts/ProximaNova-Light.ttf') format('truetype'), url('../fonts/ProximaNova-Light.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url('../fonts/ProximaNova-Regular.eot');
+  src: url('../fonts/ProximaNova-Regular.eot?iefix') format('eot'), url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: ProximaNovaLight;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+a,
+div {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+  font-family: ProximaNovaLight;
+  font-size: 14px;
+  font-weight: normal;
+}
+.header {
+  height: 510px;
+  min-width: 1440px;
+  background-image: url(../img/background-head.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c2534;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 7.7%;
+  z-index: 999;
+}
+@keyframes back {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.btn-container {
+  text-align: center;
+  position: absolute;
+  float: right;
+  top: 46px;
+  right: 7%;
+  z-index: 999;
+}
+.btn-container .btn {
+  animation: back 1.2s infinite;
+  display: inline-block;
+  padding: 6px 20px;
+  color: #fff;
+  background: #87b448;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.title-head {
+  position: absolute;
+  text-align: center;
+  top: 181px;
+  left: 34.1%;
+  max-width: 500px;
+  z-index: 999;
+}
+.title-head h1 {
+  font-size: 48px;
+  color: #fff;
+}
+.title-head h6 {
+  font-size: 20px;
+  padding-top: 5px;
+  line-height: 30px;
+  margin-left: 1px;
+  color: #fff;
+}
+.second-background {
+  height: 816px;
+  min-width: 1440px;
+  background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #e0e2e6;
+  z-index: 0;
+}
+.form-container {
+  position: absolute;
+  width: 760px;
+  height: 800px;
+  z-index: 9999;
+  top: 410px;
+  left: 26%;
+}
+.form-container .form {
+  display: block;
+  box-sizing: border-box;
+  width: 760px;
+  height: 744px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e0e2e6;
+}
+.form-container .form p {
+  font-family: ProximaNovaRegular;
+  font-size: 16px;
+  color: #000;
+  padding-left: 19px;
+}
+.form-container .form .marked-fields {
+  display: inline-block;
+  padding-top: 16px;
+  color: #c1c1c1;
+  margin-bottom: 11px;
+}
+.form-container .form .select-input > select,
+.form-container .form .select-input input {
+  border-radius: 5px;
+  margin-left: 19px;
+  font-family: ProximaNovaRegular;
+  font-size: 16px;
+}
+.form-container .form .select-input > select {
+  position: relative;
+  height: 52px;
+  width: 721px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-left: 19px;
+  padding-top: 1px;
+  -webkit-appearance: none;
+  /* for FF */
+  -moz-appearance: none;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none!important;
+}
+.form-container .form .select-input > select::-ms-expand {
+  display: none;
+}
+.form-container .form .select-input .select-arrow {
+  position: absolute;
+  top: 89px;
+  right: 40px;
+}
+.form-container .form .select-input > input {
+  height: 47px;
+  width: 700px;
+  border-style: groove;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+.form-container .form .name-email-wrapper {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+}
+.form-container .form .name-email-wrapper .name,
+.form-container .form .name-email-wrapper .e-mail {
+  float: left;
+}
+.form-container .form .name-email-wrapper .name > input,
+.form-container .form .name-email-wrapper .e-mail > input {
+  margin-top: 5px;
+  height: 47px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-left: 18px;
+  font-family: ProximaNovaRegular;
+  font-size: 16px;
+  border-style: groove;
+  /* move placeholder right on focus*/
+}
+.form-container .form .name-email-wrapper .name > input::-webkit-input-placeholder,
+.form-container .form .name-email-wrapper .e-mail > input::-webkit-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.5s ease;
+}
+.form-container .form .name-email-wrapper .name > input::-moz-placeholder,
+.form-container .form .name-email-wrapper .e-mail > input::-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.5s ease;
+}
+.form-container .form .name-email-wrapper .name > input:-moz-placeholder,
+.form-container .form .name-email-wrapper .e-mail > input:-moz-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.5s ease;
+}
+.form-container .form .name-email-wrapper .name > input:-ms-input-placeholder,
+.form-container .form .name-email-wrapper .e-mail > input:-ms-input-placeholder {
+  text-indent: 0px;
+  transition: text-indent 0.5s ease;
+}
+.form-container .form .name-email-wrapper .name > input:focus::-webkit-input-placeholder,
+.form-container .form .name-email-wrapper .e-mail > input:focus::-webkit-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.5s ease;
+}
+.form-container .form .name-email-wrapper .name > input:focus::-moz-placeholder,
+.form-container .form .name-email-wrapper .e-mail > input:focus::-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.5s ease;
+}
+.form-container .form .name-email-wrapper .name > input:focus:-moz-placeholder,
+.form-container .form .name-email-wrapper .e-mail > input:focus:-moz-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.5s ease;
+}
+.form-container .form .name-email-wrapper .name > input:focus:-ms-input-placeholder,
+.form-container .form .name-email-wrapper .e-mail > input:focus:-ms-input-placeholder {
+  text-indent: 500px;
+  transition: text-indent 0.5s ease;
+}
+.form-container .form .name-email-wrapper .name input {
+  width: 323px;
+  margin-left: 20px;
+}
+.form-container .form .name-email-wrapper .e-mail {
+  margin-left: 10px;
+}
+.form-container .form .name-email-wrapper .e-mail input {
+  width: 325px;
+  margin-left: 19px;
+}
+.form-container .form .subject {
+  margin-bottom: 10px;
+  margin-top: 1px;
+}
+.form-container .form .subject > input {
+  height: 47px;
+  width: 700px;
+  margin-left: 20px;
+  margin-top: 5px;
+  padding-left: 18px;
+  border-radius: 5px;
+  font-family: ProximaNovaRegular;
+  font-size: 16px;
+  border-style: groove;
+}
+.form-container .form .description {
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.form-container .form .description textarea {
+  width: 706px;
+  height: 146px;
+  resize: none;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-top: 1px;
+  font-family: ProximaNovaRegular;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.form-container .form .description .text-area-title {
+  display: inline-block;
+  width: 100%;
+}
+.form-container .form .description .text-area-title > p:first-child {
+  float: left;
+}
+.form-container .form .description .text-area-title > p:nth-child(2) {
+  float: right;
+  margin-right: 22px;
+}
+.form-container .form .add-photo {
+  position: relative;
+  overflow: hidden;
+  width: 130px;
+  height: 130px;
+  margin-left: 18px;
+  margin-top: 14px;
+  border: 1px solid #e0e2e6;
+  border-radius: 5px;
+}
+.form-container .form .add-photo input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+.form-container .form .add-photo #myImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.form-container .form .add-photo .photo-text {
+  text-align: center;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.form-container .form .add-photo .photo-text > h1 {
+  margin-top: 30px;
+  font-family: ProximaNovaRegular;
+  font-size: 16px;
+  color: #7c8695;
+}
+.form-container .form .add-photo .photo-text > p {
+  padding-left: 0px;
+  margin-top: 3px;
+  font-family: ProximaNovaRegular;
+  font-size: 12px;
+  color: #c2c2c4;
+}
+.form-container .form .add-photo .photo-text.active {
+  opacity: 0;
+  overflow: hidden;
+}
+.form-container button {
+  margin-top: 21px;
+  width: 100%;
+  height: 52px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #87b448;
+  font-family: ProximaNovaRegular;
+  color: #fff;
+  font-size: 16px;
+}
+.about-denteez {
+  width: 100%;
+  color: #000;
+  border-bottom: 1px solid #e0e2e6;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+.about-denteez > h1 {
+  font-size: 30px;
+  font-weight: normal;
+  font-family: ProximaNovaLight;
+}
+.about-denteez .about-denteez-wr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 0 50px;
+  padding-bottom: 100px;
+}
+.about-denteez .about-denteez-wr h6 {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #7c8695;
+  padding: 0 40px 0 40px;
+}
+.about-denteez .about-denteez-wr .about-denteez-left {
+  width: 50%;
+  display: flex;
+}
+.about-denteez .about-denteez-wr .about-denteez-right {
+  width: 50%;
+  display: flex;
+}
+.footer {
+  height: 50px;
+  display: inline-block;
+  padding-top: 30px;
+  width: 100%;
+}
+.footer p {
+  padding-top: 1px;
+  float: left;
+  padding-left: 80px;
+  color: #b7bfcd;
+  font-family: ProximaNovaRegular;
+  font-size: 12px;
+}
+.footer .links {
+  display: inline-block;
+  float: right;
+  margin-right: 85px;
+}
+.footer .links a {
+  color: #b7bfcd;
+  font-family: ProximaNovaRegular;
+  font-size: 12px;
+  padding-left: 16px;
+}
+.footer .links a:first-child {
+  padding-right: 9px;
+}
+@media (max-width: 1200px) {
+  .logo-wth-btn {
+    min-width: 1000px;
+  }
+  .header {
+    min-width: 800px;
+  }
+  .second-background {
+    min-width: 800px;
+  }
+  .title-head {
+    left: 30%;
+  }
+  .form-container {
+    left: 19%;
+  }
+}
+@media (max-width: 1000px) {
+  .header {
+    min-width: 950px;
+  }
+  .second-background {
+    min-width: 950px;
+  }
+  .title-head {
+    left: 24%;
+  }
+  .form-container {
+    left: 12%;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    min-width: 830px;
+  }
+  .btn-container {
+    width: 110px;
+    height: 30px;
+    left: 650px;
+  }
+  .second-background {
+    min-width: 830px;
+  }
+  .title-head {
+    width: 830px;
+    left: 25%;
+  }
+  .form-container {
+    left: 5%;
+  }
+  .about-denteez-wr {
+    width: 830px;
+  }
+  .footer {
+    width: 830px;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    min-width: 800px;
+  }
+  .btn-container {
+    width: 110px;
+    height: 30px;
+    left: 650px;
+  }
+  .second-background {
+    min-width: 800px;
+  }
+  .title-head {
+    width: 800px;
+    left: 43%;
+  }
+  .form-container {
+    left: 5%;
+  }
+  .about-denteez-wr {
+    width: 800px;
+  }
+  .footer {
+    width: 800px;
+  }
+}
+@media (max-width: 360px) {
+  .header {
+    min-width: 800px;
+  }
+  .btn-container {
+    width: 110px;
+    height: 30px;
+    left: 650px;
+  }
+  .second-background {
+    min-width: 800px;
+  }
+  .title-head {
+    width: 800px;
+    left: 50%;
+  }
+  .form-container {
+    left: 6%;
+  }
+  .about-denteez-wr {
+    width: 800px;
+  }
+}
