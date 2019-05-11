@@ -1,7 +1,7 @@
 
 let myDataArray = [];
 
-$(document).ready(() => {
+$(document).ready( function () {
     $(document).on("click", ".hamburger", function () {
         $(this).toggleClass("active");
         $('.side-bar').toggleClass("active");
@@ -63,8 +63,9 @@ $(document).ready(() => {
     }); 
 
     $(document).on("click", "#show-saved-cities", function () {
+
         let citiesArr = JSON.parse(localStorage.getItem('citiesArr'));
-        if (citiesArr == null) {
+        if (!citiesArr) {
             alert('The list of cities is empty');
         } else {
             $('.saved-cities').toggleClass('active');  
@@ -110,14 +111,34 @@ $(document).ready(() => {
         addCitytoLS(city, country);
         defaultCityForecast(city, country);
     });
+
+    // not allow to enter smth accept Englisch
+    $("#city").keyup(function(e){
+
+        // inputVal = this.value;
+        this.value = this.value.replace(/([^a-zA-Z])/g, '');
+
+        // if(inputVal.length != 0 && inputVal.length >= 4) {
+        //     $('#find').removeAttr('disabled');
+        //     $('#city').removeClass('error');
+        // } else {
+        //     $('.find').attr('disabled', 'disabled');
+        //     $('#city').addClass('error');
+        // }
+    });
+    $("#country").keyup(function(e){
+        this.value = this.value.replace(/([^a-zA-Z])/g, '');
+    })
 });
 
 
 // ----------- REQUEST -------------------
 const defaultCityForecast = (city, country) => {
 
+    city = city || 'Odessa';
+    country = country || 'ua';
     let citiesArr = JSON.parse(localStorage.getItem('citiesArr'));
-    if (JSON.parse(localStorage.getItem('citiesArr')) == null) {
+    if (JSON.parse(localStorage.getItem('citiesArr')) == null || JSON.parse(localStorage.getItem('citiesArr')) == '') {
         citiesArr = ['odessa ua'];
     }
     let lastSavedCity = citiesArr[citiesArr.length - 1];
@@ -136,12 +157,11 @@ const defaultCityForecast = (city, country) => {
         generateHTML(data);
         $('.request').removeClass('active');
     })
-    .catch((error) => alert(`There has been a problem with your fetch operation: ${error.message}`));
+    // .catch((error) => alert(`There has been a problem with your fetch operation: ${error.message}`));
 
     //for 5 days
     let URLhost2 = `https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&APPID=${myKey}&units=metric`;
  
-
     fetch(URLhost2)
     .then(data => {
         return data.json();
@@ -149,7 +169,7 @@ const defaultCityForecast = (city, country) => {
     .then(data => {
         fiveDaysForecast(data); 
     })
-    .catch((error) => alert(`There has been a problem with your fetch operation: ${error.message}`));
+    // .catch((error) => alert(`There has been a problem with your fetch operation: ${error.message}`));
 }
 defaultCityForecast();
 
@@ -294,18 +314,21 @@ const generateHTML = data => {
 //  Add Country in local storage
 function addCitytoLS(city, country) {
 
-    countryFromInput = $.trim(country); // remove spaces
-    var locationFromInput =`${city} ${country}`;
-    if (localStorage.getItem('citiesArr')) {
-        var citiesArr = JSON.parse(localStorage.getItem('citiesArr'));
-    } else {
-        var citiesArr = [];
+    if(city && country) {
+        var locationFromInput =`${city} ${country}`;
+        if (localStorage.getItem('citiesArr')) {
+            var citiesArr = JSON.parse(localStorage.getItem('citiesArr'));
+            updateCitiesList();
+        } else {
+            var citiesArr = [];
+        }
+    
+        if (citiesArr.indexOf(locationFromInput) == -1) {
+            citiesArr.push(locationFromInput);
+        }   
+        localStorage.setItem('citiesArr', JSON.stringify(citiesArr));
     }
-    if (citiesArr.indexOf(locationFromInput) == -1) {
-        citiesArr.push(locationFromInput);
-    }   
-    localStorage.setItem('citiesArr', JSON.stringify(citiesArr));
-    updateCitiesList();
+
 }
 
 // add country to the list from local storage
@@ -313,7 +336,9 @@ function updateCitiesList() {
     var citiesArr = JSON.parse(localStorage.getItem('citiesArr'));
     $('.saved-cities p').html('');
     for (i in citiesArr) {
-        $('.saved-cities').append(`<p>${citiesArr[i]}</p>`);
+        if(i) {
+            $('.saved-cities').append(`<p>${citiesArr[i]}</p>`);
+        }
     }
 }
 

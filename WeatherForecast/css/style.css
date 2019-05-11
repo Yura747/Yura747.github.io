@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Helvetica-Light';
+  src: url('../fonts/Helvetica Light Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,7 +99,7 @@ div {
   font-size: 20px;
   border: 2px solid #fff;
 }
-.button:hover {
+.button:hover:not([disabled]) {
   border: 2px solid #000;
 }
 .content-wr {
@@ -168,8 +174,9 @@ form {
   text-align: center;
 }
 form input {
+  box-sizing: border-box;
   margin: 10px 0;
-  width: calc(80%);
+  width: 86%;
   padding-left: 20px;
   outline: none;
   line-height: 30px;
@@ -177,7 +184,7 @@ form input {
   border: 2px solid #fff;
   color: #000;
 }
-form input:hover {
+form input:hover:not([disabled]) {
   border: 2px solid #000;
 }
 form input::placeholder {
@@ -186,6 +193,7 @@ form input::placeholder {
 }
 form button {
   width: 86%;
+  box-sizing: border-box;
   margin: 10px 0;
   outline: none;
   line-height: 30px;
@@ -193,7 +201,7 @@ form button {
   border: 2px solid #fff;
   cursor: pointer;
 }
-form button:hover {
+form button:hover:not([disabled]) {
   border: 2px solid #000;
 }
 .forecast {
@@ -526,7 +534,7 @@ form button:hover {
   border: 2px solid #fff;
   cursor: pointer;
 }
-.saved-cities button:hover {
+.saved-cities button:hover:not([disabled]) {
   border: 2px solid #000;
 }
 .saved-cities > p {

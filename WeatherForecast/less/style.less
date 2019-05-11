@@ -1,5 +1,14 @@
 // out: ../css/style.css
 
+//fonts
+@font-face {
+    font-family: 'Helvetica-Light';
+    src: url('../fonts/Helvetica Light Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 @import (optional) "flex.less";
 
@@ -13,6 +22,7 @@
 
 .fonts {
     font-family: 'Josefin Sans', sans-serif;
+    // font-family: 'Helvetica-Light';
 }
 
 html, body{
@@ -37,7 +47,7 @@ h1, h2, h3, h4, h5, h6, ul, li, p, a, div {
     line-height: 30px;
     font-size: 20px;
     border: 2px solid #fff;
-    &:hover {
+    &:hover:not([disabled]) {
         border: 2px solid #000;
     }
 }
@@ -114,8 +124,9 @@ h1, h2, h3, h4, h5, h6, ul, li, p, a, div {
 form {
     text-align: center;
     input {
+        box-sizing: border-box;
         margin: 10px 0;
-        width: calc(100% - 20px);
+        width: 86%;
         padding-left: 20px;
         .button;
         color: #000;
@@ -123,9 +134,16 @@ form {
             color: #000;
             .fonts;
         }
+        &:invalid {
+            // border: 1px solid red;
+        }
+        &:valid {
+            // border: 2px solid black;
+        }
     }
     button {
         width: 86%;
+        box-sizing: border-box;
         margin: 10px 0;
         .button;
         cursor: pointer;
