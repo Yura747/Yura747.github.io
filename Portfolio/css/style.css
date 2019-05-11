@@ -108,6 +108,10 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+.animation-fill-mode {
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
 [class^="btn-"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -991,68 +995,65 @@ h2 span.animated {
   width: 100%;
   z-index: 0;
 }
-#card-4 .card-image:hover .pieces.piece-1 {
+#card-4:hover .pieces.piece-1 {
   -webkit-animation: piece1 1s ease;
   animation: piece1 1s ease;
-  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-#card-4 .card-image:hover .pieces.piece-2 {
+#card-4:hover .pieces.piece-2 {
   -webkit-animation: piece2 1s ease;
   animation: piece2 1s ease;
-  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-#card-4 .card-image:hover .pieces.piece-3 {
+#card-4:hover .pieces.piece-3 {
   -webkit-animation: piece3 1s ease;
   animation: piece3 1s ease;
-  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-#card-4 .card-image:hover .pieces.piece-4 {
+#card-4:hover .pieces.piece-4 {
   -webkit-animation: piece4 1s ease;
   animation: piece4 1s ease;
-  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-#card-4 .card-image:hover .pieces.piece-5 {
+#card-4:hover .pieces.piece-5 {
   -webkit-animation: piece5 1s ease;
   animation: piece5 1s ease;
-  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-#card-4 .card-image:hover .pieces.piece-6 {
+#card-4:hover .pieces.piece-6 {
   -webkit-animation: piece6 1s ease;
   animation: piece6 1s ease;
-  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-#card-4 .card-image:hover .pieces.piece-7 {
+#card-4:hover .pieces.piece-7 {
   -webkit-animation: piece7 1s ease;
   animation: piece7 1s ease;
-  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-#card-4 .card-image:hover .pieces.piece-8 {
+#card-4:hover .pieces.piece-8 {
   -webkit-animation: piece8 1s ease;
   animation: piece8 1s ease;
-  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-#card-4 .card-image:hover .pieces.piece-9 {
+#card-4:hover .pieces.piece-9 {
   -webkit-animation: piece9 1s ease;
   animation: piece9 1s ease;
-  opacity: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-#card-4 .card-image:hover .overlay-content {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  transition: all 2s ease;
-  -webkit-transition-delay: 1s;
-  -moz-transition-delay: 1s;
-  -o-transition-delay: 1s;
-  -ms-transition-delay: 1s;
-  transition-delay: 1s;
-}
-#card-4 .card-image:hover .overlay {
+#card-4:hover .overlay {
   z-index: 2;
 }
-#card-4 .card-image:hover .overlay::before,
-#card-4 .card-image:hover .overlay::after {
+#card-4:hover .overlay::before,
+#card-4:hover .overlay::after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -1061,6 +1062,18 @@ h2 span.animated {
   -o-transition-delay: 1.1s;
   -ms-transition-delay: 1.1s;
   transition-delay: 1.1s;
+}
+#card-4:hover .overlay-content {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  -ms-transition-delay: 1s;
+  transition-delay: 1s;
+}
+#card-4:hover .image-pieces {
+  opacity: 0;
 }
 #card-4 .overlay::before,
 #card-4 .overlay::after {
@@ -1086,6 +1099,13 @@ h2 span.animated {
   -webkit-transform: scale(1, 0);
   transform: scale(1, 0);
 }
+#card-4 .overlay-content {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
 #card-4 .image-pieces {
   width: 100%;
   height: 100%;
@@ -1100,6 +1120,14 @@ h2 span.animated {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  opacity: 1;
+  -webkit-transition: opacity 1.35s;
+  transition: opacity 1.35s;
+  -webkit-transition-delay: 1.1s;
+  -moz-transition-delay: 1.1s;
+  -o-transition-delay: 1.1s;
+  -ms-transition-delay: 1.1s;
+  transition-delay: 1.1s;
 }
 #card-4 .pieces {
   background: url("../img/Pink.png") center center no-repeat;
@@ -1107,9 +1135,6 @@ h2 span.animated {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 #card-4 .pieces.piece-1 {
   background-position: 0 0;
@@ -1137,10 +1162,6 @@ h2 span.animated {
 }
 #card-4 .pieces.piece-9 {
   background-position: 100% 100%;
-}
-#card-4 .overlay-content {
-  opacity: 0;
-  visibility: hidden;
 }
 #card-5:hover .overlay > span:nth-child(1) {
   -webkit-transform: translate(-100%, 0px) rotate(0deg);
@@ -2283,6 +2304,7 @@ h2 span.animated {
     font-size: 14px;
   }
   .tag {
+    font-size: 14px;
     padding: 0 5px;
   }
   #card-4 .overlay::before,
