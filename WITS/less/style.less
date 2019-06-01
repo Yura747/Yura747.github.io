@@ -268,8 +268,10 @@ nav {
             >li {
                 display: inline-block;
                 width: 100%;
-                .transition(2s);
                 .translate(@x: 0px; @y: -1000px);
+                -webkit-transition: transform 2s ease; 
+                -o-transition: transform 2s ease;    
+                transition: transform 2s ease;
                 background: #494949;
                 opacity: 0;
                 >a {
