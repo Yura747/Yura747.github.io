@@ -146,6 +146,8 @@ const defaultCityForecast = (city, country) => {
     // var country = lastSavedCity.split(' ')[1];
 
 
+
+    /*
     const myKey = '9dafff6a7dc47fe36edf291d15d93a48';
     const URLhost = `http://api.openweathermap.org/data/2.5/weather`;
 
@@ -172,34 +174,35 @@ const defaultCityForecast = (city, country) => {
             // $('.loader').hide();
         }
     });
+    */
+
+    
+   const myKey = '9dafff6a7dc47fe36edf291d15d93a48';
+   const URLhost = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${myKey}&units=metric`;
+
+   fetch(URLhost)
+   .then(data => {
+       return data.json();
+   })
+   .then(data => {
+       generateHTML(data);
+       $('.request').removeClass('active');
+   })
+   // .catch((error) => alert(`There has been a problem with your fetch operation: ${error.message}`));
+
+   //for 5 days
+   let URLhost2 = `https://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&APPID=${myKey}&units=metric`;
+
+   fetch(URLhost2)
+   .then(data => {
+       return data.json();
+   })
+   .then(data => {
+       fiveDaysForecast(data); 
+   })
+   // .catch((error) => alert(`There has been a problem with your fetch operation: ${error.message}`));
 
 
-
-    //for 5 days
-    let URLhost2 = `https://api.openweathermap.org/data/2.5/forecast`;
-    $.ajax(URLhost2, {
-        data: {
-            APPID: myKey,
-            q: city,
-            c: country,
-            units: 'metric',
-            // lang: 'en'
-        },
-        dataType: 'json',
-        beforeSend: function() {
-            // $('.loader').show();
-        },
-        success: function(data) {
-            fiveDaysForecast(data);
-        },
-        error: function(error) {
-            alert(error)
-        },
-        complete: function() {
-            // $('.loader').hide();
-        }
-    });
- 
 
 
 
