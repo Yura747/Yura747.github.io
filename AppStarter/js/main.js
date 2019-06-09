@@ -18,7 +18,7 @@ $(document).ready(function() {
        $("html, body").animate({
           scrollTop: $($(this).attr("href")).offset().top - margin + "px" 
        }, {
-          duration: 300, 
+          duration: 700, 
           easing: "swing"
        });
        return false;
@@ -31,7 +31,7 @@ $(document).ready(function() {
     $("html, body").animate({
        scrollTop: $('#get-it-free').offset().top - margin + "px" 
     }, {
-       duration: 300, 
+       duration: 700, 
        easing: "swing"
     });
     return false;
