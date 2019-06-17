@@ -135,6 +135,7 @@ body {
   text-align: center;
   z-index: 1;
   outline: none;
+  border-radius: 15px;
 }
 [class^="btn-"]:focus {
   outline: none;
@@ -485,6 +486,27 @@ body {
   -ms-transform: translate(0%, 50%) rotate(0deg);
   transform: translate(0%, 50%) rotate(0deg);
 }
+.btn-10:before {
+  background-color: #fc0853;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translate(100%, 0%) rotate(0deg);
+  -moz-transform: translate(100%, 0%) rotate(0deg);
+  -o-transform: translate(100%, 0%) rotate(0deg);
+  -ms-transform: translate(100%, 0%) rotate(0deg);
+  transform: translate(100%, 0%) rotate(0deg);
+}
+.btn-10:hover:before {
+  -webkit-transform: translate(0%, 0%) rotate(0deg);
+  -moz-transform: translate(0%, 0%) rotate(0deg);
+  -o-transform: translate(0%, 0%) rotate(0deg);
+  -ms-transform: translate(0%, 0%) rotate(0deg);
+  transform: translate(0%, 0%) rotate(0deg);
+}
 .btn-12:after,
 .btn-12:before {
   content: '';
@@ -674,11 +696,13 @@ h2 span.animated {
   user-select: none;
   width: 70%;
   height: 450px;
+  border-radius: 20px;
 }
 .card-image > img {
   width: 100%;
   max-width: 700px;
   height: 450px;
+  border-radius: 20px;
 }
 .overlay {
   display: -webkit-box;
@@ -697,6 +721,7 @@ h2 span.animated {
   width: 100%;
   height: 450px;
   overflow: hidden;
+  border-radius: 20px;
 }
 .overlay-content {
   position: relative;
@@ -710,6 +735,7 @@ h2 span.animated {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  border-radius: 20px;
 }
 .overlay-content > h3 {
   font-size: 22px;
@@ -724,27 +750,12 @@ h2 span.animated {
   user-select: none;
 }
 .overlay-content ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding-bottom: 25px;
 }
 .overlay-content ul > li {
   display: block;
-  width: 200px;
   text-align: left;
   padding: 10px 0;
-  padding-left: 40px;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   -moz-user-select: none;
@@ -759,12 +770,24 @@ h2 span.animated {
   position: relative;
   left: -5px;
 }
+.list-wr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 .mask {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   padding: 200px 150px;
+  border-radius: 20px;
 }
 #card-1 .overlay:hover .mask {
   opacity: 1;
@@ -787,7 +810,7 @@ h2 span.animated {
   -ms-transition-delay: 0.7s;
   transition-delay: 0.7s;
 }
-#card-1 .overlay:hover .overlay-content > ul > li {
+#card-1 .overlay:hover .overlay-content .list-wr {
   -webkit-transform: translate(0px, 0px) rotate(0deg);
   -moz-transform: translate(0px, 0px) rotate(0deg);
   -o-transform: translate(0px, 0px) rotate(0deg);
@@ -811,7 +834,7 @@ h2 span.animated {
   -ms-transition-delay: 0.9s;
   transition-delay: 0.9s;
 }
-#card-1 .overlay-content > ul li {
+#card-1 .overlay-content .list-wr {
   -webkit-transform: translate(200px, -300px) rotate(0deg);
   -moz-transform: translate(200px, -300px) rotate(0deg);
   -o-transform: translate(200px, -300px) rotate(0deg);
@@ -1613,6 +1636,24 @@ h2 span.animated {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
+#card-10:hover .overlay {
+  -webkit-transform: translate(0%, 0%) rotate(0deg);
+  -moz-transform: translate(0%, 0%) rotate(0deg);
+  -o-transform: translate(0%, 0%) rotate(0deg);
+  -ms-transform: translate(0%, 0%) rotate(0deg);
+  transform: translate(0%, 0%) rotate(0deg);
+}
+#card-10 .overlay {
+  -webkit-transform: translate(-100%, 0%) rotate(0deg);
+  -moz-transform: translate(-100%, 0%) rotate(0deg);
+  -o-transform: translate(-100%, 0%) rotate(0deg);
+  -ms-transform: translate(-100%, 0%) rotate(0deg);
+  transform: translate(-100%, 0%) rotate(0deg);
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: #6873ea;
+}
 @keyframes piece1 {
   20% {
     -webkit-transform: translate(-50px, -50px) rotate(0deg);
@@ -2069,7 +2110,6 @@ h2 span.animated {
   }
   .overlay-content ul > li {
     padding: 7px;
-    padding-left: 40px;
   }
 }
 @media (max-width: 768px) {
@@ -2105,7 +2145,6 @@ h2 span.animated {
   }
   .overlay-content ul > li {
     padding: 5px;
-    padding-left: 40px;
     font-size: 14px;
   }
   [class^="btn-"] {
@@ -2219,7 +2258,6 @@ h2 span.animated {
   }
   .overlay-content ul > li {
     padding: 3px;
-    padding-left: 80px;
     font-size: 12px;
   }
   .overlay-content a {
@@ -2300,7 +2338,6 @@ h2 span.animated {
   }
   .overlay-content ul > li {
     padding: 2px;
-    padding-left: 80px;
     font-size: 14px;
   }
   .tag {

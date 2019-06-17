@@ -120,6 +120,7 @@ body {
     text-align: center;
     z-index: 1;
     outline: none;
+    border-radius: 15px;
     &:focus {
         outline: none;
     }
@@ -382,6 +383,23 @@ body {
 		}
 	}
 }
+.btn-10 {
+	&:before {
+        background-color: @btn-color;
+		bottom: 0;
+		content: '';
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+        .translate(100%; 0%; 0deg);
+	}
+	&:hover {
+		&:before {
+            .translate(0%; 0%; 0deg);
+		}
+	}
+}
 .btn-12 {
     &:after, &:before {
         content: '';
@@ -521,10 +539,12 @@ h2 {
     .user-select-none;
     width: 70%;
     height: @image-height;
+    border-radius: 20px;
     >img {
         width: 100%;
         max-width: @image-width;
         height: @image-height;
+        border-radius: 20px;
     }
 }
 .overlay {
@@ -536,12 +556,14 @@ h2 {
     width: 100%;
     height: @image-height;
     overflow: hidden;
+    border-radius: 20px;
 }
 .overlay-content {
     position: relative;
     z-index: 2;
     .border-box;
     .user-select-none;
+    border-radius: 20px;
     >h3 {
         font-size: 22px;
         border-bottom: 3px solid @green;
@@ -550,15 +572,11 @@ h2 {
         .user-select-none;
     }
     ul {
-        .flex-vh-center;
-        .flex-column;
         padding-bottom: 25px;
         >li {
             display: block;
-            width: 200px;
             text-align: left;
             padding: 10px 0;
-            padding-left: 40px;
             font-size: 16px;
             font-family: "Open Sans", sans-serif;
             .user-select-none;
@@ -570,12 +588,16 @@ h2 {
         }
     }
 }
+.list-wr {
+    .flex-vh-center;
+}
 .mask {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     padding: 200px 150px;
+    border-radius: 20px;
 }
 // - - - - - - - - - - - Card 1 - - - - - - - - - - - -
 #card-1 {
@@ -590,7 +612,7 @@ h2 {
                     .translate(0px; 0px; 0deg);
                     .delay(0.7s);
                 }
-                >ul >li {
+                .list-wr {
                     .translate(0px; 0px; 0deg);
                     .delay(0.8s);
                 }
@@ -602,11 +624,9 @@ h2 {
         }
     }
     .overlay-content {
-        >ul {
-            li {
+        .list-wr {
                 .translate(200px; -300px; 0deg);
                 .transition2(0.2s; 0.2s; ease-in-out);
-            }
         }
         >h3 {
             .transition2(0.2s; 0.2s; ease-in-out);
@@ -1245,6 +1265,20 @@ h2 {
         .transition1(all; 0.35s; ease);
     }
 }
+// - - - - - - - - - - - Card 10 - - - - - - - - - - - -
+#card-10 {
+    &:hover {
+        .overlay {
+            .translate(0%; 0%; 0deg);
+        }
+    }
+    .overlay {
+        .translate(-100%; 0%; 0deg);
+        .transition1(all; 0.5s; ease);
+        background-color: #6873ea;
+    }
+}
+
 // - - - - - - - - - - - - End - - - - - - - - - - - -
 
 
@@ -1556,16 +1590,6 @@ h2 {
     
 
 // Media requests
-
-// @media (min-width: 1900px) {
-
-// }
-// @media (min-width: 1600px) {
-
-// }
-// @media (max-width: 1200px) {
-
-// }
 @media (max-width: 960px) {
     @image-height: 400px;  
     .card {
@@ -1584,7 +1608,6 @@ h2 {
         ul {
             > li {
                 padding: 7px;
-                padding-left: 40px;
             }
         }
     }
@@ -1623,7 +1646,6 @@ h2 {
             padding-bottom: 10px;
             > li {
                 padding: 5px;
-                padding-left: 40px;
                 font-size: 14px;
             }
         }
@@ -1765,7 +1787,6 @@ h2 {
             padding-bottom: 10px;
             > li {
                 padding: 3px;
-                padding-left: 80px;
                 font-size: 12px;
             }
         }
@@ -1851,9 +1872,6 @@ h2 {
 
 
 }
-@media (max-width: 480px) {
-
-}
 @media (max-width: 360px) {
     @image-height: 180px;  
     .card {
@@ -1876,7 +1894,6 @@ h2 {
         ul {
             > li {
                 padding: 2px;
-                padding-left: 80px;
                 font-size: 14px;
             }
         }
