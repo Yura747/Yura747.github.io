@@ -18,6 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         // my --
         mobileMenu.classList.remove('active');
         body.classList.remove('menu-active');
+        hamburger.classList.remove('active');
         if ( e.target.getAttribute('href') == '#' ) return; 
         // ---
 
