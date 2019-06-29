@@ -1,38 +1,61 @@
 
-
-$('.hamburger').on('click', function(){
-    $(this).toggleClass('active');
-    $('.mobile-menu-wrapper').toggleClass('active');
-    $('body').toggleClass('menu-active ');
+// mobile - menu controlls
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu-wrapper');
+const body = document.body;
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    body.classList.toggle('menu-active');
 });
 
 
-$(document).ready(function() {
-    var margin = 100; 
-    $("a").click(function() { 
-       $('.hamburger').removeClass('active');
-       $('.mobile-menu-wrapper').removeClass('active');
-       $('body').removeClass('menu-active');
-       window.location.hash = $(this).attr("href");
+// smooth page scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+        e.preventDefault();
 
-       $("html, body").animate({
-          scrollTop: $($(this).attr("href")).offset().top - margin + "px" 
-       }, {
-          duration: 700, 
-          easing: "swing"
-       });
-       return false;
+        // my --
+        mobileMenu.classList.remove('active');
+        body.classList.remove('menu-active');
+        if ( e.target.getAttribute('href') == '#' ) return; 
+        // ---
+
+        document.querySelector(e.target.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+
     });
- });
-
-
- $('#get-free').on('click', function() {
-    var margin = 100; 
-    $("html, body").animate({
-       scrollTop: $('#get-it-free').offset().top - margin + "px" 
-    }, {
-       duration: 700, 
-       easing: "swing"
-    });
-    return false;
 });
+
+// scroll on click on menu-button 
+const button = document.getElementById('get-free')
+button.addEventListener('click', (e) => {
+    document.getElementById('get-it-free').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+
+//tabs
+document.querySelectorAll('[data-tab]').forEach(tab => {
+    tab.addEventListener('click', function() {
+        let attr = this.getAttribute('data-tab');
+        document.querySelectorAll('[data-target]').forEach(img => {
+            img.classList.remove('active');
+            let imgAttr = img.getAttribute('data-target');
+            if(imgAttr == attr) {
+                img.classList.add('active')
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
+
+

@@ -541,6 +541,7 @@ body.menu-active {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 12px 0px rgba(32, 33, 39, 0.08);
   box-shadow: 0px 6px 12px 0px rgba(32, 33, 39, 0.08);
+  cursor: pointer;
 }
 .tab-content {
   padding: 35px 35px 35px 75px;
@@ -561,6 +562,23 @@ body.menu-active {
   height: 24px;
   top: 0;
   left: -40px;
+}
+.highlights-tablet {
+  position: relative;
+}
+.highlights-tablet img {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.highlights-tablet img.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  z-index: 1;
 }
 #i-reload::before {
   background-image: url('../icons/reload.png');
@@ -1638,5 +1656,36 @@ body.menu-active {
   }
   .card {
     width: 85%;
+  }
+}
+@media (max-width: 320px) {
+  .buttons-wr .button.orange {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .img-tablet {
+    height: 400px;
+    width: 280px;
+  }
+  .card {
+    height: 320px;
+  }
+  .tab {
+    height: 220px;
+  }
+  .block-img {
+    height: 350px;
+  }
+  .block {
+    height: 350px;
+  }
+  .image-block-wr {
+    margin-bottom: -50%;
+  }
+  .form-inner .button.orange {
+    margin-bottom: 30px;
+  }
+  #name {
+    margin: 30px 0 20px 0;
   }
 }

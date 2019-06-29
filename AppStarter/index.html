@@ -182,7 +182,7 @@
 			<div class="columns-wr">
 				<div class="column-left">
 					<div class="tabs-wr">
-						<div class="tab" onclick="">
+						<div class="tab" onclick="" data-tab="1">
 							<div class="tab-content">
 								<h4 class="title" id="i-reload">
 									Sync <span>across all devices</span>
@@ -194,7 +194,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="tab" onclick="">
+						<div class="tab" onclick="" data-tab="2">
 							<div class="tab-content">
 								<h4 class="title" id="i-inbox">
 									All emails <span>in one place</span>
@@ -206,7 +206,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="tab" onclick="">
+						<div class="tab" onclick="" data-tab="3">
 							<div class="tab-content">
 								<h4 class="title" id="i-clock">
 									Track <span>your time</span>
@@ -222,7 +222,9 @@
 				</div>
 				<div class="column-right">
 					<div class="highlights-tablet">
-						<img class="img-tablet" src="img/Tablet2.png" alt="tablet-image">
+						<img class="img-tablet active" src="img/Tablet2.png" alt="tablet-image" data-target="1">
+						<img class="img-tablet" src="img/Tablet.png" alt="tablet-image" data-target="2">
+						<img class="img-tablet" src="img/Tablet2.png" alt="tablet-image" data-target="3">
 					</div>
 				</div>
 			</div>
@@ -568,7 +570,6 @@
 	</div>
 </section>
 
-<script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>	
 </body>
 </html>
