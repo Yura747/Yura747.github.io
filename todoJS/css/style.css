@@ -39,15 +39,7 @@ body {
 .li-task.checked {
   background-color: #000;
   color: #37d7b2;
-}
-.li-task.checked::before {
-  content: '';
-  position: absolute;
-  width: 160px;
-  height: 1px;
-  top: 18px;
-  left: 20px;
-  background-color: #37d7b2;
+  text-decoration: line-through;
 }
 .input {
   width: 250px;
@@ -74,6 +66,7 @@ body {
   border: none;
   color: #fff;
   font-size: 26px;
+  cursor: pointer;
 }
 .add:hover {
   -webkit-box-shadow: 0px 0px 12px 0px rgba(32, 33, 39, 0.5);
@@ -89,6 +82,7 @@ body {
   border: none;
   background-color: crimson;
   color: #fff;
+  cursor: pointer;
 }
 .clear:hover {
   -webkit-box-shadow: 0px 0px 12px 0px rgba(32, 33, 39, 0.5);
@@ -163,9 +157,6 @@ input[type="checkbox"].checkbox:checked:after {
   .li-task {
     width: 164px;
   }
-  .li-task.checked::before {
-    width: 124px;
-  }
 }
 @media (max-width: 320px) {
   .content-wr {
@@ -173,8 +164,5 @@ input[type="checkbox"].checkbox:checked:after {
   }
   .li-task {
     width: 140px;
-  }
-  .li-task.checked::before {
-    width: 100px;
   }
 }
