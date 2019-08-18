@@ -506,13 +506,13 @@ h2 {
 }
 
 .card {
-    max-width: 960px;
-    overflow: hidden;
-    margin: auto;
-    text-align: center;
-    &:nth-child(n+2) {
-        padding-top: 50px;
-    }
+  max-width: 960px;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  &:nth-child(n+2) {
+      padding-top: 50px;
+  }
 }
 .card-title {
     height: 55px;
@@ -1078,613 +1078,735 @@ h2 {
 }
 // - - - - - - - - - - - Card 8 - - - - - - - - - - - -
 #card-8 {
-    .card-image {
-        &:hover {
-            .slice {
-                opacity: 0;
-            }
-            .slice-1 {
-                .translate(0px; -40px; 0deg);
-            }
-            .slice-2 {
-                .translate(0px; 40px; 0deg);
-            }
-            .slice-3 {
-                .translate(0px; -40px; 0deg);
-            }
-            .slice-4 {
-                .translate(0px; 40px; 0deg);
-            }
-            .slice-5 {
-                .translate(0px; -40px; 0deg);
-            }
-            .slice-6 {
-                .translate(0px; 40px; 0deg);
-            }
-            .slice-7 {
-                .translate(0px; -40px; 0deg);
-            }
-            .slice-8 {
-                .translate(0px; 40px; 0deg);
-            }
-            .overlay {
-                &::before, &::after {
-                    .delay(0.5s);
-                    opacity: 1;
-                    -webkit-transform: scale(1);
-                    transform: scale(1);
-                }
-            }
-            .overlay-content {
-                opacity: 1;
-                .delay(0.7s);
-            }
-        }
-    }
-    .image {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    .slices {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        .slice {
-            background: url("../img/denteez.jpg") center center no-repeat;
-            background-size: 800% 100%;
-            .border-box;
-            float: left;
-            height: 100%;
-            position: relative;
-            width: 100% / 8;
-            z-index: 2;
-            opacity: 1;
-            .transition1(all; 1s; ease-in-out);
-        }
-        .slice-1 {
-            background-position: 0;
-        }
-        .slice-2 {
-            background-position: 14.2%;
-        }
-        .slice-3 {
-            background-position: 28.4%;
-        }
-        .slice-4 {
-            background-position: 43%;
-        }
-        .slice-5 {
-            background-position: 57%;
-        }
-        .slice-6 {
-            background-position: 71.4%;
-        }
-        .slice-7 {
-            background-position: 86%;
-        }
-        .slice-8 {
-            background-position: 100%;
-        }
-    }
-    .overlay {
-        &::before, &::after {
-            position: absolute;
-            content: '';
-            opacity: 0;
-            -webkit-transition: opacity 1s, -webkit-transform 1s;
-            transition: opacity 1s, transform 1s;
-        }
-        &::before {
-            top: 50px;
-            right: 30px;
-            bottom: 50px;
-            left: 30px;
-            border-top: 1px solid #fff;
-            border-bottom: 1px solid #fff;
-            -webkit-transform: scale(0,1);
-            transform: scale(0,1);
-            -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-        }
-        &::after {
-            top: 30px;
-            right: 50px;
-            bottom: 30px;
-            left: 50px;
-            border-right: 1px solid #fff;
-            border-left: 1px solid #fff;
-            -webkit-transform: scale(1,0);
-            transform: scale(1,0);
-            -webkit-transform-origin: 100% 0;
-            transform-origin: 100% 0;
-        }
-    }
-    .overlay-content {
+  .card-image {
+    &:hover {
+      .slice {
         opacity: 0;
-        .transition1(all; 1s; ease);
+      }
+      .slice-1 {
+        .translate(0px; -40px; 0deg);
+      }
+      .slice-2 {
+        .translate(0px; 40px; 0deg);
+      }
+      .slice-3 {
+        .translate(0px; -40px; 0deg);
+      }
+      .slice-4 {
+        .translate(0px; 40px; 0deg);
+      }
+      .slice-5 {
+        .translate(0px; -40px; 0deg);
+      }
+      .slice-6 {
+        .translate(0px; 40px; 0deg);
+      }
+      .slice-7 {
+        .translate(0px; -40px; 0deg);
+      }
+      .slice-8 {
+        .translate(0px; 40px; 0deg);
+      }
+      .overlay {
+        &::before, &::after {
+          .delay(0.5s);
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      .overlay-content {
+        opacity: 1;
+        .delay(0.7s);
+      }
     }
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .slices {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    .slice {
+      background: url("../img/denteez.jpg") center center no-repeat;
+      background-size: 800% 100%;
+      .border-box;
+      float: left;
+      height: 100%;
+      position: relative;
+      width: 100% / 8;
+      z-index: 2;
+      opacity: 1;
+      .transition1(all; 1s; ease-in-out);
+    }
+    .slice-1 {
+      background-position: 0;
+    }
+    .slice-2 {
+      background-position: 14.2%;
+    }
+    .slice-3 {
+      background-position: 28.4%;
+    }
+    .slice-4 {
+      background-position: 43%;
+    }
+    .slice-5 {
+      background-position: 57%;
+    }
+    .slice-6 {
+      background-position: 71.4%;
+    }
+    .slice-7 {
+      background-position: 86%;
+    }
+    .slice-8 {
+      background-position: 100%;
+    }
+  }
+  .overlay {
+    &::before, &::after {
+      position: absolute;
+      content: '';
+      opacity: 0;
+      -webkit-transition: opacity 1s, -webkit-transform 1s;
+      transition: opacity 1s, transform 1s;
+    }
+    &::before {
+      top: 50px;
+      right: 30px;
+      bottom: 50px;
+      left: 30px;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      -webkit-transform: scale(0,1);
+      transform: scale(0,1);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+    }
+    &::after {
+      top: 30px;
+      right: 50px;
+      bottom: 30px;
+      left: 50px;
+      border-right: 1px solid #fff;
+      border-left: 1px solid #fff;
+      -webkit-transform: scale(1,0);
+      transform: scale(1,0);
+      -webkit-transform-origin: 100% 0;
+      transform-origin: 100% 0;
+    }
+  }
+  .overlay-content {
+  opacity: 0;
+  .transition1(all; 1s; ease);
+  }
 }
 // - - - - - - - - - - - Card 9 - - - - - - - - - - - -
 #card-9 {
-    @card9: #135796;
-    .card-image {
-        background-color: @card9; //#2266a5;
-        color: #fff;
-        overflow: hidden;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-transform: translateZ(0);
-        -moz-transform: translateZ(0);
-        -ms-transform: translateZ(0);
-        -o-transform: translateZ(0);
-        transform: translateZ(0);
-        .transition1(all; 0.35s; ease);
-        img {
+  @card9: #135796;
+  .card-image {
+    background-color: @card9; 
+    &::before {
+      background: @card9; 
+    }
+    &::after {
+      background: @card9; 
+    }
+  }
+  .overlay {
+    background-color: @card9;
+  }
+}
+#card-9, #card-11, #card-13  {
 
-            .transition1(all; 0.35s; ease);
-        }
-        &::before {
-            content: '';
-            position: absolute;
-            background: @card9; // #135796;
-            height: 0;
-            width: 100%;
-            right: 0;
-            bottom: 0;
-            .transition1(all; 0.35s; ease);
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            background: @card9; // #135796;
-            height: 0;
-            width: 100%;
-            top: 0;
-            left: 0;
-            .transition1(all; 0.35s; ease);
-        }
-        &:hover {
-            &::before {
-                height: 50%;
-            }
-            &::after {
-                height: 50%;
-            }
-            .overlay {
-                opacity: 1;
-                .delay(0.21s);
-            }
-        }
+  .card-image {
+    color: #fff;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    .transition1(all; 0.35s; ease);
+    img {
+      .transition1(all; 0.35s; ease);
     }
-    .overlay {
-        background-color: @card9;
-        opacity: 0;
-        z-index: 1;
-        .transition1(all; 0.35s; ease);
+    &::before {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 100%;
+      right: 0;
+      bottom: 0;
+      .transition1(all; 0.35s; ease);
     }
+    &::after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 100%;
+      top: 0;
+      left: 0;
+      .transition1(all; 0.35s; ease);
+    }
+    &:hover {
+      &::before {
+        height: 50%;
+      }
+      &::after {
+        height: 50%;
+      }
+      .overlay {
+        opacity: 1;
+        .delay(0.21s);
+      }
+    }
+  }
+  .overlay {
+    opacity: 0;
+    z-index: 1;
+    .transition1(all; 0.35s; ease);
+  }
 }
 // - - - - - - - - - - - Card 10 - - - - - - - - - - - -
 #card-10 {
-    &:hover {
-        .overlay {
-            .translate(0%; 0%; 0deg);
-        }
-    }
+  &:hover {
     .overlay {
-        .translate(-100%; 0%; 0deg);
-        .transition1(all; 0.5s; ease);
-        background-color: #6873ea;
+      .translate(0%; 0%; 0deg);
     }
+  }
+  .overlay {
+    .translate(-100%; 0%; 0deg);
+    .transition1(all; 0.5s; ease);
+    background-color: #6873ea;
+  }
+}
+// - - - - - - - - - - - Card 11 - - - - - - - - - - - -
+#card-11 {
+  @card11: #6a04ae;
+  .card-image {
+    background-color: @card11; 
+    &::before {
+      background: @card11; 
+    }
+    &::after {
+      background: @card11; 
+    }
+  }
+  .overlay {
+    background-color: @card11;
+  }
+}
+// - - - - - - - - - - - Card 12 - - - - - - - - - - - -
+#card-12 {
+  @card12: #34495e; //  #344a5f
+  .card-image {
+    background-color: @card12; 
+    &::before {
+      background: @card12; 
+    }
+    &::after {
+      background: @card12; 
+    }
+  }
+  .overlay {
+    background-color: @card12;
+  }
+}
+#card-12  {
+
+  .card-image {
+    color: #fff;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    .transition1(all; 0.35s; ease);
+    img {
+      .transition1(all; 0.35s; ease);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      right: 0;
+      bottom: 0;
+      .transition1(all; 0.35s; ease);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      .transition1(all; 0.35s; ease);
+    }
+    &:hover {
+      &::before {
+        width: 50%;
+      }
+      &::after {
+        width: 50%;
+      }
+      .overlay {
+        opacity: 1;
+        .delay(0.21s);
+      }
+    }
+  }
+  .overlay {
+    opacity: 0;
+    z-index: 1;
+    .transition1(all; 0.35s; ease);
+  }
+}
+// - - - - - - - - - - - Card 13 - - - - - - - - - - - -
+#card-13 {
+  @card13: #05113d;
+  .card-image {
+    background-color: @card13; 
+    &::before {
+      background: @card13; 
+    }
+    &::after {
+      background: @card13; 
+    }
+  }
+  .overlay {
+    background-color: @card13;
+  }
 }
 
+.link {
+  margin: 30px;
+  text-align: center;
+  a {
+    color: #08fdd8;
+    text-decoration: underline;
+    font-family: "Open Sans",sans-serif;
+  }
+}
 // - - - - - - - - - - - - End - - - - - - - - - - - -
 
 
 @keyframes piece1 {
-    20% {
-        .translate(-50px; -50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(-50px; -50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(-50px; -50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(-50px; -50px; 0deg);
+    opacity: 0;
+  }
 }
 @-webkit-keyframes piece1 {
-    20% {
-        .translate(-50px; -50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(-50px; -50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(-50px; -50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(-50px; -50px; 0deg);
+    opacity: 0;
+  }
 }
 @keyframes piece2 {
-    20% {
-        .translate(0px; -50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(0px; -50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(0px; -50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(0px; -50px; 0deg);
+    opacity: 0;
+  }
 }
 @-webkit-keyframes piece2 {
-    20% {
-        .translate(0px; -50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(0px; -50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(0px; -50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(0px; -50px; 0deg);
+    opacity: 0;
+  }
 }
 @keyframes piece3 {
-    20% {
-        .translate(50px; -50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(50px; -50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(50px; -50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(50px; -50px; 0deg);
+    opacity: 0;
+  }
 }
 @-webkit-keyframes piece3 {
-    20% {
-        .translate(50px; -50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(50px; -50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(50px; -50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(50px; -50px; 0deg);
+    opacity: 0;
+  }
 }
 @keyframes piece4 {
-    20% {
-        .translate(-50px; 0px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(-50px; 0px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(-50px; 0px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(-50px; 0px; 0deg);
+    opacity: 0;
+  }
 }
 @-webkit-keyframes piece4 {
-    20% {
-        .translate(-50px; 0px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(-50px; 0px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(-50px; 0px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(-50px; 0px; 0deg);
+    opacity: 0;
+  }
 }
 @keyframes piece5 {
-    20% {
-        opacity: 1;
-        .scale(1.1);
-    }
-    100% {
-        opacity: 0;
-    }
+  20% {
+    opacity: 1;
+    .scale(1.1);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @-webkit-keyframes piece5 {
-    20% {
-        opacity: 1;
-        .scale(1.1);    
-    }
-    100% {
-        opacity: 0;
-    }
+  20% {
+    opacity: 1;
+    .scale(1.1);    
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes piece6 {
-    20% {
-        .translate(50px; 0px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(50px; 0px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(50px; 0px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(50px; 0px; 0deg);
+    opacity: 0;
+  }
 }
 @-webkit-keyframes piece6 {
-    20% {
-        .translate(50px; 0px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(50px; 0px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(50px; 0px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(50px; 0px; 0deg);
+    opacity: 0;
+  }
 }
 @keyframes piece7 {
-    20% {
-        .translate(-50px; 50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(-50px; 50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(-50px; 50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(-50px; 50px; 0deg);
+    opacity: 0;
+  }
 }
 @-webkit-keyframes piece7 {
-    20% {
-        .translate(-50px; 50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(-50px; 50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(-50px; 50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(-50px; 50px; 0deg);
+    opacity: 0;
+  }
 }
 @keyframes piece8 {
-    20% {
-        .translate(0px; 50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(0px; 50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(0px; 50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(0px; 50px; 0deg);
+    opacity: 0;
+  }
 }
 @-webkit-keyframes piece8 {
-    20% {
-        .translate(0px; 50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(0px; 50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(0px; 50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(0px; 50px; 0deg);
+    opacity: 0;
+  }
 }
 @keyframes piece9 {
-    20% {
-        .translate(50px; 50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(50px; 50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(50px; 50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(50px; 50px; 0deg);
+    opacity: 0;
+  }
 }
 @-webkit-keyframes piece9 {
-    20% {
-        .translate(50px; 50px; 0deg);
-        opacity: 1;
-    }
-    100% {
-        .translate(50px; 50px; 0deg);
-        opacity: 0;
-    }
+  20% {
+    .translate(50px; 50px; 0deg);
+    opacity: 1;
+  }
+  100% {
+    .translate(50px; 50px; 0deg);
+    opacity: 0;
+  }
 }
 @-webkit-keyframes rubberBand{
-    0% {
-        -webkit-transform:scale3d(1,1,1);
-        transform:scale3d(1,1,1)
-    }
-    30% {
-        -webkit-transform:scale3d(1.25,.75,1);
-        transform:scale3d(1.25,.75,1)
-    }
-    40% {
-        -webkit-transform:scale3d(.75,1.25,1);
-        transform:scale3d(.75,1.25,1)
-    }
-    50% {
-        -webkit-transform:scale3d(1.15,.85,1);
-        transform:scale3d(1.15,.85,1)
-    }
-    65% {
-        -webkit-transform:scale3d(.95,1.05,1);
-        transform:scale3d(.95,1.05,1)
-    }
-    75% {
-        -webkit-transform:scale3d(1.05,.95,1);
-        transform:scale3d(1.05,.95,1)
-    }
-    100% {
-        -webkit-transform:scale3d(1,1,1);
-        transform:scale3d(1,1,1)
-    }
+  0% {
+    -webkit-transform:scale3d(1,1,1);
+    transform:scale3d(1,1,1)
+  }
+  30% {
+    -webkit-transform:scale3d(1.25,.75,1);
+    transform:scale3d(1.25,.75,1)
+  }
+  40% {
+    -webkit-transform:scale3d(.75,1.25,1);
+    transform:scale3d(.75,1.25,1)
+  }
+  50% {
+    -webkit-transform:scale3d(1.15,.85,1);
+    transform:scale3d(1.15,.85,1)
+  }
+  65% {
+    -webkit-transform:scale3d(.95,1.05,1);
+    transform:scale3d(.95,1.05,1)
+  }
+  75% {
+    -webkit-transform:scale3d(1.05,.95,1);
+    transform:scale3d(1.05,.95,1)
+  }
+  100% {
+    -webkit-transform:scale3d(1,1,1);
+    transform:scale3d(1,1,1)
+  }
 }
 @keyframes rubberBand {
-    0% {
-        -webkit-transform:scale3d(1,1,1);
-        -ms-transform:scale3d(1,1,1);
-        transform:scale3d(1,1,1)
-    }
-    30% {
-        -webkit-transform:scale3d(1.25,.75,1);
-        -ms-transform:scale3d(1.25,.75,1);
-        transform:scale3d(1.25,.75,1)
-    }
-    40% {
-        -webkit-transform:scale3d(.75,1.25,1);
-        -ms-transform:scale3d(.75,1.25,1);
-        transform:scale3d(.75,1.25,1)
-    }
-    50% {
-        -webkit-transform:scale3d(1.15,.85,1);
-        -ms-transform:scale3d(1.15,.85,1);
-        transform:scale3d(1.15,.85,1)
-    }
-    65% {
-        -webkit-transform:scale3d(.95,1.05,1);
-        -ms-transform:scale3d(.95,1.05,1);
-        transform:scale3d(.95,1.05,1)
-    }
-    75% {
-        -webkit-transform:scale3d(1.05,.95,1);
-        -ms-transform:scale3d(1.05,.95,1);
-        transform:scale3d(1.05,.95,1)
-    }
-    100% {
-        -webkit-transform:scale3d(1,1,1);
-        -ms-transform:scale3d(1,1,1);
-        transform:scale3d(1,1,1)}
+  0% {
+    -webkit-transform:scale3d(1,1,1);
+    -ms-transform:scale3d(1,1,1);
+    transform:scale3d(1,1,1)
+  }
+  30% {
+    -webkit-transform:scale3d(1.25,.75,1);
+    -ms-transform:scale3d(1.25,.75,1);
+    transform:scale3d(1.25,.75,1)
+  }
+  40% {
+    -webkit-transform:scale3d(.75,1.25,1);
+    -ms-transform:scale3d(.75,1.25,1);
+    transform:scale3d(.75,1.25,1)
+  }
+  50% {
+    -webkit-transform:scale3d(1.15,.85,1);
+    -ms-transform:scale3d(1.15,.85,1);
+    transform:scale3d(1.15,.85,1)
+  }
+  65% {
+    -webkit-transform:scale3d(.95,1.05,1);
+    -ms-transform:scale3d(.95,1.05,1);
+    transform:scale3d(.95,1.05,1)
+  }
+  75% {
+    -webkit-transform:scale3d(1.05,.95,1);
+    -ms-transform:scale3d(1.05,.95,1);
+    transform:scale3d(1.05,.95,1)
+  }
+  100% {
+    -webkit-transform:scale3d(1,1,1);
+    -ms-transform:scale3d(1,1,1);
+    transform:scale3d(1,1,1)
+  }
 }
 @-webkit-keyframes criss-cross-left {
-    0% {
-        left: -20px;
-    }
-    50% {
-        left: 50%;
-        width: 20px;
-        height: 20px;
-    }
-    100% {
-        left: 50%;
-        width: 375px;
-        height: 375px;
-    }
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
 }
 @keyframes criss-cross-left {
-    0% {
-        left: -20px;
-    }
-    50% {
-        left: 50%;
-        width: 20px;
-        height: 20px;
-    }
-    100% {
-        left: 50%;
-        width: 375px;
-        height: 375px;
-    }
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
 }
 @-webkit-keyframes criss-cross-right {
-    0% {
-        right: -20px;
-    }
-    50% {
-        right: 50%;
-        width: 20px;
-        height: 20px;
-    }
-    100% {
-        right: 50%;
-        width: 375px;
-        height: 375px;
-    }
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
 }
 @keyframes criss-cross-right {
-    0% {
-        right: -20px;
-    }
-    50% {
-        right: 50%;
-        width: 20px;
-        height: 20px;
-    }
-    100% {
-        right: 50%;
-        width: 375px;
-        height: 375px;
-    }
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
 }
 
     
 
 // Media requests
 @media (max-width: 960px) {
-    @image-height: 400px;  
-    .card {
-        max-width: 860px;
+  @image-height: 400px;  
+  .card {
+    max-width: 860px;
+  }
+  .card-image {
+    height: @image-height;
+    >img {
+      height: @image-height;
     }
-    .card-image {
-        height: @image-height;
-        >img {
-            height: @image-height;
-        }
+  }
+  .overlay {
+    height: @image-height;
+  }
+  .overlay-content {
+    ul {
+      > li {
+        padding: 7px;
+      }
     }
-    .overlay {
-        height: @image-height;
-    }
-    .overlay-content {
-        ul {
-            > li {
-                padding: 7px;
-            }
-        }
-    }
+  }
 }
 @media (max-width: 768px) {
-    @image-height: 260px;  
-    h2 {
-        font-size: 30px;
+  @image-height: 260px;  
+  h2 {
+    font-size: 30px;
+  }
+  .tag {
+    padding: 0 10px;
+  }
+  .card {
+    max-width: 590px;
+    &:nth-child(n+2) {
+      padding-top: 20px;
     }
-    .tag {
-        padding: 0 10px;
+  }
+  .card-image {
+    height: @image-height;
+    >img {
+      height: @image-height;
     }
-    .card {
-        max-width: 590px;
-        &:nth-child(n+2) {
-            padding-top: 20px;
-        }
-    }
-    .card-image {
-        height: @image-height;
-        >img {
-            height: @image-height;
-        }
-    }
-    .card-content {
-        padding: 10px 0;
-    }
-    .overlay {
-        height: @image-height;
-    }
+  }
+  .card-content {
+    padding: 10px 0;
+  }
+  .overlay {
+    height: @image-height;
+  }
     .overlay-content {
-        > h3 {
-            font-size: 20px;
+      > h3 {
+        font-size: 20px;
+      }
+      ul {
+        padding-bottom: 10px;
+        > li {
+          padding: 5px;
+          font-size: 14px;
         }
-        ul {
-            padding-bottom: 10px;
-            > li {
-                padding: 5px;
-                font-size: 14px;
-            }
-        }
+      }
     }
 
     // --- buttons --- 
-    @btn-height: 30px;
-    @btn-width: 100px;
+@btn-height: 30px;
+@btn-width: 100px;
 
 [class^="btn-"] {
-    height: @btn-height;
-    line-height: @btn-height;
-    width: @btn-width;
+  height: @btn-height;
+  line-height: @btn-height;
+  width: @btn-width;
 }
 
 .btn-1 {
 	&:before {
 		right: calc(-@btn-height + 5px);
-        border-bottom: @btn-height solid @btn-color;
+    border-bottom: @btn-height solid @btn-color;
 		border-right: calc(@btn-height - 5px) solid transparent;
 	}
 }
 .btn-3 {
 	&:before {
-        border-bottom: @btn-height solid @btn-color;
+    border-bottom: @btn-height solid @btn-color;
 		border-right: calc(@btn-height - 5px) solid transparent;
-        right: calc(-@btn-height + 5px);
+    right: calc(-@btn-height + 5px);
 	}
 	&:after {
-        border-left: calc(@btn-height - 5px) solid transparent;
+    border-left: calc(@btn-height - 5px) solid transparent;
 		border-top: @btn-height solid @btn-color;
 		left: calc(-@btn-height + 10px);
 	}
 }
 .btn-4 {
-    &:after, &:before {
-        border-bottom: calc(@btn-height / 2 ) solid @btn-color;
-        border-top: calc(@btn-height / 2 ) solid @btn-color;
-    }
+  &:after, &:before {
+    border-bottom: calc(@btn-height / 2 ) solid @btn-color;
+    border-top: calc(@btn-height / 2 ) solid @btn-color;
+  }
 	&:before {
 		border-right: calc(@btn-height / 2 ) solid transparent;
 	}
@@ -1694,115 +1816,115 @@ h2 {
 }
 .btn-6 {
 	&:hover {
-        &:after, &:before {
-            border-width: @btn-height calc(@btn-width + 10px);
-        }
+    &:after, &:before {
+      border-width: @btn-height calc(@btn-width + 10px);
+    }
 	}
 }
 .btn-8 {
 	&:hover {
-        &:after, &:before {
-            height: @btn-height;
-        }
+    &:after, &:before {
+      height: @btn-height;
+    }
 		span {
-            &:after, &:before {
-                height: @btn-height;
-            }
+      &:after, &:before {
+        height: @btn-height;
+      }
 		}
 	}
 }
 .btn-12 {
-    &:after, &:before {
-        background-color: @btn-color;
-        width: calc(@btn-height / 2);
-        height: calc(@btn-height / 2);
-    }
+  &:after, &:before {
+    background-color: @btn-color;
+    width: calc(@btn-height / 2);
+    height: calc(@btn-height / 2);
+  }
 	&:before {
-        left:  calc(-@btn-height / 2);
+    left:  calc(-@btn-height / 2);
 	}
 	&:after {
-        right:  calc(-@btn-height / 2);
+    right:  calc(-@btn-height / 2);
 	}
 }
 // --- buttons-end --- 
-#card-4 {
+  #card-4 {
     .overlay {
-        &::before, &::after {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            bottom: 10px;
-            left: 10px;
-        }
+      &::before, &::after {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+      }
     }
-}
-#card-8 {
+  }
+  #card-8 {
     .overlay {
-        &::before {
-            top: 20px;
-            right: 10px;
-            bottom: 20px;
-            left: 10px;
-        }
-        &::after {
-            top: 10px;
-            right: 20px;
-            bottom: 10px;
-            left: 20px;
-        }
+      &::before {
+        top: 20px;
+        right: 10px;
+        bottom: 20px;
+        left: 10px;
+      }
+      &::after {
+        top: 10px;
+        right: 20px;
+        bottom: 10px;
+        left: 20px;
+      }
     }
-}
+  }
 }
 @media (max-width: 600px) {
-    @image-height: 200px;  
-    h2 {
-        font-size: 25px;
+  @image-height: 200px;  
+  h2 {
+    font-size: 25px;
+  }
+  .card {
+    max-width: 470px;
+    &:nth-child(n+2) {
+      padding-top: 20px;
     }
-    .card {
-        max-width: 470px;
-        &:nth-child(n+2) {
-            padding-top: 20px;
-        }
+  }
+  .card-content {
+    padding: 10px 0;
+  }
+  .card-image {
+    height: @image-height;
+    >img {
+      height: @image-height;
     }
-    .card-content {
-        padding: 10px 0;
+  }
+  .overlay {
+    height: @image-height;
+  }
+  .overlay-content {
+    width: 100%;
+    padding: 0 30px;
+    > h3 {
+      font-size: 14px;
+      margin: 10px 0;
     }
-    .card-image {
-        height: @image-height;
-        >img {
-            height: @image-height;
-        }
+    ul {
+      padding-bottom: 10px;
+      > li {
+        padding: 3px;
+        font-size: 12px;
+      }
     }
-    .overlay {
-        height: @image-height;
+    a {
+      font-size: 10px;
     }
-    .overlay-content {
-        width: 100%;
-        padding: 0 30px;
-        > h3 {
-            font-size: 14px;
-            margin: 10px 0;
-        }
-        ul {
-            padding-bottom: 10px;
-            > li {
-                padding: 3px;
-                font-size: 12px;
-            }
-        }
-        a {
-            font-size: 10px;
-        }
-    }
+  }
 
     // --- buttons --- 
-    @btn-height: 20px;
-    @btn-width: 70px;
+@btn-height: 20px;
+@btn-width: 70px;
 
 [class^="btn-"] {
-    height: @btn-height;
-    line-height: @btn-height;
-    width: @btn-width;
+  height: @btn-height;
+  line-height: @btn-height;
+  width: @btn-width;
 }
 
 .btn-1 {
@@ -1814,21 +1936,21 @@ h2 {
 }
 .btn-3 {
 	&:before {
-        border-bottom: @btn-height solid @btn-color;
+    border-bottom: @btn-height solid @btn-color;
 		border-right: calc(@btn-height - 5px) solid transparent;
-        right: calc(-@btn-height + 5px);
+    right: calc(-@btn-height + 5px);
 	}
 	&:after {
-        border-left: calc(@btn-height - 5px) solid transparent;
+    border-left: calc(@btn-height - 5px) solid transparent;
 		border-top: @btn-height solid @btn-color;
 		left: calc(-@btn-height + 10px);
 	}
 }
 .btn-4 {
-    &:after, &:before {
-        border-bottom: calc(@btn-height / 2 ) solid @btn-color;
-        border-top: calc(@btn-height / 2 ) solid @btn-color;
-    }
+  &:after, &:before {
+    border-bottom: calc(@btn-height / 2 ) solid @btn-color;
+    border-top: calc(@btn-height / 2 ) solid @btn-color;
+  }
 	&:before {
 		border-right: calc(@btn-height / 2 ) solid transparent;
 	}
@@ -1838,34 +1960,34 @@ h2 {
 }
 .btn-6 {
 	&:hover {
-        &:after, &:before {
-            border-width: @btn-height calc(@btn-width + 10px);
-        }
+    &:after, &:before {
+      border-width: @btn-height calc(@btn-width + 10px);
+    }
 	}
 }
 .btn-8 {
 	&:hover {
-        &:after, &:before {
-            height: @btn-height;
-        }
+    &:after, &:before {
+      height: @btn-height;
+    }
 		span {
-            &:after, &:before {
-                height: @btn-height;
-            }
+      &:after, &:before {
+        height: @btn-height;
+      }
 		}
 	}
 }
 .btn-12 {
-    &:after, &:before {
-        background-color: @btn-color;
-        width: calc(@btn-height / 2);
-        height: calc(@btn-height / 2);
-    }
+  &:after, &:before {
+    background-color: @btn-color;
+    width: calc(@btn-height / 2);
+    height: calc(@btn-height / 2);
+  }
 	&:before {
-        left:  calc(-@btn-height / 2);
+    left:  calc(-@btn-height / 2);
 	}
 	&:after {
-        right:  calc(-@btn-height / 2);
+    right:  calc(-@btn-height / 2);
 	}
 }
 // --- buttons-end --- 
@@ -1873,46 +1995,46 @@ h2 {
 
 }
 @media (max-width: 360px) {
-    @image-height: 180px;  
-    .card {
-        max-width: 350px;
+  @image-height: 180px;  
+  .card {
+    max-width: 350px;
+  }
+  .card-image {
+    height: @image-height;
+    >img {
+      height: @image-height;
     }
-    .card-image {
-        height: @image-height;
-        >img {
-            height: @image-height;
-        }
+  }
+  .overlay {
+    height: @image-height;
+  }
+  .overlay-content {
+    > h3 {
+      font-size: 14px;
+      margin: 7px 0;
     }
-    .overlay {
-        height: @image-height;
-    }
-    .overlay-content {
-        > h3 {
-            font-size: 14px;
-            margin: 7px 0;
-        }
-        ul {
-            > li {
-                padding: 2px;
-                font-size: 14px;
-            }
-        }
-    }
-    .tag {
+    ul {
+      > li {
+        padding: 2px;
         font-size: 14px;
-        padding: 0 5px;
+      }
     }
-    #card-4 {
-        .overlay {
-            &::before, &::after {
-                position: absolute;
-                top: 2px;
-                right: 2px;
-                bottom: 2px;
-                left: 2px;
-            }
-        }
+  }
+  .tag {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+  #card-4 {
+    .overlay {
+      &::before, &::after {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+      }
     }
+  }
 }
 
 

@@ -1571,6 +1571,19 @@ h2 span.animated {
 }
 #card-9 .card-image {
   background-color: #135796;
+}
+#card-9 .card-image::before {
+  background: #135796;
+}
+#card-9 .card-image::after {
+  background: #135796;
+}
+#card-9 .overlay {
+  background-color: #135796;
+}
+#card-9 .card-image,
+#card-11 .card-image,
+#card-13 .card-image {
   color: #fff;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -1585,15 +1598,18 @@ h2 span.animated {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-9 .card-image img {
+#card-9 .card-image img,
+#card-11 .card-image img,
+#card-13 .card-image img {
   -webkit-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-9 .card-image::before {
+#card-9 .card-image::before,
+#card-11 .card-image::before,
+#card-13 .card-image::before {
   content: '';
   position: absolute;
-  background: #135796;
   height: 0;
   width: 100%;
   right: 0;
@@ -1602,10 +1618,11 @@ h2 span.animated {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-9 .card-image::after {
+#card-9 .card-image::after,
+#card-11 .card-image::after,
+#card-13 .card-image::after {
   content: '';
   position: absolute;
-  background: #135796;
   height: 0;
   width: 100%;
   top: 0;
@@ -1614,13 +1631,19 @@ h2 span.animated {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-9 .card-image:hover::before {
+#card-9 .card-image:hover::before,
+#card-11 .card-image:hover::before,
+#card-13 .card-image:hover::before {
   height: 50%;
 }
-#card-9 .card-image:hover::after {
+#card-9 .card-image:hover::after,
+#card-11 .card-image:hover::after,
+#card-13 .card-image:hover::after {
   height: 50%;
 }
-#card-9 .card-image:hover .overlay {
+#card-9 .card-image:hover .overlay,
+#card-11 .card-image:hover .overlay,
+#card-13 .card-image:hover .overlay {
   opacity: 1;
   -webkit-transition-delay: 0.21s;
   -moz-transition-delay: 0.21s;
@@ -1628,8 +1651,9 @@ h2 span.animated {
   -ms-transition-delay: 0.21s;
   transition-delay: 0.21s;
 }
-#card-9 .overlay {
-  background-color: #135796;
+#card-9 .overlay,
+#card-11 .overlay,
+#card-13 .overlay {
   opacity: 0;
   z-index: 1;
   -webkit-transition: all 0.35s ease;
@@ -1653,6 +1677,114 @@ h2 span.animated {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   background-color: #6873ea;
+}
+#card-11 .card-image {
+  background-color: #6a04ae;
+}
+#card-11 .card-image::before {
+  background: #6a04ae;
+}
+#card-11 .card-image::after {
+  background: #6a04ae;
+}
+#card-11 .overlay {
+  background-color: #6a04ae;
+}
+#card-12 .card-image {
+  background-color: #34495e;
+}
+#card-12 .card-image::before {
+  background: #34495e;
+}
+#card-12 .card-image::after {
+  background: #34495e;
+}
+#card-12 .overlay {
+  background-color: #34495e;
+}
+#card-12 .card-image {
+  color: #fff;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-12 .card-image img {
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-12 .card-image::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-12 .card-image::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-12 .card-image:hover::before {
+  width: 50%;
+}
+#card-12 .card-image:hover::after {
+  width: 50%;
+}
+#card-12 .card-image:hover .overlay {
+  opacity: 1;
+  -webkit-transition-delay: 0.21s;
+  -moz-transition-delay: 0.21s;
+  -o-transition-delay: 0.21s;
+  -ms-transition-delay: 0.21s;
+  transition-delay: 0.21s;
+}
+#card-12 .overlay {
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-13 .card-image {
+  background-color: #05113d;
+}
+#card-13 .card-image::before {
+  background: #05113d;
+}
+#card-13 .card-image::after {
+  background: #05113d;
+}
+#card-13 .overlay {
+  background-color: #05113d;
+}
+.link {
+  margin: 30px;
+  text-align: center;
+}
+.link a {
+  color: #08fdd8;
+  text-decoration: underline;
+  font-family: "Open Sans", sans-serif;
 }
 @keyframes piece1 {
   20% {
