@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> BestBike </title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#629cad">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <!-- favicon -->
+  <link rel="stylesheet" href="css/slider-reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header">
+    <div class="content-wr">
+      <div class="header__inner">
+        <div class="logo">
+          <a href="/"><img src="img/logo.png" alt="logo"></a>
+        </div>
+        <nav>
+          <ul class="desctop-menu">
+            <li><a href="#Велосипеды">Велосипеды</a>
+              <div class="drop-menu-wr">
+                <ul class="drop-menu">
+                  <li><a href="#Велосипеды/Горные">Горные велосипеды</a></li>
+                  <li><a href="#Велосипеды/Женские">Женские велосипеды</a></li>
+                  <li><a href="#Велосипеды/Фэтбайки">Фэтбайки</a></li>
+                  <li><a href="#Велосипеды/Дорожные">Дорожные велосипеды</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#Аксессуары">Аксессуары</a></li>
+            <li><a href="#Запчасти">Запчасти</a></li>
+          </ul>
+          <div class="hamburger-wr">
+            <svg class="hamburger" viewBox="0 0 100 100">
+              <path
+                class="line top"
+                d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+              <path
+                class="line middle"
+                d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+              <path
+                class="line bottom"
+                d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+            </svg>
+          </div>
+        </nav>
+        <div class="search-wr">
+          <input type="text" class="search">
+          <button class="search-submit"></button>
+        </div>
+        <div class="social-wr">
+          <div class="social">
+            <div class="icon-wr">
+              <a class="icon facebook" href="https://facebook.com"></a>
+            </div>
+            <div class="icon-wr">
+              <a class="icon insta" href="https://www.instagram.com"></a>
+            </div>
+            <div class="icon-wr">
+              <a class="icon youtube" href="https://youtube.com"></a>
+            </div>
+          </div>
+          <div class="phone-link">
+            <a href="tel:+38(063)9404740">+38 (063) 940 47 40</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <section id="section-slider">
+    <div class="slider__inner">
+      <div class="main-carousel">
+        <div class="carousel-cell"><div class="image" style="background-image: url(img/slide1.png)"></div></div>
+        <div class="carousel-cell"><div class="image" style="background-image: url(img/slide2.png)"></div></div>
+        <div class="carousel-cell"><div class="image" style="background-image: url(img/slide3.png)"></div></div>
+        <div class="carousel-cell"><div class="image" style="background-image: url(img/slide4.png)"></div></div>
+        <div class="carousel-cell"><div class="image" style="background-image: url(img/slide5.png)"></div></div>
+        <div class="carousel-cell"><div class="image" style="background-image: url(img/slide6.png)"></div></div>
+        <div class="carousel-cell"><div class="image" style="background-image: url(img/slide7.png)"></div></div>
+      </div>
+    </div>
+  </section>
+  <section id="section-advantages">
+    <div class="advantages">
+      <div class="content-wr">
+        <div class="title">
+          <h2>Наши преимущества</h2>
+        </div>
+        <div class="advantages__inner">
+          <div class="block">
+            <div class="icon-wr">
+              <img src="icons/tools.png" alt="tools">
+            </div>
+            <div class="block__content">
+              <div class="subtitle">
+                <h3>ПРЕДПРОДАЖНАЯ СБОРКА И НАСТРОЙКА</h3>
+              </div>
+              <div class="content">
+                <p>Мы предоставляем услугу сборки,настройки и предпродажной 
+                   подготовки перед тем как велосипед отправится на почту,это 
+                   делается БЕСПЛАТНО. Бесплатная сборка и настройка не 
+                   распостраняется на велосипеды брендов: 
+                   Crosser, Ardis, Crossride, Totem, 
+                   Azimut, Avanti, Intenzo.
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="icon-wr">
+              <img src="icons/support.png" alt="support">
+            </div>
+            <div class="block__content">
+              <div class="subtitle">
+                <h3>ПОМОЩЬ В ВЫБОРЕ</h3>
+              </div>
+              <div class="content">
+                <p> Имея большой опыт в вело продаже, мы поможем сделать 
+                    правильный выбор,правильно подберем размер рамы, учтем 
+                    все ваши пожелания. <br>
+                    С 2014 года мы занимаемся продажей велосипедов,сами 
+                    являемся велосипедистами со стажем.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="icon-wr">
+              <img src="icons/book.png" alt="book">
+            </div>
+            <div class="block__content">
+              <div class="subtitle">
+                <h3>СБОРКА И НАСТРОЙКА</h3>
+              </div>
+              <div class="content">
+                <p>Мы знакомы с велосипедами не на теории,а на практике. На 
+                  большинство велосипедов снимаем видео обзоры. На видео мы 
+                  рассказываем о комплектации байка,где его лучше 
+                  эксплуатировать, а также свое мнение о велосипеде.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="icon-wr">
+              <img src="icons/headset.png" alt="headset">
+            </div>
+            <div class="block__content">
+              <div class="subtitle">
+                <h3>ВИДЕО ОБЗОРЫ</h3>
+              </div>
+              <div class="content">
+                <p>Мы знакомы с велосипедами не на теории,а на практике. 
+                  На большинство велосипедов снимаем видео обзоры.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section-about-us">
+    <div class="about">
+      <div class="content-wr">
+        <div class="title">
+          <h2>О нас</h2>
+        </div>
+        <div class="about__inner">
+          <p>
+            Каждый из всех людей хотя бы один раз в своей жизни пробовал прокатиться на велосипеде и наверняка на всю 
+            жизнь запомнил непередаваемые эти ощущения счастья и равновесия.
+          </p>
+          <p>
+            История нашего интернет-магазина "Best-bike" началась в 2009 году. 
+            Мы заядлые любители велоспорта и как только у нас появляется 
+            свободное время,мы едем на трассу здоровья и наматываем там не 
+            один круг. А также участвуем во всех любительских вело 
+            соревнованиях. Мы и Вас призываем приобщаться к велосипедной 
+            культуре,ведь в нашей стране она стремительно развивается. <br>
+            Катаясь на велосипеде мы ведем здоровый образ жизни, 
+            тем самым продлевая здоровье себе и своим детям.
+          </p>
+          <p>
+            Мы продаем велосипеды самых разных производителей. 
+            У нас каждый найдет для себя велосипед, 
+            велосипедные аксессуары, велосипедные запчасти,получит 
+            обширную и грамотною консультацию.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section-contact-us">
+    <div class="contact-us__inner">
+      <div class="content-wr">
+        <div class="title">
+          <h2>Нужна консультация?</h2>
+        </div>
+        <p>Оставьте свои данные и мы свяжемся с вами в ближайшее время</p>
+        <div class="form-wr">
+          <form class="form">
+            <div class="form__inner">
+              <div class="input-wr">
+                <input type="text" id="name" minlength="3" required>
+                <label for="name">Имя</label>
+              </div>
+              <div class="input-wr">
+                <input type="number" id="phone" required>
+                <label for="phone">Телефон</label>
+              </div>
+              <button class="send">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer">
+    <div class="content-wr">
+      <div class="footer__inner">
+        <div class="logo">
+          <a href="/"><img src="img/logo.png" alt="logo"></a>
+        </div>
+        <div class="social-wr">
+          <div class="social">
+            <div class="icon-wr">
+              <a class="icon facebook" href="https://facebook.com"></a>
+            </div>
+            <div class="icon-wr">
+              <a class="icon insta" href="https://www.instagram.com"></a>
+            </div>
+            <div class="icon-wr">
+              <a class="icon youtube" href="https://youtube.com"></a>
+            </div>
+          </div>
+          <p>Bike Sport 2011-2018</p>
+        </div>
+        <div class="links-wr">
+          <a href="#горные">ГОРНЫЕ</a>
+          <a href="#дорожные">ДОРОЖНЫЕ</a>
+        </div>
+        <div class="links-wr">
+          <a href="#фэтбайки">ФЭТБАЙКИ</a>
+          <a href="#женские">ЖЕНСКИЕ</a>
+        </div>
+        <div class="links-wr">
+          <a href="tel:+38(063)9404740">+38 (063) 940 47 40</a>
+          <p>с 9.00 до 21.00 без выходных</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

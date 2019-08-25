@@ -1,0 +1,32 @@
+// out: ../css/slider-reset.css
+
+@color: rgb(238, 96, 42);
+
+.carousel-cell { width: 100%;}
+
+.flickity-page-dots { 
+  bottom: 30px; 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  .dot {
+    background-color: #fff;
+    opacity: 0.8;
+    &.is-selected {
+      background-color: @color;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.carousel .flickity-viewport {
+  position: absolute;
+  width: 100%;
+}
