@@ -60,11 +60,15 @@ const YOUTUBE = {
     const listItems = document.getElementsByClassName('title');
     for (let i = 0; i < listItems.length; i++) {
       listItems[i].addEventListener('click', function() {
-        console.log(this)
-        this.classList.toggle('active');
-        this.nextElementSibling.classList.toggle('active');
-        this.lastElementChild.classList.toggle('active');
-        this.lastElementChild.previousElementSibling.classList.toggle('active');
+        let title = this;
+            title.classList.toggle('active');
+        let video = this.nextElementSibling;
+            video.classList.toggle('active');
+            video.scrollIntoView({behavior: 'smooth'});
+        let number = this.lastElementChild;
+            number.classList.toggle('active');
+        let open = this.lastElementChild.previousElementSibling;
+            open.classList.toggle('active');
       });
     }
   }
