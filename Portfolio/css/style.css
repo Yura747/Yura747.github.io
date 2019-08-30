@@ -789,7 +789,98 @@ h2 span.animated {
   padding: 200px 150px;
   border-radius: 20px;
 }
-#card-1 .overlay:hover .mask {
+#card-1 .card-image {
+  background-color: #6a04ae;
+}
+#card-1 .card-image::before {
+  background: #6a04ae;
+}
+#card-1 .card-image::after {
+  background: #6a04ae;
+}
+#card-1 .overlay {
+  background-color: #6a04ae;
+}
+#card-2 .card-image {
+  background-color: #34495e;
+  color: #fff;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-2 .card-image img {
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-2 .card-image::before {
+  background: #34495e;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-2 .card-image::after {
+  background: #34495e;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-2 .card-image:hover::before {
+  width: 50%;
+}
+#card-2 .card-image:hover::after {
+  width: 50%;
+}
+#card-2 .card-image:hover .overlay {
+  opacity: 1;
+  -webkit-transition-delay: 0.21s;
+  -moz-transition-delay: 0.21s;
+  -o-transition-delay: 0.21s;
+  -ms-transition-delay: 0.21s;
+  transition-delay: 0.21s;
+}
+#card-2 .overlay {
+  background-color: #34495e;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+#card-3 .card-image {
+  background-color: #05113d;
+}
+#card-3 .card-image::before {
+  background: #05113d;
+}
+#card-3 .card-image::after {
+  background: #05113d;
+}
+#card-3 .overlay {
+  background-color: #05113d;
+}
+#card-4 .overlay:hover .mask {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate(0px, 0px) rotate(45deg);
@@ -798,7 +889,7 @@ h2 span.animated {
   -ms-transform: translate(0px, 0px) rotate(45deg);
   transform: translate(0px, 0px) rotate(45deg);
 }
-#card-1 .overlay:hover .overlay-content > h3 {
+#card-4 .overlay:hover .overlay-content > h3 {
   -webkit-transform: translate(0px, 0px) rotate(0deg);
   -moz-transform: translate(0px, 0px) rotate(0deg);
   -o-transform: translate(0px, 0px) rotate(0deg);
@@ -810,7 +901,7 @@ h2 span.animated {
   -ms-transition-delay: 0.7s;
   transition-delay: 0.7s;
 }
-#card-1 .overlay:hover .overlay-content .list-wr {
+#card-4 .overlay:hover .overlay-content .list-wr {
   -webkit-transform: translate(0px, 0px) rotate(0deg);
   -moz-transform: translate(0px, 0px) rotate(0deg);
   -o-transform: translate(0px, 0px) rotate(0deg);
@@ -822,7 +913,7 @@ h2 span.animated {
   -ms-transition-delay: 0.8s;
   transition-delay: 0.8s;
 }
-#card-1 .overlay:hover .overlay-content > a {
+#card-4 .overlay:hover .overlay-content > a {
   -webkit-transform: translate(0px, 0px) rotate(0deg);
   -moz-transform: translate(0px, 0px) rotate(0deg);
   -o-transform: translate(0px, 0px) rotate(0deg);
@@ -834,7 +925,7 @@ h2 span.animated {
   -ms-transition-delay: 0.9s;
   transition-delay: 0.9s;
 }
-#card-1 .overlay-content .list-wr {
+#card-4 .overlay-content .list-wr {
   -webkit-transform: translate(200px, -300px) rotate(0deg);
   -moz-transform: translate(200px, -300px) rotate(0deg);
   -o-transform: translate(200px, -300px) rotate(0deg);
@@ -846,7 +937,7 @@ h2 span.animated {
   -ms-transition: 0.2s 0.2s ease-in-out;
   transition: 0.2s 0.2s ease-in-out;
 }
-#card-1 .overlay-content > h3 {
+#card-4 .overlay-content > h3 {
   -webkit-transition: all 0.2s 0.2s ease-in-out;
   -moz-transition: all 0.2s 0.2s ease-in-out;
   -o-transition: all 0.2s 0.2s ease-in-out;
@@ -858,7 +949,7 @@ h2 span.animated {
   -ms-transform: translate(200px, -200px) rotate(0deg);
   transform: translate(200px, -200px) rotate(0deg);
 }
-#card-1 .overlay-content > a {
+#card-4 .overlay-content > a {
   -webkit-transform: translate(0px, 200px) rotate(0deg);
   -moz-transform: translate(0px, 200px) rotate(0deg);
   -o-transform: translate(0px, 200px) rotate(0deg);
@@ -870,7 +961,7 @@ h2 span.animated {
   -ms-transition: 0.2s 0.1s ease-in-out;
   transition: 0.2s 0.1s ease-in-out;
 }
-#card-1 .mask {
+#card-4 .mask {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translate(550px, 450px) rotate(45deg);
@@ -884,7 +975,7 @@ h2 span.animated {
   -ms-transition: 0.5s 0.5s ease-in-out;
   transition: 0.5s 0.5s ease-in-out;
 }
-#card-2 img {
+#card-5 img {
   -webkit-transition: all 0.4s 0.2s ease-in-out;
   -moz-transition: all 0.4s 0.2s ease-in-out;
   -o-transition: all 0.4s 0.2s ease-in-out;
@@ -892,7 +983,7 @@ h2 span.animated {
   transition: 0.4s 0.2s ease-in-out;
   opacity: 1;
 }
-#card-2 .card-image:hover .mask {
+#card-5 .card-image:hover .mask {
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1) rotate(0deg);
@@ -906,7 +997,7 @@ h2 span.animated {
   -ms-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-#card-2 .card-image:hover img {
+#card-5 .card-image:hover img {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -o-transform: scale(0);
@@ -921,7 +1012,7 @@ h2 span.animated {
   -ms-transition-delay: 0s;
   transition-delay: 0s;
 }
-#card-2 .mask {
+#card-5 .mask {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -947,22 +1038,22 @@ h2 span.animated {
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-#card-3 .overlay {
+#card-6 .overlay {
   top: -100%;
 }
-#card-3 .card-image {
+#card-6 .card-image {
   background: #ab5211;
   -moz-perspective: 1500;
   -webkit-perspective: 1500;
   perspective: 1500;
 }
-#card-3 .card-image:hover .top {
+#card-6 .card-image:hover .top {
   -moz-transform: rotateX(-180deg);
   -ms-transform: rotateX(-180deg);
   -webkit-transform: rotateX(-180deg);
   transform: rotateX(-180deg);
 }
-#card-3 .front {
+#card-6 .front {
   background: url(../img/metricon.png);
   background-size: 100% 200%;
   background-position-y: top;
@@ -970,7 +1061,7 @@ h2 span.animated {
   height: 100%;
   width: 100%;
 }
-#card-3 .top {
+#card-6 .top {
   height: 50%;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
@@ -992,13 +1083,13 @@ h2 span.animated {
   width: 100%;
   z-index: 10;
 }
-#card-3 .face {
+#card-6 .face {
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
 }
-#card-3 .back {
+#card-6 .back {
   background: #ab5211;
   height: 100%;
   -moz-transform: rotateX(180deg);
@@ -1007,7 +1098,7 @@ h2 span.animated {
   transform: rotateX(180deg);
   width: 100%;
 }
-#card-3 .bottom {
+#card-6 .bottom {
   background: url(../img/metricon.png) bottom;
   background-size: 100% 200%;
   background-position-y: bottom;
@@ -1018,65 +1109,65 @@ h2 span.animated {
   width: 100%;
   z-index: 0;
 }
-#card-4:hover .pieces.piece-1 {
+#card-7:hover .pieces.piece-1 {
   -webkit-animation: piece1 1s ease;
   animation: piece1 1s ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-#card-4:hover .pieces.piece-2 {
+#card-7:hover .pieces.piece-2 {
   -webkit-animation: piece2 1s ease;
   animation: piece2 1s ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-#card-4:hover .pieces.piece-3 {
+#card-7:hover .pieces.piece-3 {
   -webkit-animation: piece3 1s ease;
   animation: piece3 1s ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-#card-4:hover .pieces.piece-4 {
+#card-7:hover .pieces.piece-4 {
   -webkit-animation: piece4 1s ease;
   animation: piece4 1s ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-#card-4:hover .pieces.piece-5 {
+#card-7:hover .pieces.piece-5 {
   -webkit-animation: piece5 1s ease;
   animation: piece5 1s ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-#card-4:hover .pieces.piece-6 {
+#card-7:hover .pieces.piece-6 {
   -webkit-animation: piece6 1s ease;
   animation: piece6 1s ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-#card-4:hover .pieces.piece-7 {
+#card-7:hover .pieces.piece-7 {
   -webkit-animation: piece7 1s ease;
   animation: piece7 1s ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-#card-4:hover .pieces.piece-8 {
+#card-7:hover .pieces.piece-8 {
   -webkit-animation: piece8 1s ease;
   animation: piece8 1s ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-#card-4:hover .pieces.piece-9 {
+#card-7:hover .pieces.piece-9 {
   -webkit-animation: piece9 1s ease;
   animation: piece9 1s ease;
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
-#card-4:hover .overlay {
+#card-7:hover .overlay {
   z-index: 2;
 }
-#card-4:hover .overlay::before,
-#card-4:hover .overlay::after {
+#card-7:hover .overlay::before,
+#card-7:hover .overlay::after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -1086,7 +1177,7 @@ h2 span.animated {
   -ms-transition-delay: 1.1s;
   transition-delay: 1.1s;
 }
-#card-4:hover .overlay-content {
+#card-7:hover .overlay-content {
   opacity: 1;
   visibility: visible;
   -webkit-transition-delay: 1s;
@@ -1095,11 +1186,11 @@ h2 span.animated {
   -ms-transition-delay: 1s;
   transition-delay: 1s;
 }
-#card-4:hover .image-pieces {
+#card-7:hover .image-pieces {
   opacity: 0;
 }
-#card-4 .overlay::before,
-#card-4 .overlay::after {
+#card-7 .overlay::before,
+#card-7 .overlay::after {
   position: absolute;
   top: 30px;
   right: 30px;
@@ -1110,26 +1201,26 @@ h2 span.animated {
   -webkit-transition: opacity 1.35s, -webkit-transform 1.35s;
   transition: 1.35s, transform 1.35s;
 }
-#card-4 .overlay::before {
+#card-7 .overlay::before {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   -webkit-transform: scale(0, 1);
   transform: scale(0, 1);
 }
-#card-4 .overlay::after {
+#card-7 .overlay::after {
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
   -webkit-transform: scale(1, 0);
   transform: scale(1, 0);
 }
-#card-4 .overlay-content {
+#card-7 .overlay-content {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 2s ease;
   -o-transition: all 2s ease;
   transition: all 2s ease;
 }
-#card-4 .image-pieces {
+#card-7 .image-pieces {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1152,63 +1243,63 @@ h2 span.animated {
   -ms-transition-delay: 1.1s;
   transition-delay: 1.1s;
 }
-#card-4 .pieces {
+#card-7 .pieces {
   background: url("../img/Pink.png") center center no-repeat;
   background-size: 300% 300%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-#card-4 .pieces.piece-1 {
+#card-7 .pieces.piece-1 {
   background-position: 0 0;
 }
-#card-4 .pieces.piece-2 {
+#card-7 .pieces.piece-2 {
   background-position: 50% 0;
 }
-#card-4 .pieces.piece-3 {
+#card-7 .pieces.piece-3 {
   background-position: 100% 0;
 }
-#card-4 .pieces.piece-4 {
+#card-7 .pieces.piece-4 {
   background-position: 0 50%;
 }
-#card-4 .pieces.piece-5 {
+#card-7 .pieces.piece-5 {
   background-position: 50% 50%;
 }
-#card-4 .pieces.piece-6 {
+#card-7 .pieces.piece-6 {
   background-position: 100% 50%;
 }
-#card-4 .pieces.piece-7 {
+#card-7 .pieces.piece-7 {
   background-position: 0 100%;
 }
-#card-4 .pieces.piece-8 {
+#card-7 .pieces.piece-8 {
   background-position: 50% 100%;
 }
-#card-4 .pieces.piece-9 {
+#card-7 .pieces.piece-9 {
   background-position: 100% 100%;
 }
-#card-5:hover .overlay > span:nth-child(1) {
+#card-8:hover .overlay > span:nth-child(1) {
   -webkit-transform: translate(-100%, 0px) rotate(0deg);
   -moz-transform: translate(-100%, 0px) rotate(0deg);
   -o-transform: translate(-100%, 0px) rotate(0deg);
   -ms-transform: translate(-100%, 0px) rotate(0deg);
   transform: translate(-100%, 0px) rotate(0deg);
 }
-#card-5:hover .overlay > span:nth-child(2) {
+#card-8:hover .overlay > span:nth-child(2) {
   -webkit-transform: translate(100%, 0px) rotate(0deg);
   -moz-transform: translate(100%, 0px) rotate(0deg);
   -o-transform: translate(100%, 0px) rotate(0deg);
   -ms-transform: translate(100%, 0px) rotate(0deg);
   transform: translate(100%, 0px) rotate(0deg);
 }
-#card-5 .card-image {
+#card-8 .card-image {
   background: #000;
 }
-#card-5 .overlay {
+#card-8 .overlay {
   position: absolute;
   top: 0;
   left: 0;
 }
-#card-5 .overlay > span {
+#card-8 .overlay > span {
   position: relative;
   z-index: 2;
   width: 50%;
@@ -1220,13 +1311,13 @@ h2 span.animated {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-#card-5 .overlay > span:nth-child(1) {
+#card-8 .overlay > span:nth-child(1) {
   background-position: 0%;
 }
-#card-5 .overlay > span:nth-child(2) {
+#card-8 .overlay > span:nth-child(2) {
   background-position: 100%;
 }
-#card-5 .overlay-content {
+#card-8 .overlay-content {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -1247,7 +1338,7 @@ h2 span.animated {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-#card-6 .card-image {
+#card-9 .card-image {
   max-width: 100%;
   background-color: #a09c9c;
   color: #fff;
@@ -1267,7 +1358,7 @@ h2 span.animated {
   -moz-perspective: 50em;
   perspective: 50em;
 }
-#card-6 .card-image img {
+#card-9 .card-image img {
   -webkit-transform-origin: 50% 0%;
   -moz-transform-origin: 50% 0%;
   -ms-transform-origin: 50% 0%;
@@ -1277,14 +1368,14 @@ h2 span.animated {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-6 .card-image:hover img {
+#card-9 .card-image:hover img {
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
   -ms-transform: rotateX(-90deg);
   -o-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
-#card-6 .card-image:hover .overlay {
+#card-9 .card-image:hover .overlay {
   opacity: 1;
   -webkit-transition-delay: 0.21s;
   -moz-transition-delay: 0.21s;
@@ -1295,7 +1386,7 @@ h2 span.animated {
   -o-transform: rotateX(0);
   transform: rotateX(0);
 }
-#card-6 .overlay {
+#card-9 .overlay {
   background-color: #8a2cd7;
   -webkit-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
@@ -1312,14 +1403,14 @@ h2 span.animated {
   transform-origin: 50% 100%;
   opacity: 0;
 }
-#card-7:hover .overlay > span {
+#card-10:hover .overlay > span {
   -webkit-transform: translate(0px, -100%) rotate(0deg);
   -moz-transform: translate(0px, -100%) rotate(0deg);
   -o-transform: translate(0px, -100%) rotate(0deg);
   -ms-transform: translate(0px, -100%) rotate(0deg);
   transform: translate(0px, -100%) rotate(0deg);
 }
-#card-7:hover .overlay-content {
+#card-10:hover .overlay-content {
   -webkit-transform: translate(0px, 0%) rotate(0deg);
   -moz-transform: translate(0px, 0%) rotate(0deg);
   -o-transform: translate(0px, 0%) rotate(0deg);
@@ -1331,15 +1422,15 @@ h2 span.animated {
   -ms-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
-#card-7 .card-image {
+#card-10 .card-image {
   background: #d2145a;
 }
-#card-7 .overlay {
+#card-10 .overlay {
   position: absolute;
   top: 0;
   left: 0;
 }
-#card-7 .overlay > span {
+#card-10 .overlay > span {
   width: 25%;
   height: 100%;
   background: url(../img/quizz.jpg);
@@ -1349,7 +1440,7 @@ h2 span.animated {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-#card-7 .overlay > span:nth-child(1) {
+#card-10 .overlay > span:nth-child(1) {
   background-position: 0%;
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
@@ -1357,7 +1448,7 @@ h2 span.animated {
   -ms-transition-delay: 0s;
   transition-delay: 0s;
 }
-#card-7 .overlay > span:nth-child(2) {
+#card-10 .overlay > span:nth-child(2) {
   background-position: 33.33%;
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
@@ -1365,7 +1456,7 @@ h2 span.animated {
   -ms-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-#card-7 .overlay > span:nth-child(3) {
+#card-10 .overlay > span:nth-child(3) {
   background-position: 66.66%;
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
@@ -1373,7 +1464,7 @@ h2 span.animated {
   -ms-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-#card-7 .overlay > span:nth-child(4) {
+#card-10 .overlay > span:nth-child(4) {
   background-position: 100%;
   -webkit-transition-delay: 0.3s;
   -moz-transition-delay: 0.3s;
@@ -1381,7 +1472,7 @@ h2 span.animated {
   -ms-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
-#card-7 .overlay-content {
+#card-10 .overlay-content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1403,67 +1494,67 @@ h2 span.animated {
   transition: .5s;
   transform: translateY(110%);
 }
-#card-8 .card-image:hover .slice {
+#card-11 .card-image:hover .slice {
   opacity: 0;
 }
-#card-8 .card-image:hover .slice-1 {
+#card-11 .card-image:hover .slice-1 {
   -webkit-transform: translate(0px, -40px) rotate(0deg);
   -moz-transform: translate(0px, -40px) rotate(0deg);
   -o-transform: translate(0px, -40px) rotate(0deg);
   -ms-transform: translate(0px, -40px) rotate(0deg);
   transform: translate(0px, -40px) rotate(0deg);
 }
-#card-8 .card-image:hover .slice-2 {
+#card-11 .card-image:hover .slice-2 {
   -webkit-transform: translate(0px, 40px) rotate(0deg);
   -moz-transform: translate(0px, 40px) rotate(0deg);
   -o-transform: translate(0px, 40px) rotate(0deg);
   -ms-transform: translate(0px, 40px) rotate(0deg);
   transform: translate(0px, 40px) rotate(0deg);
 }
-#card-8 .card-image:hover .slice-3 {
+#card-11 .card-image:hover .slice-3 {
   -webkit-transform: translate(0px, -40px) rotate(0deg);
   -moz-transform: translate(0px, -40px) rotate(0deg);
   -o-transform: translate(0px, -40px) rotate(0deg);
   -ms-transform: translate(0px, -40px) rotate(0deg);
   transform: translate(0px, -40px) rotate(0deg);
 }
-#card-8 .card-image:hover .slice-4 {
+#card-11 .card-image:hover .slice-4 {
   -webkit-transform: translate(0px, 40px) rotate(0deg);
   -moz-transform: translate(0px, 40px) rotate(0deg);
   -o-transform: translate(0px, 40px) rotate(0deg);
   -ms-transform: translate(0px, 40px) rotate(0deg);
   transform: translate(0px, 40px) rotate(0deg);
 }
-#card-8 .card-image:hover .slice-5 {
+#card-11 .card-image:hover .slice-5 {
   -webkit-transform: translate(0px, -40px) rotate(0deg);
   -moz-transform: translate(0px, -40px) rotate(0deg);
   -o-transform: translate(0px, -40px) rotate(0deg);
   -ms-transform: translate(0px, -40px) rotate(0deg);
   transform: translate(0px, -40px) rotate(0deg);
 }
-#card-8 .card-image:hover .slice-6 {
+#card-11 .card-image:hover .slice-6 {
   -webkit-transform: translate(0px, 40px) rotate(0deg);
   -moz-transform: translate(0px, 40px) rotate(0deg);
   -o-transform: translate(0px, 40px) rotate(0deg);
   -ms-transform: translate(0px, 40px) rotate(0deg);
   transform: translate(0px, 40px) rotate(0deg);
 }
-#card-8 .card-image:hover .slice-7 {
+#card-11 .card-image:hover .slice-7 {
   -webkit-transform: translate(0px, -40px) rotate(0deg);
   -moz-transform: translate(0px, -40px) rotate(0deg);
   -o-transform: translate(0px, -40px) rotate(0deg);
   -ms-transform: translate(0px, -40px) rotate(0deg);
   transform: translate(0px, -40px) rotate(0deg);
 }
-#card-8 .card-image:hover .slice-8 {
+#card-11 .card-image:hover .slice-8 {
   -webkit-transform: translate(0px, 40px) rotate(0deg);
   -moz-transform: translate(0px, 40px) rotate(0deg);
   -o-transform: translate(0px, 40px) rotate(0deg);
   -ms-transform: translate(0px, 40px) rotate(0deg);
   transform: translate(0px, 40px) rotate(0deg);
 }
-#card-8 .card-image:hover .overlay::before,
-#card-8 .card-image:hover .overlay::after {
+#card-11 .card-image:hover .overlay::before,
+#card-11 .card-image:hover .overlay::after {
   -webkit-transition-delay: 0.5s;
   -moz-transition-delay: 0.5s;
   -o-transition-delay: 0.5s;
@@ -1473,7 +1564,7 @@ h2 span.animated {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-#card-8 .card-image:hover .overlay-content {
+#card-11 .card-image:hover .overlay-content {
   opacity: 1;
   -webkit-transition-delay: 0.7s;
   -moz-transition-delay: 0.7s;
@@ -1481,17 +1572,17 @@ h2 span.animated {
   -ms-transition-delay: 0.7s;
   transition-delay: 0.7s;
 }
-#card-8 .image {
+#card-11 .image {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-#card-8 .slices {
+#card-11 .slices {
   height: 100%;
   width: 100%;
   position: absolute;
 }
-#card-8 .slices .slice {
+#card-11 .slices .slice {
   background: url("../img/denteez.jpg") center center no-repeat;
   background-size: 800% 100%;
   -webkit-box-sizing: border-box;
@@ -1507,39 +1598,39 @@ h2 span.animated {
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-#card-8 .slices .slice-1 {
+#card-11 .slices .slice-1 {
   background-position: 0;
 }
-#card-8 .slices .slice-2 {
+#card-11 .slices .slice-2 {
   background-position: 14.2%;
 }
-#card-8 .slices .slice-3 {
+#card-11 .slices .slice-3 {
   background-position: 28.4%;
 }
-#card-8 .slices .slice-4 {
+#card-11 .slices .slice-4 {
   background-position: 43%;
 }
-#card-8 .slices .slice-5 {
+#card-11 .slices .slice-5 {
   background-position: 57%;
 }
-#card-8 .slices .slice-6 {
+#card-11 .slices .slice-6 {
   background-position: 71.4%;
 }
-#card-8 .slices .slice-7 {
+#card-11 .slices .slice-7 {
   background-position: 86%;
 }
-#card-8 .slices .slice-8 {
+#card-11 .slices .slice-8 {
   background-position: 100%;
 }
-#card-8 .overlay::before,
-#card-8 .overlay::after {
+#card-11 .overlay::before,
+#card-11 .overlay::after {
   position: absolute;
   content: '';
   opacity: 0;
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, transform 1s;
 }
-#card-8 .overlay::before {
+#card-11 .overlay::before {
   top: 50px;
   right: 30px;
   bottom: 50px;
@@ -1551,7 +1642,7 @@ h2 span.animated {
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
 }
-#card-8 .overlay::after {
+#card-11 .overlay::after {
   top: 30px;
   right: 50px;
   bottom: 30px;
@@ -1563,27 +1654,27 @@ h2 span.animated {
   -webkit-transform-origin: 100% 0;
   transform-origin: 100% 0;
 }
-#card-8 .overlay-content {
+#card-11 .overlay-content {
   opacity: 0;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
-#card-9 .card-image {
+#card-12 .card-image {
   background-color: #135796;
 }
-#card-9 .card-image::before {
+#card-12 .card-image::before {
   background: #135796;
 }
-#card-9 .card-image::after {
+#card-12 .card-image::after {
   background: #135796;
 }
-#card-9 .overlay {
+#card-12 .overlay {
   background-color: #135796;
 }
-#card-9 .card-image,
-#card-11 .card-image,
-#card-13 .card-image {
+#card-12 .card-image,
+#card-1 .card-image,
+#card-3 .card-image {
   color: #fff;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -1598,16 +1689,16 @@ h2 span.animated {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-9 .card-image img,
-#card-11 .card-image img,
-#card-13 .card-image img {
+#card-12 .card-image img,
+#card-1 .card-image img,
+#card-3 .card-image img {
   -webkit-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-9 .card-image::before,
-#card-11 .card-image::before,
-#card-13 .card-image::before {
+#card-12 .card-image::before,
+#card-1 .card-image::before,
+#card-3 .card-image::before {
   content: '';
   position: absolute;
   height: 0;
@@ -1618,9 +1709,9 @@ h2 span.animated {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-9 .card-image::after,
-#card-11 .card-image::after,
-#card-13 .card-image::after {
+#card-12 .card-image::after,
+#card-1 .card-image::after,
+#card-3 .card-image::after {
   content: '';
   position: absolute;
   height: 0;
@@ -1631,19 +1722,19 @@ h2 span.animated {
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-9 .card-image:hover::before,
-#card-11 .card-image:hover::before,
-#card-13 .card-image:hover::before {
+#card-12 .card-image:hover::before,
+#card-1 .card-image:hover::before,
+#card-3 .card-image:hover::before {
   height: 50%;
 }
-#card-9 .card-image:hover::after,
-#card-11 .card-image:hover::after,
-#card-13 .card-image:hover::after {
+#card-12 .card-image:hover::after,
+#card-1 .card-image:hover::after,
+#card-3 .card-image:hover::after {
   height: 50%;
 }
-#card-9 .card-image:hover .overlay,
-#card-11 .card-image:hover .overlay,
-#card-13 .card-image:hover .overlay {
+#card-12 .card-image:hover .overlay,
+#card-1 .card-image:hover .overlay,
+#card-3 .card-image:hover .overlay {
   opacity: 1;
   -webkit-transition-delay: 0.21s;
   -moz-transition-delay: 0.21s;
@@ -1651,23 +1742,23 @@ h2 span.animated {
   -ms-transition-delay: 0.21s;
   transition-delay: 0.21s;
 }
-#card-9 .overlay,
-#card-11 .overlay,
-#card-13 .overlay {
+#card-12 .overlay,
+#card-1 .overlay,
+#card-3 .overlay {
   opacity: 0;
   z-index: 1;
   -webkit-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
-#card-10:hover .overlay {
+#card-13:hover .overlay {
   -webkit-transform: translate(0%, 0%) rotate(0deg);
   -moz-transform: translate(0%, 0%) rotate(0deg);
   -o-transform: translate(0%, 0%) rotate(0deg);
   -ms-transform: translate(0%, 0%) rotate(0deg);
   transform: translate(0%, 0%) rotate(0deg);
 }
-#card-10 .overlay {
+#card-13 .overlay {
   -webkit-transform: translate(-100%, 0%) rotate(0deg);
   -moz-transform: translate(-100%, 0%) rotate(0deg);
   -o-transform: translate(-100%, 0%) rotate(0deg);
@@ -1678,104 +1769,23 @@ h2 span.animated {
   transition: all 0.5s ease;
   background-color: #6873ea;
 }
-#card-11 .card-image {
-  background-color: #6a04ae;
+#card-14:hover .card-image > img {
+  -webkit-transform: translate(-100%, 0%) rotate(0deg);
+  -moz-transform: translate(-100%, 0%) rotate(0deg);
+  -o-transform: translate(-100%, 0%) rotate(0deg);
+  -ms-transform: translate(-100%, 0%) rotate(0deg);
+  transform: translate(-100%, 0%) rotate(0deg);
 }
-#card-11 .card-image::before {
-  background: #6a04ae;
+#card-14 .card-image > img {
+  position: relative;
+  z-index: 10;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-#card-11 .card-image::after {
-  background: #6a04ae;
-}
-#card-11 .overlay {
-  background-color: #6a04ae;
-}
-#card-12 .card-image {
-  background-color: #34495e;
-}
-#card-12 .card-image::before {
-  background: #34495e;
-}
-#card-12 .card-image::after {
-  background: #34495e;
-}
-#card-12 .overlay {
-  background-color: #34495e;
-}
-#card-12 .card-image {
-  color: #fff;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-#card-12 .card-image img {
-  -webkit-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-#card-12 .card-image::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 100%;
-  right: 0;
-  bottom: 0;
-  -webkit-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-#card-12 .card-image::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-#card-12 .card-image:hover::before {
-  width: 50%;
-}
-#card-12 .card-image:hover::after {
-  width: 50%;
-}
-#card-12 .card-image:hover .overlay {
-  opacity: 1;
-  -webkit-transition-delay: 0.21s;
-  -moz-transition-delay: 0.21s;
-  -o-transition-delay: 0.21s;
-  -ms-transition-delay: 0.21s;
-  transition-delay: 0.21s;
-}
-#card-12 .overlay {
-  opacity: 0;
+#card-14 .overlay {
+  background-color: #0b1c38;
   z-index: 1;
-  -webkit-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
-  transition: all 0.35s ease;
-}
-#card-13 .card-image {
-  background-color: #05113d;
-}
-#card-13 .card-image::before {
-  background: #05113d;
-}
-#card-13 .card-image::after {
-  background: #05113d;
-}
-#card-13 .overlay {
-  background-color: #05113d;
 }
 .link {
   margin: 30px;

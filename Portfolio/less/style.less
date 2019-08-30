@@ -599,8 +599,100 @@ h2 {
     padding: 200px 150px;
     border-radius: 20px;
 }
+
 // - - - - - - - - - - - Card 1 - - - - - - - - - - - -
 #card-1 {
+  @card11: #6a04ae;
+  .card-image {
+    background-color: @card11; 
+    &::before {
+      background: @card11; 
+    }
+    &::after {
+      background: @card11; 
+    }
+  }
+  .overlay {
+    background-color: @card11;
+  }
+}
+// - - - - - - - - - - - Card 2 - - - - - - - - - - - -
+#card-2  {
+  @card12: #34495e; 
+  .card-image {
+    background-color: @card12; 
+    color: #fff;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    .transition1(all; 0.35s; ease);
+    img {
+      .transition1(all; 0.35s; ease);
+    }
+    &::before {
+      background: @card12; 
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      right: 0;
+      bottom: 0;
+      .transition1(all; 0.35s; ease);
+    }
+    &::after {
+      background: @card12; 
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      .transition1(all; 0.35s; ease);
+    }
+    &:hover {
+      &::before {
+        width: 50%;
+      }
+      &::after {
+        width: 50%;
+      }
+      .overlay {
+        opacity: 1;
+        .delay(0.21s);
+      }
+    }
+  }
+  .overlay {
+    background-color: @card12;
+    opacity: 0;
+    z-index: 1;
+    .transition1(all; 0.35s; ease);
+  }
+}
+// - - - - - - - - - - - Card 3 - - - - - - - - - - - -
+#card-3 {
+  @card13: #05113d;
+  .card-image {
+    background-color: @card13; 
+    &::before {
+      background: @card13; 
+    }
+    &::after {
+      background: @card13; 
+    }
+  }
+  .overlay {
+    background-color: @card13;
+  }
+}
+// - - - - - - - - - - - Card 4 - - - - - - - - - - - -
+#card-4 {
     .overlay {
         &:hover {
             .mask {
@@ -643,8 +735,8 @@ h2 {
         .transition2(0.5s; 0.5s; ease-in-out);
     }
 }
-// - - - - - - - - - - - Card 2 - - - - - - - - - - - -
-#card-2 {
+// - - - - - - - - - - - Card 5 - - - - - - - - - - - -
+#card-5 {
 
     img {
         .transition2(0.4s; 0.2s; ease-in-out);
@@ -684,8 +776,8 @@ h2 {
         border-radius: 0px;
     }
 }
-// - - - - - - - - - - - Card 3 - - - - - - - - - - - -
-#card-3 {
+// - - - - - - - - - - - Card 6 - - - - - - - - - - - -
+#card-6 {
     .overlay {
         top: -100%;
     }
@@ -760,8 +852,8 @@ h2 {
         z-index: 0;
     }
 }
-// - - - - - - - - - - - Card 4 - - - - - - - - - - - -
-#card-4 {
+// - - - - - - - - - - - Card 7 - - - - - - - - - - - -
+#card-7 {
     &:hover {
         .pieces {
             &.piece-1 {
@@ -906,8 +998,8 @@ h2 {
         }
     }
 }
-// - - - - - - - - - - - Card 5 - - - - - - - - - - - -
-#card-5 {
+// - - - - - - - - - - - Card 8 - - - - - - - - - - - -
+#card-8 {
     &:hover {
         .overlay {
             >span {
@@ -955,8 +1047,8 @@ h2 {
         .flex-column;
     }
 }
-// - - - - - - - - - - - Card 6 - - - - - - - - - - - -
-#card-6 {
+// - - - - - - - - - - - Card 9 - - - - - - - - - - - -
+#card-9 {
     .card-image {
         max-width: 100%;
         background-color: #a09c9c;
@@ -1019,8 +1111,8 @@ h2 {
         opacity: 0;
     }
 }
-// - - - - - - - - - - - Card 7 - - - - - - - - - - - -
-#card-7 {
+// - - - - - - - - - - - Card 10 - - - - - - - - - - - -
+#card-10 {
     &:hover {
         .overlay {
             >span {
@@ -1076,8 +1168,8 @@ h2 {
         transform: translateY(110%);
     }
 }
-// - - - - - - - - - - - Card 8 - - - - - - - - - - - -
-#card-8 {
+// - - - - - - - - - - - Card 11 - - - - - - - - - - - -
+#card-11 {
   .card-image {
     &:hover {
       .slice {
@@ -1205,8 +1297,8 @@ h2 {
   .transition1(all; 1s; ease);
   }
 }
-// - - - - - - - - - - - Card 9 - - - - - - - - - - - -
-#card-9 {
+// - - - - - - - - - - - Card 12 - - - - - - - - - - - -
+#card-12 {
   @card9: #135796;
   .card-image {
     background-color: @card9; 
@@ -1221,7 +1313,7 @@ h2 {
     background-color: @card9;
   }
 }
-#card-9, #card-11, #card-13  {
+#card-12, #card-1, #card-3  {
 
   .card-image {
     color: #fff;
@@ -1262,105 +1354,6 @@ h2 {
       }
       &::after {
         height: 50%;
-      }
-      .overlay {
-        opacity: 1;
-        .delay(0.21s);
-      }
-    }
-  }
-  .overlay {
-    opacity: 0;
-    z-index: 1;
-    .transition1(all; 0.35s; ease);
-  }
-}
-// - - - - - - - - - - - Card 10 - - - - - - - - - - - -
-#card-10 {
-  &:hover {
-    .overlay {
-      .translate(0%; 0%; 0deg);
-    }
-  }
-  .overlay {
-    .translate(-100%; 0%; 0deg);
-    .transition1(all; 0.5s; ease);
-    background-color: #6873ea;
-  }
-}
-// - - - - - - - - - - - Card 11 - - - - - - - - - - - -
-#card-11 {
-  @card11: #6a04ae;
-  .card-image {
-    background-color: @card11; 
-    &::before {
-      background: @card11; 
-    }
-    &::after {
-      background: @card11; 
-    }
-  }
-  .overlay {
-    background-color: @card11;
-  }
-}
-// - - - - - - - - - - - Card 12 - - - - - - - - - - - -
-#card-12 {
-  @card12: #34495e; //  #344a5f
-  .card-image {
-    background-color: @card12; 
-    &::before {
-      background: @card12; 
-    }
-    &::after {
-      background: @card12; 
-    }
-  }
-  .overlay {
-    background-color: @card12;
-  }
-}
-#card-12  {
-
-  .card-image {
-    color: #fff;
-    overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    .transition1(all; 0.35s; ease);
-    img {
-      .transition1(all; 0.35s; ease);
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 100%;
-      right: 0;
-      bottom: 0;
-      .transition1(all; 0.35s; ease);
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 100%;
-      top: 0;
-      left: 0;
-      .transition1(all; 0.35s; ease);
-    }
-    &:hover {
-      &::before {
-        width: 50%;
-      }
-      &::after {
-        width: 50%;
       }
       .overlay {
         opacity: 1;
@@ -1376,20 +1369,44 @@ h2 {
 }
 // - - - - - - - - - - - Card 13 - - - - - - - - - - - -
 #card-13 {
-  @card13: #05113d;
-  .card-image {
-    background-color: @card13; 
-    &::before {
-      background: @card13; 
-    }
-    &::after {
-      background: @card13; 
+  &:hover {
+    .overlay {
+      .translate(0%; 0%; 0deg);
     }
   }
   .overlay {
-    background-color: @card13;
+    .translate(-100%; 0%; 0deg);
+    .transition1(all; 0.5s; ease);
+    background-color: #6873ea;
   }
 }
+// - - - - - - - - - - - Card 14 - - - - - - - - - - - -
+#card-14 {
+  @card9: rgb(11, 28, 56);
+  &:hover {
+    .card-image {
+      // background-color: @card9; 
+      > img {
+        .translate(-100%; 0%; 0deg);
+      }
+    }
+    .overlay {
+      // z-index: 10;
+    }
+  }
+  .card-image {
+    > img {
+      position: relative;
+      z-index: 10;
+      .transition1(all; 0.5s; ease);
+    }
+  }
+  .overlay {
+    background-color: @card9;
+    z-index: 1;
+  }
+}
+
 
 .link {
   margin: 30px;
