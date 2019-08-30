@@ -8,19 +8,21 @@ const YOUTUBE = {
   init() {
     this.load();
   },
-  url: 'https://www.googleapis.com/youtube/v3/search?',
-  KEY: 'AIzaSyAeedIvfAxkWBPSiFMrQDQlcAZAf5BW1Gw',
-  part: 'snippet',
-  type: 'video',
-  maxResults: '15',
-  order: 'date',
-  searchFor: 'JavaScript|python -basic',
-  videoCaption: 'closedCaption',
-  relevanceLanguage: 'en',
-  publishedAfter: '2019-08-04T00:00:00Z',
-  URLhost: `${this.url}part=${this.part}&maxResults=${this.maxResults}&order=${this.order}&publishedAfter=${this.publishedAfter}&q=${this.searchFor}&relevanceLanguage=${this.relevanceLanguage}&type=${this.type}videoCaption=${this.videoCaption}&key=${this.KEY}`,
+  params: {
+    url: 'https://www.googleapis.com/youtube/v3/search?',
+    KEY: 'AIzaSyAeedIvfAxkWBPSiFMrQDQlcAZAf5BW1Gw',
+    part: 'snippet',
+    type: 'video',
+    maxResults: '15',
+    order: 'date',
+    searchFor: 'JavaScript|python -basic',
+    videoCaption: 'closedCaption',
+    relevanceLanguage: 'en',
+    publishedAfter: '2019-08-04T00:00:00Z',
+  },
   load() {
-    fetch(`${this.url}part=${this.part}&maxResults=${this.maxResults}&order=${this.order}&publishedAfter=${this.publishedAfter}&q=${this.searchFor}&relevanceLanguage=${this.relevanceLanguage}&type=${this.type}videoCaption=${this.videoCaption}&key=${this.KEY}`, {
+    const { url, KEY, part, type, maxResults, order, searchFor, videoCaption, relevanceLanguage, publishedAfter } = this.params; 
+    fetch(`${url}part=${part}&maxResults=${maxResults}&order=${order}&publishedAfter=${publishedAfter}&q=${searchFor}&relevanceLanguage=${relevanceLanguage}&type=${type}videoCaption=${videoCaption}&key=${KEY}`, {
       headers: {
         'Content-Type': 'application/json',
       },
