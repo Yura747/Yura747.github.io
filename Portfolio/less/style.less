@@ -854,70 +854,72 @@ h2 {
 }
 // - - - - - - - - - - - Card 7 - - - - - - - - - - - -
 #card-7 {
-    &:hover {
-        .pieces {
-            &.piece-1 {
-                -webkit-animation: piece1 1s ease;   
-                animation: piece1 1s ease;
-                .animation-fill-mode; 
-            }
-            &.piece-2 {
-                -webkit-animation: piece2 1s ease;   
-                animation: piece2 1s ease;
-                .animation-fill-mode;
-            }
-            &.piece-3 {
-                -webkit-animation: piece3 1s ease;   
-                animation: piece3 1s ease;
-                .animation-fill-mode;
-            }
-            &.piece-4 {
-                -webkit-animation: piece4 1s ease;   
-                animation: piece4 1s ease;
-                .animation-fill-mode;
-            }
-            &.piece-5 {
-                -webkit-animation: piece5 1s ease;   
-                animation: piece5 1s ease;
-                .animation-fill-mode;
-            }
-            &.piece-6 {
-                -webkit-animation: piece6 1s ease;   
-                animation: piece6 1s ease;
-                .animation-fill-mode;
-            }
-            &.piece-7 {
-                -webkit-animation: piece7 1s ease;   
-                animation: piece7 1s ease;
-                .animation-fill-mode;
-            }
-            &.piece-8 {
-                -webkit-animation: piece8 1s ease;   
-                animation: piece8 1s ease;
-                .animation-fill-mode;
-            }
-            &.piece-9 {
-                -webkit-animation: piece9 1s ease;   
-                animation: piece9 1s ease;
-                .animation-fill-mode;
-            }
-        }
-        .overlay {
-            z-index: 2;
-            &::before, &::after {
-                opacity: 1;
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                .delay(1.1s);
-            }
-        }
-        .overlay-content {
-            .show();
-            .delay(1s);
-        }
-        .image-pieces {
-            opacity: 0;
-        }
+    .card-image {
+      &:hover {
+          .pieces {
+              &.piece-1 {
+                  -webkit-animation: piece1 1s ease;   
+                  animation: piece1 1s ease;
+                  .animation-fill-mode; 
+              }
+              &.piece-2 {
+                  -webkit-animation: piece2 1s ease;   
+                  animation: piece2 1s ease;
+                  .animation-fill-mode;
+              }
+              &.piece-3 {
+                  -webkit-animation: piece3 1s ease;   
+                  animation: piece3 1s ease;
+                  .animation-fill-mode;
+              }
+              &.piece-4 {
+                  -webkit-animation: piece4 1s ease;   
+                  animation: piece4 1s ease;
+                  .animation-fill-mode;
+              }
+              &.piece-5 {
+                  -webkit-animation: piece5 1s ease;   
+                  animation: piece5 1s ease;
+                  .animation-fill-mode;
+              }
+              &.piece-6 {
+                  -webkit-animation: piece6 1s ease;   
+                  animation: piece6 1s ease;
+                  .animation-fill-mode;
+              }
+              &.piece-7 {
+                  -webkit-animation: piece7 1s ease;   
+                  animation: piece7 1s ease;
+                  .animation-fill-mode;
+              }
+              &.piece-8 {
+                  -webkit-animation: piece8 1s ease;   
+                  animation: piece8 1s ease;
+                  .animation-fill-mode;
+              }
+              &.piece-9 {
+                  -webkit-animation: piece9 1s ease;   
+                  animation: piece9 1s ease;
+                  .animation-fill-mode;
+              }
+          }
+          .overlay {
+              z-index: 2;
+              &::before, &::after {
+                  opacity: 1;
+                  -webkit-transform: scale(1);
+                  transform: scale(1);
+                  .delay(1.1s);
+              }
+          }
+          .overlay-content {
+              .show();
+              .delay(1s);
+          }
+          .image-pieces {
+              opacity: 0;
+          }
+      }
     }
     .overlay {
         &::before, &::after {
@@ -1000,52 +1002,52 @@ h2 {
 }
 // - - - - - - - - - - - Card 8 - - - - - - - - - - - -
 #card-8 {
+  .card-image {
+    background: #000;
     &:hover {
-        .overlay {
-            >span {
-                &:nth-child(1) {
-                    .translate(-100%; 0px; 0deg);
-                }
-                &:nth-child(2) {
-                    .translate(100%; 0px; 0deg);
-                }
-            }
-        }
-    }
-    .card-image {
-        background: #000;
-    }
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
+      .overlay {
         >span {
-            position: relative;
-            z-index: 2;
-            width: 50%;
-            height: 100%;
-            background: url(../img/Golden.png);
-            background-size: 200% 100%;
-            background-repeat: no-repeat;
-            .transition( .5s);
-            &:nth-child(1) {
-                background-position: 0%; 
-            }
-            &:nth-child(2) {
-                background-position: 100%; 
-            }
+          &:nth-child(1) {
+            .translate(-100%; 0px; 0deg);
+          }
+          &:nth-child(2) {
+            .translate(100%; 0px; 0deg);
+          }
         }
+      }
     }
-    .overlay-content {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        .flex-vh-center;
-        .flex-column;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    >span {
+      position: relative;
+      z-index: 2;
+      width: 50%;
+      height: 100%;
+      background: url(../img/Golden.png);
+      background-size: 200% 100%;
+      background-repeat: no-repeat;
+      .transition( .5s);
+      &:nth-child(1) {
+        background-position: 0%; 
+      }
+      &:nth-child(2) {
+        background-position: 100%; 
+      }
     }
+  }
+  .overlay-content {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .flex-vh-center;
+    .flex-column;
+  }
 }
 // - - - - - - - - - - - Card 9 - - - - - - - - - - - -
 #card-9 {
@@ -1113,16 +1115,18 @@ h2 {
 }
 // - - - - - - - - - - - Card 10 - - - - - - - - - - - -
 #card-10 {
-    &:hover {
-        .overlay {
-            >span {
-                .translate(0px; -100%; 0deg);
-            }
-        }
-        .overlay-content {
-            .translate(0px; 0%; 0deg);
-            .delay( .5s)
-        }
+    .card-image {
+      &:hover {
+          .overlay {
+              >span {
+                  .translate(0px; -100%; 0deg);
+              }
+          }
+          .overlay-content {
+              .translate(0px; 0%; 0deg);
+              .delay( .5s)
+          }
+      }
     }
     .card-image {
         background: #d2145a;
@@ -1369,9 +1373,11 @@ h2 {
 }
 // - - - - - - - - - - - Card 13 - - - - - - - - - - - -
 #card-13 {
-  &:hover {
-    .overlay {
-      .translate(0%; 0%; 0deg);
+  .card-image{
+    &:hover {
+      .overlay {
+        .translate(0%; 0%; 0deg);
+      }
     }
   }
   .overlay {
@@ -1383,8 +1389,8 @@ h2 {
 // - - - - - - - - - - - Card 14 - - - - - - - - - - - -
 #card-14 {
   @card9: rgb(11, 28, 56);
-  &:hover {
-    .card-image {
+.card-image{
+    &:hover {
       > img {
         .translate(-100%; 0%; 0deg);
       }
@@ -1773,18 +1779,18 @@ h2 {
   .overlay {
     height: @image-height;
   }
-    .overlay-content {
-      > h3 {
-        font-size: 20px;
-      }
-      ul {
-        padding-bottom: 10px;
-        > li {
-          padding: 5px;
-          font-size: 14px;
-        }
+  .overlay-content {
+    > h3 {
+      font-size: 20px;
+    }
+    ul {
+      padding-bottom: 10px;
+      > li {
+        padding: 5px;
+        font-size: 14px;
       }
     }
+  }
 
     // --- buttons --- 
 @btn-height: 30px;
@@ -1860,7 +1866,7 @@ h2 {
 	}
 }
 // --- buttons-end --- 
-  #card-4 {
+  #card-7 {
     .overlay {
       &::before, &::after {
         position: absolute;
@@ -1871,19 +1877,19 @@ h2 {
       }
     }
   }
-  #card-8 {
+  #card-11 {
     .overlay {
       &::before {
-        top: 20px;
-        right: 10px;
-        bottom: 20px;
-        left: 10px;
+        top: 10px;
+        right: 0px;
+        bottom: 10px;
+        left: 0px;
       }
       &::after {
-        top: 10px;
-        right: 20px;
-        bottom: 10px;
-        left: 20px;
+        top: 0px;
+        right: 10px;
+        bottom: 0px;
+        left: 10px;
       }
     }
   }
@@ -1931,81 +1937,90 @@ h2 {
   }
 
     // --- buttons --- 
-@btn-height: 20px;
-@btn-width: 70px;
+  @btn-height: 20px;
+  @btn-width: 70px;
 
-[class^="btn-"] {
-  height: @btn-height;
-  line-height: @btn-height;
-  width: @btn-width;
-}
-
-.btn-1 {
-	&:before {
-		right: calc(-@btn-height + 5px);
-        border-bottom: @btn-height solid @btn-color;
-		border-right: calc(@btn-height - 5px) solid transparent;
-	}
-}
-.btn-3 {
-	&:before {
-    border-bottom: @btn-height solid @btn-color;
-		border-right: calc(@btn-height - 5px) solid transparent;
-    right: calc(-@btn-height + 5px);
-	}
-	&:after {
-    border-left: calc(@btn-height - 5px) solid transparent;
-		border-top: @btn-height solid @btn-color;
-		left: calc(-@btn-height + 10px);
-	}
-}
-.btn-4 {
-  &:after, &:before {
-    border-bottom: calc(@btn-height / 2 ) solid @btn-color;
-    border-top: calc(@btn-height / 2 ) solid @btn-color;
+  [class^="btn-"] {
+    height: @btn-height;
+    line-height: @btn-height;
+    width: @btn-width;
   }
-	&:before {
-		border-right: calc(@btn-height / 2 ) solid transparent;
-	}
-	&:after {
-		border-left: calc(@btn-height / 2 ) solid transparent;
-	}
-}
-.btn-6 {
-	&:hover {
-    &:after, &:before {
-      border-width: @btn-height calc(@btn-width + 10px);
+  .btn-1 {
+    &:before {
+      right: calc(-@btn-height + 5px);
+          border-bottom: @btn-height solid @btn-color;
+      border-right: calc(@btn-height - 5px) solid transparent;
     }
-	}
-}
-.btn-8 {
-	&:hover {
-    &:after, &:before {
-      height: @btn-height;
+  }
+  .btn-3 {
+    &:before {
+      border-bottom: @btn-height solid @btn-color;
+      border-right: calc(@btn-height - 5px) solid transparent;
+      right: calc(-@btn-height + 5px);
     }
-		span {
+    &:after {
+      border-left: calc(@btn-height - 5px) solid transparent;
+      border-top: @btn-height solid @btn-color;
+      left: calc(-@btn-height + 10px);
+    }
+  }
+  .btn-4 {
+    &:after, &:before {
+      border-bottom: calc(@btn-height / 2 ) solid @btn-color;
+      border-top: calc(@btn-height / 2 ) solid @btn-color;
+    }
+    &:before {
+      border-right: calc(@btn-height / 2 ) solid transparent;
+    }
+    &:after {
+      border-left: calc(@btn-height / 2 ) solid transparent;
+    }
+  }
+  .btn-6 {
+    &:hover {
+      &:after, &:before {
+        border-width: @btn-height calc(@btn-width + 10px);
+      }
+    }
+  }
+  .btn-8 {
+    &:hover {
       &:after, &:before {
         height: @btn-height;
       }
-		}
-	}
-}
-.btn-12 {
-  &:after, &:before {
-    background-color: @btn-color;
-    width: calc(@btn-height / 2);
-    height: calc(@btn-height / 2);
+      span {
+        &:after, &:before {
+          height: @btn-height;
+        }
+      }
+    }
   }
-	&:before {
-    left:  calc(-@btn-height / 2);
-	}
-	&:after {
-    right:  calc(-@btn-height / 2);
-	}
-}
-// --- buttons-end --- 
-
-
+  .btn-12 {
+    &:after, &:before {
+      background-color: @btn-color;
+      width: calc(@btn-height / 2);
+      height: calc(@btn-height / 2);
+    }
+    &:before {
+      left:  calc(-@btn-height / 2);
+    }
+    &:after {
+      right:  calc(-@btn-height / 2);
+    }
+  }
+  // --- buttons-end --- 
+  #card-11, #card-12, #card-5, #card-1 {
+    .overlay-content > h3 {
+      margin: 10px auto;
+      max-width: 130px;
+    }
+  }
+  #card-14, #card-4, #card-3, #card-2 {
+    .overlay-content > h3 {
+      margin: 10px auto;
+      max-width: 190px;
+    }
+  }
 }
 @media (max-width: 360px) {
   @image-height: 180px;  
@@ -2037,7 +2052,13 @@ h2 {
     font-size: 14px;
     padding: 0 5px;
   }
-  #card-4 {
+  #card-7 {
+    .card-image:hover {
+      border-radius: 0px;
+      .overlay {
+        border-radius: 0px;
+      }
+    }
     .overlay {
       &::before, &::after {
         position: absolute;
@@ -2045,6 +2066,13 @@ h2 {
         right: 2px;
         bottom: 2px;
         left: 2px;
+      }
+    }
+  }
+  #card-10, #card-7 {
+    .overlay-content {
+      > h3 {
+        margin: 0;
       }
     }
   }
