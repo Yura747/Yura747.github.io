@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "yura747.github.io/static/css/main.b9d09fc1.chunk.css",
-    "main.js": "yura747.github.io/static/js/main.962eaea5.chunk.js",
-    "main.js.map": "yura747.github.io/static/js/main.962eaea5.chunk.js.map",
-    "runtime~main.js": "yura747.github.io/static/js/runtime~main.7219d33f.js",
-    "runtime~main.js.map": "yura747.github.io/static/js/runtime~main.7219d33f.js.map",
-    "static/css/2.053a83bb.chunk.css": "yura747.github.io/static/css/2.053a83bb.chunk.css",
-    "static/js/2.dda6e453.chunk.js": "yura747.github.io/static/js/2.dda6e453.chunk.js",
-    "static/js/2.dda6e453.chunk.js.map": "yura747.github.io/static/js/2.dda6e453.chunk.js.map",
-    "index.html": "yura747.github.io/index.html",
-    "precache-manifest.d23bbcb2c5639ec7fb6af08ea78a55da.js": "yura747.github.io/precache-manifest.d23bbcb2c5639ec7fb6af08ea78a55da.js",
-    "service-worker.js": "yura747.github.io/service-worker.js",
-    "static/css/2.053a83bb.chunk.css.map": "yura747.github.io/static/css/2.053a83bb.chunk.css.map",
-    "static/css/main.b9d09fc1.chunk.css.map": "yura747.github.io/static/css/main.b9d09fc1.chunk.css.map",
-    "static/media/Home.scss": "yura747.github.io/static/media/slick.f97e3bbf.svg"
+    "main.css": "yura747.github.io/OSF/static/css/main.b9d09fc1.chunk.css",
+    "main.js": "yura747.github.io/OSF/static/js/main.502eb6f9.chunk.js",
+    "main.js.map": "yura747.github.io/OSF/static/js/main.502eb6f9.chunk.js.map",
+    "runtime~main.js": "yura747.github.io/OSF/static/js/runtime~main.7a6f4230.js",
+    "runtime~main.js.map": "yura747.github.io/OSF/static/js/runtime~main.7a6f4230.js.map",
+    "static/css/2.c38cf88d.chunk.css": "yura747.github.io/OSF/static/css/2.c38cf88d.chunk.css",
+    "static/js/2.cc008a2a.chunk.js": "yura747.github.io/OSF/static/js/2.cc008a2a.chunk.js",
+    "static/js/2.cc008a2a.chunk.js.map": "yura747.github.io/OSF/static/js/2.cc008a2a.chunk.js.map",
+    "index.html": "yura747.github.io/OSF/index.html",
+    "precache-manifest.d3c8fb04249d852dd10262ca93588898.js": "yura747.github.io/OSF/precache-manifest.d3c8fb04249d852dd10262ca93588898.js",
+    "service-worker.js": "yura747.github.io/OSF/service-worker.js",
+    "static/css/2.c38cf88d.chunk.css.map": "yura747.github.io/OSF/static/css/2.c38cf88d.chunk.css.map",
+    "static/css/main.b9d09fc1.chunk.css.map": "yura747.github.io/OSF/static/css/main.b9d09fc1.chunk.css.map",
+    "static/media/Home.scss": "yura747.github.io/OSF/static/media/slick.f97e3bbf.svg"
   }
 }
