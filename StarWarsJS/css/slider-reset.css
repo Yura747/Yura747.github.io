@@ -1,5 +1,10 @@
 .flickity-button {
   background: transparent;
+  outline: none;
+  border: none;
+}
+.flickity-button.focus {
+  outline: none;
 }
 .flickity-button:hover {
   background: transparent;
@@ -8,6 +13,8 @@
   background-repeat: no-repeat;
   height: 50px;
   width: 200px;
+  outline: none;
+  border: none;
 }
 .flickity-button-icon {
   display: none;
