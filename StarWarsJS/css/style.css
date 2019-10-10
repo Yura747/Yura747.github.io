@@ -1,0 +1,268 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+a,
+div {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Tahoma";
+  font-size: 14px;
+  font-weight: normal;
+}
+html {
+  background-color: #090A0F;
+}
+.content-wr > h1 {
+  color: yellow;
+  font-family: 'Charm', cursive;
+  font-weight: bold;
+  font-size: 30px;
+  height: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+.card-wrap {
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.slider {
+  width: 580px;
+  margin: 0 auto;
+}
+.card {
+  z-index: 9999;
+  position: relative;
+  width: 580px;
+  height: 430px;
+  box-sizing: border-box;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+.card > h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15px;
+}
+.content {
+  margin-top: 30px;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
+.logo {
+  padding: 20px;
+  width: 50%;
+  height: 270px;
+}
+.img-wr {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.img-wr > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
+}
+.info-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-wrap;
+  width: 240px;
+  padding: 10px 0px;
+}
+.info-block > h2,
+.info-block h3 {
+  width: 100%;
+}
+.info-block > h3,
+.info-block p {
+  width: 50%;
+  font-family: 'Arial';
+  font-size: 15px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.info-block h3 {
+  margin-left: 20px;
+  text-decoration: underline;
+}
+.loader {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.loader > img {
+  width: 576px;
+  height: 426px;
+  border-radius: 10px;
+}
+.loader.show {
+  display: block;
+}
+#introduction .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#introduction .card.hide {
+  display: none;
+}
+#introduction.hide {
+  display: none;
+}
+.button-wr {
+  margin-top: 20px;
+}
+.button-wr button {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 30px;
+  outline: none;
+  border: 5px solid grey;
+  cursor: pointer;
+}
+.button-wr button:hover {
+  box-sizing: border-box;
+  text-decoration: underline;
+}
+.button-wr button:focus {
+  outline: none;
+}
+@media (max-width: 800px) {
+  .slider {
+    width: 540px;
+  }
+  .card {
+    width: 540px;
+  }
+  .loader > img {
+    width: 536px;
+  }
+}
+@media (max-width: 600px) {
+  .slider {
+    width: 330px;
+    height: 560px;
+  }
+  .card {
+    width: 330px;
+    height: 560px;
+    margin: 0;
+  }
+  .logo {
+    width: 80%;
+  }
+  .loader > img {
+    width: 326px;
+    height: 556px;
+  }
+  .content {
+    margin-top: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .info {
+    width: 100%;
+  }
+  .info-block > h3 {
+    margin-left: 60px;
+  }
+  .info-block > p {
+    margin-left: 10px;
+  }
+  .search {
+    margin-top: 50px;
+  }
+  .content-wr > h1 {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 360px) {
+  .card {
+    height: 500px;
+  }
+  .loader > img {
+    height: 496px;
+  }
+  .content-wr > h1 {
+    margin-top: 30px;
+  }
+  .logo {
+    width: 180px;
+    height: 180px;
+  }
+  .content {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .slider {
+    width: 300px;
+  }
+  .card {
+    height: 500px;
+    width: 300px;
+  }
+  .loader > img {
+    width: 296px;
+  }
+}
