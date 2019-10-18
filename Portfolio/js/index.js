@@ -40,13 +40,13 @@ $('.fas').on('click', () => {
     $('.fas').removeClass('fa-border-all');
     $('.fas').addClass('fa-th-list');
     $('.toTop').show();
-    // $('.fas .list-btn ').hide();
+    $('.fas.list-btn').addClass('active');
   } else {
     localStorage.display = 'table';
     $('.fas').removeClass('fa-th-list');
     $('.fas').addClass('fa-border-all');
     $('.toTop').hide();
-    // $('.fas .list-btn').show();
+    $('.fas.list-btn').removeClass('active');
   }
 });
 
@@ -59,7 +59,6 @@ if( localStorage.display && localStorage.display == 'table' ) {
   $('.cards-table').addClass('active');
   $('.toTop').hide();
   $('.fas.list-btn').removeClass('active');
-  // $('.list-btn').hide();
 } else if ( localStorage.display == 'list' ) {
   $('.fas').removeClass('fa-border-all');
   $('.fas').addClass('fa-th-list');
@@ -67,7 +66,6 @@ if( localStorage.display && localStorage.display == 'table' ) {
   $('.cards-table').removeClass('active');
   $('.toTop').show();
   $('.fas.list-btn').addClass('active');
-  // $('.list-btn').show();
 }
 
 

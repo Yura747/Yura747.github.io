@@ -2980,4 +2980,8 @@ select:focus > option:checked {
   #card-7 .overlay-content > h3 {
     margin: 0;
   }
+  .toTop {
+    right: calc(50% - 32px);
+    bottom: 135px;
+  }
 }
