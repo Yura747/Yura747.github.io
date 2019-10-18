@@ -138,7 +138,7 @@ for(var i = 0; i < boxes.length; i++) {
     var x = e.clientX - rect.left; //x position within the element.
     var y = e.clientY - rect.top;  //y position within the element.
     var edge = closestEdge(x,y,this.clientWidth, this.clientHeight);
-    var overlay = this.lastElementChild;
+    var overlay = this.lastElementChild.firstElementChild;
     var image = this.firstElementChild;
 
     switch(edge){
@@ -179,7 +179,7 @@ for(var i = 0; i < boxes.length; i++) {
     var x = e.clientX - rect.left; 
     var y = e.clientY - rect.top;  
     var edge = closestEdge(x,y,this.clientWidth, this.clientHeight);
-    var overlay = this.lastElementChild;
+    var overlay = this.lastElementChild.firstElementChild;
     var image = this.firstElementChild;
 
 

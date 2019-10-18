@@ -921,20 +921,18 @@ h2 span.animated {
   width: 1000px;
   margin: 0 auto;
 }
-.grid-item {
-  left: 10px;
-  margin-top: 30px;
-  width: 300px;
-  height: 200px;
-  padding: 10px;
-}
 .grid-item__inner {
   width: 300px;
   height: 200px;
   position: relative;
   overflow: hidden;
 }
-.grid-item__inner img {
+.grid-item {
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+}
+.grid-item img {
   width: 100%;
   height: 100%;
 }
