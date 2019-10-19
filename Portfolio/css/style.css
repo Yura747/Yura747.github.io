@@ -2983,4 +2983,9 @@ select:focus > option:checked {
     right: calc(50% - 32px);
     bottom: 135px;
   }
+  #card-14 .overlay-content,
+  #card-16 .overlay-content {
+    height: 100%;
+    margin-top: 20px;
+  }
 }
