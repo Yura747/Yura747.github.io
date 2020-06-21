@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ChalhoubGroup/index.html/static/css/main.2bdf9bab.chunk.css",
+    "main.js": "/ChalhoubGroup/index.html/static/js/main.8f423aa3.chunk.js",
+    "main.js.map": "/ChalhoubGroup/index.html/static/js/main.8f423aa3.chunk.js.map",
+    "runtime-main.js": "/ChalhoubGroup/index.html/static/js/runtime-main.818f86e2.js",
+    "runtime-main.js.map": "/ChalhoubGroup/index.html/static/js/runtime-main.818f86e2.js.map",
+    "static/js/2.2e6b9cfa.chunk.js": "/ChalhoubGroup/index.html/static/js/2.2e6b9cfa.chunk.js",
+    "static/js/2.2e6b9cfa.chunk.js.map": "/ChalhoubGroup/index.html/static/js/2.2e6b9cfa.chunk.js.map",
+    "index.html": "/ChalhoubGroup/index.html/index.html",
+    "precache-manifest.5e66f0fbb79fa8dde0c0d714bb3eca2f.js": "/ChalhoubGroup/index.html/precache-manifest.5e66f0fbb79fa8dde0c0d714bb3eca2f.js",
+    "service-worker.js": "/ChalhoubGroup/index.html/service-worker.js",
+    "static/css/main.2bdf9bab.chunk.css.map": "/ChalhoubGroup/index.html/static/css/main.2bdf9bab.chunk.css.map",
+    "static/js/2.2e6b9cfa.chunk.js.LICENSE.txt": "/ChalhoubGroup/index.html/static/js/2.2e6b9cfa.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/ChalhoubGroup/index.html/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.818f86e2.js",
+    "static/js/2.2e6b9cfa.chunk.js",
+    "static/css/main.2bdf9bab.chunk.css",
+    "static/js/main.8f423aa3.chunk.js"
+  ]
+}

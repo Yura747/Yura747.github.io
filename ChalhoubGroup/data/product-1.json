@@ -1,0 +1,39 @@
+{
+  "data": {
+    "image": "./images/product-image1.png",
+    "alt": "default-product",
+    "title": "tiger medium red",
+    "currency": "aed",
+    "price": 250,
+    "sizes": ["s", "m", "l", "xl"],
+    "colors": ["#000", "lightcyan", "#fff", "darkcyan"],
+    "descriptionTitle": "description Json",
+    "description": "Opt for a bold look with this T-short. With its iconic Tiger print on the chest, it is sure to turn heads. Pair it with jogging trousers and sneakers for a casual look",
+    "descriptionList": ["Short sleeved T-short.", "Rounden neck.", "Tiger embroidered on the chest"]
+  },
+  "moreProducts": {
+    "title": "see more products",
+    "images": [
+      {
+        "smallImage": "./images/product-small-1.png",
+        "link": "/product-1",
+        "alt": "product-1"
+      },
+      {
+        "smallImage": "./images/product-small-2.png",
+        "link": "/product-2",
+        "alt": "product-2"
+      },
+      {
+        "smallImage": "./images/product-small-3.png",
+        "link": "/product-3",
+        "alt": "product-3"
+      },
+      {
+        "smallImage": "./images/product-small-4.png",
+        "link": "/product-4",
+        "alt": "product-4"
+      }
+    ]
+  }
+}

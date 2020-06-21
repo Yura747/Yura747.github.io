@@ -1,0 +1,39 @@
+{
+  "data": {
+    "image": "./images/product2/first-front.jpg",
+    "alt": "default-product",
+    "title": "A Lounge Chair AAL 93",
+    "currency": "$",
+    "price": 695,
+    "sizes": ["s", "m", "l", "xl", "xxxl"],
+    "colors": ["#000", "red", "darkcyan", "yellow"],
+    "descriptionTitle": "description Json",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "descriptionList": ["T-short product2", "Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet, consectetur"]
+  },
+  "moreProducts": {
+    "title": "see more products",
+    "images": [
+      {
+        "smallImage": "./images/product2/first-front-small.jpg",
+        "link": "/",
+        "alt": "product-1"
+      },
+      {
+        "smallImage": "./images/product2/second-back-small.jpg",
+        "link": "/",
+        "alt": "product-2"
+      },
+      {
+        "smallImage": "./images/product2/first-back-small.jpg",
+        "link": "/",
+        "alt": "product-3"
+      },
+      {
+        "smallImage": "./images/product2/second-front-small.jpg",
+        "link": "/",
+        "alt": "product-4"
+      }
+    ]
+  }
+}
