@@ -1,0 +1,149 @@
+/*
+ * Header scss File
+*/
+
+.m-product {
+    margin-bottom: 50px;
+
+    &__image-container {
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__image {
+        height: 100%;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    &__preview-btn {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        bottom: 15px;
+        right: 15px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        cursor: pointer;
+
+        .m-product__preview-btn-icon {
+            width: 100%;
+            height: 100%;
+            transform: rotate(45deg)
+        }
+    }
+
+    &__info {
+        text-align: left;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        text-transform: capitalize;
+        color: #6d6c6c;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__price-container {
+        margin: 0;
+        text-transform: uppercase;
+        color: #6d6c6c;
+    }
+
+    &__price {
+        margin-left: 5px;
+    }
+
+    &__sizes {
+        text-transform: capitalize;
+        color:#ccc;
+    }
+
+    &__size {
+        text-transform: uppercase;
+        margin-left: 15px;
+
+        &:first-child {
+            margin-left: 5px;
+        }
+    }
+
+    &__colors-label {
+        margin-bottom: 5px;
+    }
+
+    &__colors {
+        display: flex;
+    }
+
+    &__color {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+        border-radius: 4px;
+        border: 1px solid #e2e2e2;
+        cursor: pointer;
+    }
+
+    &__color-bg {
+        margin-top: 15px;
+        height: 40px;
+        background-color: #e2e2e2;
+        border-radius: 4px;
+    }
+
+    &__description-container {
+        text-align: left;
+        color: #b4abab;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    &__description-title {
+        text-transform: uppercase;
+        color: #6d6c6c;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    &__description {
+        margin-top: 5px;
+    }
+
+    &__description-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__more-products {
+        text-align: left;
+    }
+
+    &__more-products-images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    &__more-products-image {
+        height: 80px;
+    }
+}
+
+
+// "dark-grey": #6d6c6c,
+// "grey": #646464,
+// "accessible-grey": #949494,
+// "light-grey": #e2e2e2,
+// "very-light-grey": #f8f8f8,
+// "off-white": #f2f2f5,
+// "white": #fff,
+// "silver": #b9b9b9

@@ -1,0 +1,41 @@
+/*
+ * Search scss File
+*/
+
+.c-search {
+    &__container {
+        margin-top: 10px;
+    }
+
+    &__inner {
+        position: relative;
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        padding: 5px 25px 5px 15px;
+        box-sizing: border-box;
+
+        &::placeholder {
+            text-transform: uppercase;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        height: 100%;
+        width: 25px;
+        right: 0;
+        padding: 0;
+        top: 0;
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: #ccc;
+        cursor: pointer;
+    }
+}
