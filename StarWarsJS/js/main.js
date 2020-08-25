@@ -5,7 +5,7 @@
     **          LESSON 27         **
     **                            **
     ********************************
-                        
+
     ! Тема:  xhr, fetch, promise, asyncawait
 
 	TODO:
@@ -13,28 +13,40 @@
 
 */
 
-const api = 'https://swapi.co/api/people/';
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const apiURL = 'https://swapi.dev/api/people/';
 const promises = [];
 
 const search = document.querySelector('.search');
 const loader = document.querySelector('.loader');
 
 const starWarsPeople = {
-	getPages() {
-    fetch(api)
-      .then(response => response.json())
-      .then(data => {
-        let pages = Math.ceil(data.count / data.results.length);
-        for (var i = 0; i < pages; i++) {
-          promises.push(starWarsPeople.getPeople(`${api}?page=${(i + 1)}`));
-        }
-        Promise.all(promises)
-        .then(function(result) {
-          loader.classList.remove('show');
-          starWarsPeople.createTemplate(result);
-        });
+	getPages(url) {
+    try {
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          "Content-Type": "application/json",
+          "X-Requested-With": "XMLHttpRequest",
+          requireHeader : []
+        },
       })
-    .catch(console.error);
+        .then(response => response.json())
+        .then(data => {
+          let pages = Math.ceil(data.count / data.results.length);
+          for (var i = 0; i < pages; i++) {
+            promises.push(starWarsPeople.getPeople(`${url}?page=${(i + 1)}`));
+          }
+          Promise.all(promises)
+          .then(function(result) {
+            loader.classList.remove('show');
+            starWarsPeople.createTemplate(result);
+          });
+        })
+      .catch(console.error);
+    } catch(error) {
+      console.log(error);
+    }
   },
   getPeople(url) {
     return new Promise(function(resolve, reject) {
@@ -82,11 +94,11 @@ const starWarsPeople = {
         </div>`
       );
     });
-    
+
     // initialize Slider
     starWarsPeople.initializeSlider();
   },
-  
+
   initializeSlider() {
     var slider = document.querySelector('.main-carousel');
     var flkty = new Flickity( slider, {
@@ -99,10 +111,10 @@ const starWarsPeople = {
     });
   }
 }
-search.addEventListener('click', () => { 
+search.addEventListener('click', () => {
   loader.classList.add('show');
-  starWarsPeople.getPages(api);
-}); 
+  starWarsPeople.getPages(`${proxyurl}${apiURL}`);
+});
 
 
 
