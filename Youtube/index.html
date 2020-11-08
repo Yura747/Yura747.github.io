@@ -21,23 +21,28 @@
 
 <main>
   <section class="section-content">
-    <div class="content__wrapper">
-      <div class="content__inner">
+    <div class="content-wrapper">
+      <div class="content-inner">
+        <div class="form-wrapper full">
+          <form class="form">
+            <p class="form__title">
+              Type key phrathes to search for youtube video
+            </p>
+            <div class="form__inner">
+              <input class="form__input" type="text">
+              <button class="form__button">Search</button>
+            </div>
+          </form>
+        </div>
         <div class="list">
         </div>
-        <div class="message">
-          <div class="message__inner">
-              <p>
-                  Sorry the requested data is not available.
-                  Maybe check your internet connection... 
-              </p>
-            </div>
+        <div class="message error-message hide">
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<script src="js/main.js"></script>	
+<script src="js/main.js"></script>
 </body>
 </html>
