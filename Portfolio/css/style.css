@@ -195,9 +195,9 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  right: calc(-35px);
+  right: calc(-40px + 5px);
   border-bottom: 40px solid #fc0853;
-  border-right: calc(35px) solid transparent;
+  border-right: calc(40px - 5px) solid transparent;
   -webkit-transform: translate(-100%, 0%) rotate(0deg);
   -moz-transform: translate(-100%, 0%) rotate(0deg);
   -o-transform: translate(-100%, 0%) rotate(0deg);
@@ -222,9 +222,9 @@ body {
 }
 .btn-3:before {
   border-bottom: 40px solid #fc0853;
-  border-right: calc(35px) solid transparent;
+  border-right: calc(40px - 5px) solid transparent;
   left: 0;
-  right: calc(-35px);
+  right: calc(-40px + 5px);
   -webkit-transform: translate(-100%, 0%) rotate(0deg);
   -moz-transform: translate(-100%, 0%) rotate(0deg);
   -o-transform: translate(-100%, 0%) rotate(0deg);
@@ -232,9 +232,9 @@ body {
   transform: translate(-100%, 0%) rotate(0deg);
 }
 .btn-3:after {
-  border-left: calc(35px) solid transparent;
+  border-left: calc(40px - 5px) solid transparent;
   border-top: 40px solid #fc0853;
-  left: calc(-30px);
+  left: calc(-40px + 10px);
   right: 0;
   -webkit-transform: translate(100%, 0%) rotate(0deg);
   -moz-transform: translate(100%, 0%) rotate(0deg);
@@ -263,11 +263,11 @@ body {
   bottom: 0;
   right: 0;
   top: 0;
-  border-bottom: calc(20px) solid #fc0853;
-  border-top: calc(20px) solid #fc0853;
+  border-bottom: calc(40px / 2) solid #fc0853;
+  border-top: calc(40px / 2) solid #fc0853;
 }
 .btn-4:before {
-  border-right: calc(20px) solid transparent;
+  border-right: calc(40px / 2) solid transparent;
   -webkit-transform: translate(-100%, 0%) rotate(0deg);
   -moz-transform: translate(-100%, 0%) rotate(0deg);
   -o-transform: translate(-100%, 0%) rotate(0deg);
@@ -275,7 +275,7 @@ body {
   transform: translate(-100%, 0%) rotate(0deg);
 }
 .btn-4:after {
-  border-left: calc(20px) solid transparent;
+  border-left: calc(40px / 2) solid transparent;
   -webkit-transform: translate(100%, 0%) rotate(0deg);
   -moz-transform: translate(100%, 0%) rotate(0deg);
   -o-transform: translate(100%, 0%) rotate(0deg);
@@ -407,7 +407,40 @@ body {
 }
 .btn-6:hover:after,
 .btn-6:hover:before {
-  border-width: 40px calc(160px);
+  border-width: 40px calc(150px + 10px);
+}
+.btn-7 {
+  position: relative;
+}
+.btn-7::before,
+.btn-7::after {
+  content: '';
+  height: 40px;
+  width: 50%;
+  position: absolute;
+  top: 0px;
+  background-color: #fc0853;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.3s all linear;
+  -moz-transition: 0.3s all linear;
+  -o-transition: 0.3s all linear;
+  -ms-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+}
+.btn-7::before {
+  right: 0px;
+}
+.btn-7::after {
+  left: 0;
+}
+.btn-7:hover {
+  letter-spacing: 0.2em;
+}
+.btn-7:hover::before,
+.btn-7:hover::after {
+  width: 10px;
 }
 .btn-8:after,
 .btn-8:before {
@@ -513,12 +546,12 @@ body {
   content: '';
   border-radius: 50%;
   background-color: #fc0853;
-  width: calc(20px);
-  height: calc(20px);
+  width: calc(40px / 2);
+  height: calc(40px / 2);
   top: 50%;
 }
 .btn-12:before {
-  left: calc(-20px);
+  left: calc(-40px / 2);
   -webkit-transform: translate(-50%, -50%) rotate(0deg);
   -moz-transform: translate(-50%, -50%) rotate(0deg);
   -o-transform: translate(-50%, -50%) rotate(0deg);
@@ -526,7 +559,7 @@ body {
   transform: translate(-50%, -50%) rotate(0deg);
 }
 .btn-12:after {
-  right: calc(-20px);
+  right: calc(-40px / 2);
   -webkit-transform: translate(50%, -50%) rotate(0deg);
   -moz-transform: translate(50%, -50%) rotate(0deg);
   -o-transform: translate(50%, -50%) rotate(0deg);
@@ -652,6 +685,7 @@ h2 span.animated {
 }
 .card-title {
   height: 55px;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -839,11 +873,11 @@ h2 span.animated {
 /* ---- button ---- */
 .button {
   display: inline-block;
-  padding: 0.5em 1.0em;
+  padding: 0.5em 1em;
   background: #EEE;
   border: none;
   border-radius: 7px;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  background-image: linear-gradient(to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2));
   color: #222;
   font-family: sans-serif;
   font-size: 16px;
@@ -856,7 +890,7 @@ h2 span.animated {
 }
 .button:hover {
   background-color: #84fdeb;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
   color: #222;
 }
 .button.active,
@@ -865,10 +899,10 @@ h2 span.animated {
 }
 .button.is-checked {
   color: #7c7a7a00;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
 }
 .button.active {
-  box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
 }
 /* ---- button-group ---- */
 .button-group {
@@ -1037,7 +1071,7 @@ h2 span.animated {
   line-height: 3;
   overflow: hidden;
   font-size: 16px;
-  padding-left: 1.0em;
+  padding-left: 1em;
 }
 select:focus > option:checked {
   background: #08fdd8 !important;
@@ -1748,7 +1782,7 @@ select:focus > option:checked {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  transition: .5s;
+  transition: 0.5s;
   transform: translateY(110%);
 }
 #card-11 .card-image:hover .slice {
@@ -2132,6 +2166,87 @@ select:focus > option:checked {
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+#card-17 .card-image {
+  background: #000;
+  overflow: unset;
+}
+#card-17 .card-image:hover .overlay > span {
+  -webkit-animation: melting 0.6s ease;
+  animation: melting 0.6s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+#card-17 .card-image:hover .overlay > span:nth-child(1) {
+  -webkit-transform: translate(0, -100%) rotate(0deg);
+  -moz-transform: translate(0, -100%) rotate(0deg);
+  -o-transform: translate(0, -100%) rotate(0deg);
+  -ms-transform: translate(0, -100%) rotate(0deg);
+  transform: translate(0, -100%) rotate(0deg);
+}
+#card-17 .card-image:hover .overlay > span:nth-child(2) {
+  -webkit-transform: translate(0, 100%) rotate(0deg);
+  -moz-transform: translate(0, 100%) rotate(0deg);
+  -o-transform: translate(0, 100%) rotate(0deg);
+  -ms-transform: translate(0, 100%) rotate(0deg);
+  transform: translate(0, 100%) rotate(0deg);
+}
+#card-17 .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: unset;
+}
+#card-17 .overlay > span {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  height: 100%;
+  background: url(../img/YouTube-Data-API-Overview.jpg);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#card-17 .overlay > span:nth-child(1) {
+  background-position: 0%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#card-17 .overlay > span:nth-child(2) {
+  background-position: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#card-17 .overlay-content {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@keyframes melting {
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes piece1 {
   20% {
@@ -2695,34 +2810,34 @@ select:focus > option:checked {
     width: 100px;
   }
   .btn-1:before {
-    right: calc(-25px);
+    right: calc(-30px + 5px);
     border-bottom: 30px solid #fc0853;
-    border-right: calc(25px) solid transparent;
+    border-right: calc(30px - 5px) solid transparent;
   }
   .btn-3:before {
     border-bottom: 30px solid #fc0853;
-    border-right: calc(25px) solid transparent;
-    right: calc(-25px);
+    border-right: calc(30px - 5px) solid transparent;
+    right: calc(-30px + 5px);
   }
   .btn-3:after {
-    border-left: calc(25px) solid transparent;
+    border-left: calc(30px - 5px) solid transparent;
     border-top: 30px solid #fc0853;
-    left: calc(-20px);
+    left: calc(-30px + 10px);
   }
   .btn-4:after,
   .btn-4:before {
-    border-bottom: calc(15px) solid #fc0853;
-    border-top: calc(15px) solid #fc0853;
+    border-bottom: calc(30px / 2) solid #fc0853;
+    border-top: calc(30px / 2) solid #fc0853;
   }
   .btn-4:before {
-    border-right: calc(15px) solid transparent;
+    border-right: calc(30px / 2) solid transparent;
   }
   .btn-4:after {
-    border-left: calc(15px) solid transparent;
+    border-left: calc(30px / 2) solid transparent;
   }
   .btn-6:hover:after,
   .btn-6:hover:before {
-    border-width: 30px calc(110px);
+    border-width: 30px calc(100px + 10px);
   }
   .btn-8:hover:after,
   .btn-8:hover:before {
@@ -2735,14 +2850,14 @@ select:focus > option:checked {
   .btn-12:after,
   .btn-12:before {
     background-color: #fc0853;
-    width: calc(15px);
-    height: calc(15px);
+    width: calc(30px / 2);
+    height: calc(30px / 2);
   }
   .btn-12:before {
-    left: calc(-15px);
+    left: calc(-30px / 2);
   }
   .btn-12:after {
-    right: calc(-15px);
+    right: calc(-30px / 2);
   }
   #card-7 .overlay::before,
   #card-7 .overlay::after {
@@ -2840,34 +2955,34 @@ select:focus > option:checked {
     width: 70px;
   }
   .btn-1:before {
-    right: calc(-15px);
+    right: calc(-20px + 5px);
     border-bottom: 20px solid #fc0853;
-    border-right: calc(15px) solid transparent;
+    border-right: calc(20px - 5px) solid transparent;
   }
   .btn-3:before {
     border-bottom: 20px solid #fc0853;
-    border-right: calc(15px) solid transparent;
-    right: calc(-15px);
+    border-right: calc(20px - 5px) solid transparent;
+    right: calc(-20px + 5px);
   }
   .btn-3:after {
-    border-left: calc(15px) solid transparent;
+    border-left: calc(20px - 5px) solid transparent;
     border-top: 20px solid #fc0853;
-    left: calc(-10px);
+    left: calc(-20px + 10px);
   }
   .btn-4:after,
   .btn-4:before {
-    border-bottom: calc(10px) solid #fc0853;
-    border-top: calc(10px) solid #fc0853;
+    border-bottom: calc(20px / 2) solid #fc0853;
+    border-top: calc(20px / 2) solid #fc0853;
   }
   .btn-4:before {
-    border-right: calc(10px) solid transparent;
+    border-right: calc(20px / 2) solid transparent;
   }
   .btn-4:after {
-    border-left: calc(10px) solid transparent;
+    border-left: calc(20px / 2) solid transparent;
   }
   .btn-6:hover:after,
   .btn-6:hover:before {
-    border-width: 20px calc(80px);
+    border-width: 20px calc(70px + 10px);
   }
   .btn-8:hover:after,
   .btn-8:hover:before {
@@ -2880,14 +2995,14 @@ select:focus > option:checked {
   .btn-12:after,
   .btn-12:before {
     background-color: #fc0853;
-    width: calc(10px);
-    height: calc(10px);
+    width: calc(20px / 2);
+    height: calc(20px / 2);
   }
   .btn-12:before {
-    left: calc(-10px);
+    left: calc(-20px / 2);
   }
   .btn-12:after {
-    right: calc(-10px);
+    right: calc(-20px / 2);
   }
   #card-11 .overlay-content > h3,
   #card-12 .overlay-content > h3,
@@ -2987,5 +3102,8 @@ select:focus > option:checked {
   #card-16 .overlay-content {
     height: 100%;
     margin-top: 20px;
+  }
+  #card-17 .overlay-content {
+    margin-top: 0;
   }
 }

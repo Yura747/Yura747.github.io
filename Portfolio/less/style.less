@@ -32,20 +32,20 @@ body {
 }
 
 
-//mixins 
+//mixins
 .border-box {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .transition(@speed: 1s) {
-  -webkit-transition: all @speed ease; 
-  -o-transition: all @speed ease;    
+  -webkit-transition: all @speed ease;
+  -o-transition: all @speed ease;
   transition: all @speed ease;
 }
 .transition1(@how: all; @speed: 1s; @type: ease) {
-  -webkit-transition: @how @speed @type; 
-  -o-transition: @how @speed @type;    
+  -webkit-transition: @how @speed @type;
+  -o-transition: @how @speed @type;
   transition: @how @speed @type;
 }
 .transition2(@speed1: 1s; @speed2: 1s; @animate: ease-in-out) {
@@ -92,15 +92,15 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-.animation-fill-mode {                    
+.animation-fill-mode {
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards; 
+  -webkit-animation-fill-mode: forwards;
 }
 
 // styles
 
-// --- buttons --- 
-@btn-color: @pink; 
+// --- buttons ---
+@btn-color: @pink;
 @btn-height: 40px;
 @btn-width: 150px;
 
@@ -316,6 +316,42 @@ body {
       }
 	}
 }
+.btn-7 {
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+      height: 40px;
+      width: 50%;
+      position: absolute;
+      top: 0px;
+      background-color: @pink;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: 0.3s all linear;
+      -moz-transition: 0.3s all linear;
+      -o-transition: 0.3s all linear;
+      -ms-transition: 0.3s all linear;
+      transition: 0.3s all linear;
+    }
+
+    &::before {
+      right: 0px;
+    }
+
+    &::after {
+      left: 0;
+    }
+
+    &:hover {
+      letter-spacing: 0.2em;
+
+      &::before, &::after {
+        width: 10px;
+      }
+    }
+}
 .btn-8 {
   &:after, &:before {
     content: '';
@@ -432,7 +468,7 @@ body {
 		}
 	}
 }
-// --- buttons-end --- 
+// --- buttons-end ---
 
 h2 {
   font-size: 40px;
@@ -484,7 +520,7 @@ h2 {
     color: @green;
   }
   &.rubberBand {
-    -webkit-animation: rubberBand 1s ease 1;   
+    -webkit-animation: rubberBand 1s ease 1;
     animation: rubberBand 1s ease 1;
   }
   &.animated {
@@ -516,6 +552,7 @@ h2 {
 }
 .card-title {
   height: 55px;
+  white-space: nowrap;
   .flex-vh-center;
 }
 .card-content {
@@ -1085,47 +1122,47 @@ select:focus > option:checked {
       &:hover {
         .pieces {
             &.piece-1 {
-              -webkit-animation: piece1 1s ease;   
+              -webkit-animation: piece1 1s ease;
               animation: piece1 1s ease;
-              .animation-fill-mode; 
+              .animation-fill-mode;
             }
             &.piece-2 {
-              -webkit-animation: piece2 1s ease;   
+              -webkit-animation: piece2 1s ease;
               animation: piece2 1s ease;
               .animation-fill-mode;
             }
             &.piece-3 {
-              -webkit-animation: piece3 1s ease;   
+              -webkit-animation: piece3 1s ease;
               animation: piece3 1s ease;
               .animation-fill-mode;
             }
             &.piece-4 {
-              -webkit-animation: piece4 1s ease;   
+              -webkit-animation: piece4 1s ease;
               animation: piece4 1s ease;
               .animation-fill-mode;
             }
             &.piece-5 {
-              -webkit-animation: piece5 1s ease;   
+              -webkit-animation: piece5 1s ease;
               animation: piece5 1s ease;
               .animation-fill-mode;
             }
             &.piece-6 {
-              -webkit-animation: piece6 1s ease;   
+              -webkit-animation: piece6 1s ease;
               animation: piece6 1s ease;
               .animation-fill-mode;
             }
             &.piece-7 {
-              -webkit-animation: piece7 1s ease;   
+              -webkit-animation: piece7 1s ease;
               animation: piece7 1s ease;
               .animation-fill-mode;
             }
             &.piece-8 {
-              -webkit-animation: piece8 1s ease;   
+              -webkit-animation: piece8 1s ease;
               animation: piece8 1s ease;
               .animation-fill-mode;
             }
             &.piece-9 {
-              -webkit-animation: piece9 1s ease;   
+              -webkit-animation: piece9 1s ease;
               animation: piece9 1s ease;
               .animation-fill-mode;
             }
@@ -1258,10 +1295,10 @@ select:focus > option:checked {
       background-repeat: no-repeat;
       .transition( .5s);
       &:nth-child(1) {
-        background-position: 0%; 
+        background-position: 0%;
       }
       &:nth-child(2) {
-        background-position: 100%; 
+        background-position: 100%;
       }
     }
   }
@@ -1532,19 +1569,20 @@ select:focus > option:checked {
 #card-12 {
   @card9: #135796;
   .card-image {
-    background-color: @card9; 
+    background-color: @card9;
     &::before {
-      background: @card9; 
+      background: @card9;
     }
     &::after {
-      background: @card9; 
+      background: @card9;
     }
   }
   .overlay {
     background-color: @card9;
   }
 }
-#card-12, #card-1, #card-3  {
+
+#card-12, #card-1, #card-3 {
 
   .card-image {
     color: #fff;
@@ -1706,10 +1744,82 @@ select:focus > option:checked {
     .transition1(all; 0.3s; ease-out);
   }
 }
+// - - - - - - - - - - - Card 17 - - - - - - - - - - - -
+#card-17 {
+  .card-image {
+    background: #000;
+    overflow: unset;
+
+    &:hover {
+      .overlay {
+        > span {
+          -webkit-animation: melting .6s ease;
+          animation: melting .6s ease;
+          .animation-fill-mode;
+
+          &:nth-child(1) {
+            .translate(0; -100%; 0deg);
+          }
+
+          &:nth-child(2) {
+            .translate(0; 100%; 0deg);
+          }
+        }
+      }
+    }
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: unset;
+
+    > span {
+      position: relative;
+      z-index: 2;
+      width: 50%;
+      height: 100%;
+      background: url(../img/YouTube-Data-API-Overview.jpg);
+      background-size: 200% 100%;
+      background-repeat: no-repeat;
+      .transition( .5s);
+
+      &:nth-child(1) {
+        background-position: 0%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+
+      &:nth-child(2) {
+        background-position: 100%;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+    }
+  }
+
+  .overlay-content {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .flex-vh-center;
+    .flex-column;
+  }
+}
 
 // - - - - - - - - - - - - End - - - - - - - - - - - -
 
-
+@keyframes melting {
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes piece1 {
   20% {
     .translate(-50px; -50px; 0deg);
@@ -1802,7 +1912,7 @@ select:focus > option:checked {
 @-webkit-keyframes piece5 {
   20% {
     opacity: 1;
-    .scale(1.1);    
+    .scale(1.1);
   }
   100% {
     opacity: 0;
@@ -1888,7 +1998,7 @@ select:focus > option:checked {
     opacity: 0;
   }
 }
-@-webkit-keyframes rubberBand{
+@-webkit-keyframes rubberBand {
   0% {
     -webkit-transform:scale3d(1,1,1);
     transform:scale3d(1,1,1)
@@ -2016,8 +2126,6 @@ select:focus > option:checked {
   }
 }
 
-    
-
 // Media requests
 @media (max-width: 1050px) {
   .button-group .button {
@@ -2038,7 +2146,7 @@ select:focus > option:checked {
 }
 
 @media (max-width: 960px) {
-  @image-height: 400px;  
+  @image-height: 400px;
   .card {
     max-width: 860px;
   }
@@ -2072,22 +2180,22 @@ select:focus > option:checked {
 }
 @media (max-width: 850px) {
   .button-group { display: none; }
-  .filters-wr { 
+  .filters-wr {
     width: 640px;
-    margin-left: 10%; 
+    margin-left: 10%;
   }
   .filters-select { display: block; }
   #select-type {
     margin-right: 10px;
   }
-  .grid { margin: 0 10%; } 
+  .grid { margin: 0 10%; }
   .toTop {
     right: 50px;
     bottom: 50px;
   }
 }
 @media (max-width: 768px) {
-  @image-height: 260px;  
+  @image-height: 260px;
   h2 {
     font-size: 30px;
   }
@@ -2208,7 +2316,7 @@ select:focus > option:checked {
       right:  calc(-@btn-height / 2);
     }
   }
-  // --- buttons-end --- 
+  // --- buttons-end ---
   #card-7 {
     .overlay {
       &::before, &::after {
@@ -2246,7 +2354,7 @@ select:focus > option:checked {
   .filters__title,.filters__inner {
     margin-left: 0;
   }
-  .filters-wr { 
+  .filters-wr {
     width: 600px;
     margin: 30px auto;
   }
@@ -2258,13 +2366,13 @@ select:focus > option:checked {
   }
 }
 @media (max-width: 650px) {
-  .filters-wr { 
+  .filters-wr {
     padding: 0 20px;
     box-sizing: border-box;
   }
 }
 @media (max-width: 600px) {
-  @image-height: 200px;  
+  @image-height: 200px;
   h2 {
     font-size: 25px;
   }
@@ -2305,7 +2413,7 @@ select:focus > option:checked {
     }
   }
 
-    // --- buttons --- 
+    // --- buttons ---
   @btn-height: 20px;
   @btn-width: 70px;
 
@@ -2377,7 +2485,7 @@ select:focus > option:checked {
       right:  calc(-@btn-height / 2);
     }
   }
-  // --- buttons-end --- 
+  // --- buttons-end ---
   #card-11, #card-12, #card-5, #card-1 {
     .overlay-content > h3 {
       margin: 10px auto;
@@ -2421,7 +2529,7 @@ select:focus > option:checked {
   }
 }
 @media (max-width: 360px) {
-  @image-height: 180px;  
+  @image-height: 180px;
   .card {
     max-width: 350px;
   }
@@ -2482,6 +2590,11 @@ select:focus > option:checked {
     .overlay-content {
       height: 100%;
       margin-top: 20px;
+    }
+  }
+  #card-17 {
+    .overlay-content {
+      margin-top: 0;
     }
   }
 }
