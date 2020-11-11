@@ -21,11 +21,7 @@ div {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-decoration: none;
-  color: #000;
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  font-weight: normal;
 }
 .flex-vh-center {
   display: -webkit-box;
@@ -78,15 +74,6 @@ body {
 .title:last-child {
   border-bottom: none;
 }
-.title.active {
-  background-color: #0083F5;
-  color: #fff;
-  margin: 20px 0;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  border-bottom: none;
-  transform: scale(1.1, 1.1);
-  -webkit-transform: scale(1.1, 1.1);
-}
 h2 {
   font-size: 20px;
   font-weight: bold;
@@ -108,14 +95,6 @@ h2 {
   box-sizing: border-box;
   transition-duration: 0.5s;
 }
-.video.active {
-  opacity: 1;
-  visibility: visible;
-  width: 600px;
-  height: 350px;
-  margin: 30px auto;
-  border: 1px solid #000;
-}
 .video__inner {
   height: 100%;
   background: url('../img/bg.jpg');
@@ -128,7 +107,7 @@ h2 {
   width: 100%;
   height: 100%;
 }
-.open {
+.plus-minus-circle {
   width: 30px;
   height: 30px;
   border-radius: 15px;
@@ -138,8 +117,8 @@ h2 {
   top: 50%;
   margin-top: -15px;
 }
-.open:before,
-.open:after {
+.plus-minus-circle:before,
+.plus-minus-circle:after {
   width: 16px;
   height: 2px;
   border-radius: 2px;
@@ -150,38 +129,15 @@ h2 {
   left: 7px;
   transition-duration: 0.33s;
 }
-.open:before {
+.plus-minus-circle:before {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.open.active {
-  background-color: #fff;
-}
-.open.active:before,
-.open.active:after {
-  background-color: #0083F5;
-}
-.open.active:before {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  transition-duration: 0.33s;
-}
-.open.active:hover {
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
-}
-.open.active:hover:before {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
-.open.active:hover:after {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-.open:hover:before {
+.plus-minus-circle:hover:before {
   transform: rotate(-270deg);
   -webkit-transform: rotate(-270deg);
 }
-.open:hover:after {
+.plus-minus-circle:hover:after {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
@@ -194,10 +150,6 @@ h2 {
   bottom: 0;
   color: #fff;
   font-style: italic;
-}
-.number.active {
-  background-color: #fff;
-  color: #0083F5;
 }
 .message {
   width: 100%;
@@ -227,7 +179,7 @@ h2 {
 }
 .error-message p {
   width: 400px;
-  word-break: break-all;
+  word-break: break-word;
   text-align: left;
 }
 .form-wrapper {
@@ -272,7 +224,8 @@ h2 {
   width: 70%;
   box-sizing: border-box;
   padding: 0 10px;
-  border-radius: 2px;
+  border-radius: 3px;
+  border: 1px solid #000;
 }
 .form__button {
   height: 100%;
@@ -283,6 +236,50 @@ h2 {
   margin-left: 15px;
   font-weight: bold;
 }
+.item.active .number {
+  background-color: #fff;
+  color: #0083F5;
+}
+.item.active .plus-minus-circle {
+  background-color: #fff;
+}
+.item.active .plus-minus-circle:before,
+.item.active .plus-minus-circle:after {
+  background-color: #0083F5;
+}
+.item.active .plus-minus-circle:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition-duration: 0.33s;
+}
+.item.active .plus-minus-circle:hover {
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+.item.active .plus-minus-circle:hover:before {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.item.active .plus-minus-circle:hover:after {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.item.active .title {
+  background-color: #0083F5;
+  color: #fff;
+  margin: 20px 0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+  transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+}
+.item.active .video {
+  opacity: 1;
+  visibility: visible;
+  width: 600px;
+  height: 350px;
+  margin: 30px auto;
+  border: 1px solid #000;
+}
 .hide {
   opacity: 0;
   visibility: hidden;
@@ -292,7 +289,7 @@ h2 {
   .title {
     width: 500px;
   }
-  .video.active {
+  .item.active .video {
     width: 500px;
   }
 }
@@ -303,7 +300,7 @@ h2 {
   .title {
     width: 400px;
   }
-  .video.active {
+  .item.active .video {
     width: 380px;
     height: 300px;
   }
@@ -315,12 +312,12 @@ h2 {
   .title {
     width: 300px;
   }
-  .video.active {
-    width: 280px;
-    height: 250px;
-  }
   .message__inner {
     width: 300px;
+  }
+  .item.active .video {
+    width: 280px;
+    height: 250px;
   }
 }
 @media (max-width: 320px) {
@@ -331,7 +328,7 @@ h2 {
     width: 250px;
     margin: 0 auto;
   }
-  .video.active {
+  .item.active .video {
     width: 250px;
     height: 250px;
   }

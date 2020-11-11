@@ -30,9 +30,9 @@ const YOUTUBE = {
 		if (result && result.error) {
 			this.showMessage(result.error.message);
 		} else {
-			$form.closest(".form-wrapper").classList.remove("full");
 			this.createHTML(result);
 		}
+		$form.closest(".form-wrapper").classList.remove("full");
 	})
 	.catch((error) => $this.showMessage(error));
   },
@@ -56,7 +56,7 @@ const YOUTUBE = {
 				<div class="title">
 				<h2>${title}</h2>
 				<p class="date">${date}</p>
-				<span class="open"></span>
+				<span class="plus-minus-circle"></span>
 				<span class="number">${number + 1}</span>
 				</div>
 				<div class="video">
@@ -71,15 +71,16 @@ const YOUTUBE = {
 
 		for (let i = 0; i < listItems.length; i++) {
 			listItems[i].addEventListener('click', function() {
-				let title = this;
-					title.classList.toggle('active');
-				let video = this.nextElementSibling;
-					video.classList.toggle('active');
-					video.scrollIntoView({behavior: 'smooth'});
-				let number = this.lastElementChild;
-					number.classList.toggle('active');
-				let open = this.lastElementChild.previousElementSibling;
-					open.classList.toggle('active');
+				let $title = this;
+				let $video = this.nextElementSibling;
+
+				if ($title.parentElement.classList.contains("active")) {
+					$title.parentElement.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+				} else {
+					$video.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+				}
+
+				$title.parentElement.classList.toggle('active')
 			});
 		}
 	}
@@ -90,6 +91,7 @@ const YOUTUBE = {
 
 	$errorMesage.innerHTML = `<p>${message}</p>`;
 	$errorMesage.classList.remove("hide");
+	$form.closest(".form-wrapper").classList.add("hide");
   }
 }
 
