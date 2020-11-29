@@ -906,6 +906,7 @@ h2 span.animated {
 }
 /* ---- button-group ---- */
 .button-group {
+  display: flex;
   width: 800px;
   white-space: nowrap;
 }
@@ -915,7 +916,6 @@ h2 span.animated {
   clear: both;
 }
 .button-group .button {
-  float: left;
   border-radius: 0;
   margin-left: 0;
   margin-right: 1px;
@@ -1266,7 +1266,8 @@ select:focus > option:checked {
   -ms-transition: 0.5s 0.5s ease-in-out;
   transition: 0.5s 0.5s ease-in-out;
 }
-#card-5 img {
+#card-5 img,
+#card-18 img {
   -webkit-transition: all 0.4s 0.2s ease-in-out;
   -moz-transition: all 0.4s 0.2s ease-in-out;
   -o-transition: all 0.4s 0.2s ease-in-out;
@@ -1274,7 +1275,8 @@ select:focus > option:checked {
   transition: 0.4s 0.2s ease-in-out;
   opacity: 1;
 }
-#card-5 .card-image:hover .mask {
+#card-5 .card-image:hover .mask,
+#card-18 .card-image:hover .mask {
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1) rotate(0deg);
@@ -1288,7 +1290,8 @@ select:focus > option:checked {
   -ms-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-#card-5 .card-image:hover img {
+#card-5 .card-image:hover img,
+#card-18 .card-image:hover img {
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -o-transform: scale(0);
@@ -1303,7 +1306,8 @@ select:focus > option:checked {
   -ms-transition-delay: 0s;
   transition-delay: 0s;
 }
-#card-5 .mask {
+#card-5 .mask,
+#card-18 .mask {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2240,6 +2244,9 @@ select:focus > option:checked {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+#card-18 .mask {
+  background: linear-gradient(#451d7e, #1c247c);
+}
 @keyframes melting {
   20% {
     opacity: 1;
@@ -3007,7 +3014,8 @@ select:focus > option:checked {
   #card-11 .overlay-content > h3,
   #card-12 .overlay-content > h3,
   #card-5 .overlay-content > h3,
-  #card-1 .overlay-content > h3 {
+  #card-1 .overlay-content > h3,
+  #card-18 .overlay-content > h3 {
     margin: 10px auto;
     max-width: 130px;
   }
