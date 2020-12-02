@@ -36,11 +36,12 @@ $(".word").mouseenter(function() {
 
 // change displayed style
 $fasIcon.on('click', () => {
-	$('.cards-list').toggle('');
+	$('.cards-list').toggleClass('hidden');
 	$('.cards-table').toggleClass('active');
 	$('.fas.list-btn').toggleClass('active');
+	$('.fas.table-btn').toggleClass('active');
 
-	if( localStorage.display == 'table' ) {
+	if (localStorage.display == 'table') {
 		localStorage.display = 'list';
 		$fasIcon.removeClass('fa-border-all');
 		$fasIcon.addClass('fa-th-list');
@@ -56,14 +57,15 @@ $fasIcon.on('click', () => {
 });
 
 // save displayed style in LocalStorage
-if( localStorage.display && localStorage.display == 'table' ) {
+if (localStorage.display && localStorage.display == 'table') {
 	$fasIcon.removeClass('fa-border-all');
 	$fasIcon.addClass('fa-th-list');
 	$('.cards-list').addClass('hidden');
 	$('.cards-table').addClass('active');
 	$scrollToTopBtn.hide();
 	$('.fas.list-btn').removeClass('active');
-} else if ( localStorage.display == 'list' ) {
+	$('.fas.table-btn').addClass('active');
+} else if (localStorage.display == 'list') {
 	$fasIcon.removeClass('fa-border-all');
 	$fasIcon.addClass('fa-th-list');
   	$('.cards-list').removeClass('hidden');
@@ -89,7 +91,7 @@ $('#filters').on( 'click', 'button', function() {
 });
 
 // change is-checked class on buttons
-$('.button-group').each( function(i, buttonGroup) {
+$('.button-group').each(function(i, buttonGroup) {
 	var $buttonGroup = $( buttonGroup );
 
 	$buttonGroup.on( 'click', 'button', function() {
@@ -98,7 +100,7 @@ $('.button-group').each( function(i, buttonGroup) {
 	});
 });
 
-$( ".filters-select" ).change(function () {
+$(".filters-select").change(function () {
 	const filterValue = this.value;
 
 	$grid.isotope({ filter: filterValue });
@@ -110,11 +112,12 @@ $( ".filters-select" ).change(function () {
 //===============   Table - overlay animation   ==============
 
 //Detect Closest Edge
-function closestEdge(x,y,w,h) {
-	var topEdgeDist    = distMetric(x,y,w/2,0);
-	var bottomEdgeDist = distMetric(x,y,w/2,h);
-	var leftEdgeDist   = distMetric(x,y,0,h/2);
-	var rightEdgeDist  = distMetric(x,y,w,h/2);
+function closestEdge(x, y, w, h) {
+	var topEdgeDist    = distMetric(x, y, w/2, 0);
+	var bottomEdgeDist = distMetric(x, y, w/2, h);
+	var leftEdgeDist   = distMetric(x, y, 0, h/2);
+	var rightEdgeDist  = distMetric(x, y, w, h/2);
+
 	var min = Math.min(topEdgeDist,bottomEdgeDist,leftEdgeDist,rightEdgeDist);
 
 	switch (min) {
@@ -145,7 +148,7 @@ for(var i = 0; i < boxes.length; i++) {
 		var rect = e.target.getBoundingClientRect();
 		var x = e.clientX - rect.left; //x position within the element.
 		var y = e.clientY - rect.top;  //y position within the element.
-		var edge = closestEdge(x,y,this.clientWidth, this.clientHeight);
+		var edge = closestEdge(x, y, this.clientWidth, this.clientHeight);
 		var overlay = this.lastElementChild.firstElementChild;
 		var image = this.firstElementChild;
 

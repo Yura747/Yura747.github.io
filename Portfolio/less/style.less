@@ -1772,7 +1772,7 @@ h2 {
 	cursor: pointer;
 }
 
-.list-btn {
+.list-btn, .table-btn {
 	display: none;
 	position: absolute;
 	right: 50px;
@@ -1785,17 +1785,31 @@ h2 {
 }
 
 .cards-list {
+	position: relative;
+	transform: translateX(0);
+	.transition1(all; 0.5s; ease-in-out);
+
 	&.hidden {
-		display: none;
+		opacity: 0;
+		visibility: hidden;
+
+		position: absolute;
+		transform: translateX(100%);
 	}
 }
 
 .cards-table {
-	display: none;
-	position: relative;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	transform: translateX(100%);
+	.transition1(all; 0.5s; ease-in-out);
 
 	&.active {
-		display: block;
+		opacity: 1;
+		position: relative;
+		visibility: visible;
+		transform: translateX(0);
 	}
 }
 
@@ -2810,7 +2824,8 @@ select:focus > option:checked {
 		bottom: 20px;
 	}
 
-	.list-btn {
+	.list-btn,
+	.table-btn {
 		right: 20px;
 		top: 20px;
 	}

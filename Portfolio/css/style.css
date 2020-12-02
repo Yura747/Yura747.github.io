@@ -2102,25 +2102,45 @@ h2 span.animated {
   color: #8d8d8d;
   cursor: pointer;
 }
-.list-btn {
+.list-btn,
+.table-btn {
   display: none;
   position: absolute;
   right: 50px;
   top: 50px;
   z-index: 999;
 }
-.list-btn.active {
+.list-btn.active,
+.table-btn.active {
   display: block;
+}
+.cards-list {
+  position: relative;
+  transform: translateX(0);
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .cards-list.hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transform: translateX(100%);
 }
 .cards-table {
-  display: none;
-  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transform: translateX(100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .cards-table.active {
-  display: block;
+  opacity: 1;
+  position: relative;
+  visibility: visible;
+  transform: translateX(0);
 }
 .grid {
   width: 1000px;
@@ -3054,7 +3074,8 @@ select:focus > option:checked {
     right: 20px;
     bottom: 20px;
   }
-  .list-btn {
+  .list-btn,
+  .table-btn {
     right: 20px;
     top: 20px;
   }
