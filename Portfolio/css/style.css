@@ -2124,13 +2124,13 @@ h2 span.animated {
 .cards-list.hidden {
   opacity: 0;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   transform: translateX(100%);
 }
 .cards-table {
   opacity: 0;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   transform: translateX(100%);
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
