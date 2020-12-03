@@ -113,6 +113,9 @@ body {
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
+.wrapper-inner {
+  overflow-x: hidden;
+}
 [class^="btn-"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
