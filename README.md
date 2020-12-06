@@ -1,3 +1,3 @@
 My portfolio website 
 
-Look here: https://yura747.github.io/Portfolio/index.html
+Look here: https://yura747.github.io/Portfolio
