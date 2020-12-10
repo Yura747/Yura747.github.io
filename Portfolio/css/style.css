@@ -1857,6 +1857,39 @@ h2 span.animated {
 .card--18 .mask {
   background: linear-gradient(#451d7e, #1c247c);
 }
+.card--19 .card__image > img {
+  position: relative;
+  z-index: 10;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.card--19 .card__image:hover > img {
+  -webkit-transform: translate(-100%, 0%) rotate(0deg);
+  -moz-transform: translate(-100%, 0%) rotate(0deg);
+  -o-transform: translate(-100%, 0%) rotate(0deg);
+  -ms-transform: translate(-100%, 0%) rotate(0deg);
+  transform: translate(-100%, 0%) rotate(0deg);
+}
+.card--19 .card__image:hover .overlay {
+  -webkit-transform: translate(0%, 0%) rotate(0deg);
+  -moz-transform: translate(0%, 0%) rotate(0deg);
+  -o-transform: translate(0%, 0%) rotate(0deg);
+  -ms-transform: translate(0%, 0%) rotate(0deg);
+  transform: translate(0%, 0%) rotate(0deg);
+}
+.card--19 .overlay {
+  background-color: #6873ea;
+  z-index: 1;
+  -webkit-transform: translate(100%, 0%) rotate(0deg);
+  -moz-transform: translate(100%, 0%) rotate(0deg);
+  -o-transform: translate(100%, 0%) rotate(0deg);
+  -ms-transform: translate(100%, 0%) rotate(0deg);
+  transform: translate(100%, 0%) rotate(0deg);
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
 .card__title {
   height: 55px;
   white-space: nowrap;

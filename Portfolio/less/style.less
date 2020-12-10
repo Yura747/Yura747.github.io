@@ -1395,18 +1395,18 @@ h2 {
 	}
 	// - - - - - - - - - - - Card 13 - - - - - - - - - - - -
 	&--13 {
-	.card__image{
-		&:hover {
+		.card__image {
+			&:hover {
+				.overlay {
+					.translate(0%; 0%; 0deg);
+				}
+			}
+		}
 		.overlay {
-			.translate(0%; 0%; 0deg);
+			.translate(-100%; 0%; 0deg);
+			.transition1(all; 0.5s; ease);
+			background-color: #6873ea;
 		}
-		}
-	}
-	.overlay {
-		.translate(-100%; 0%; 0deg);
-		.transition1(all; 0.5s; ease);
-		background-color: #6873ea;
-	}
 	}
 
 	// - - - - - - - - - - - Card 14 - - - - - - - - - - - -
@@ -1444,28 +1444,28 @@ h2 {
 
 	// - - - - - - - - - - - Card 15 - - - - - - - - - - - -
 	&--15 {
-	@card9: rgb(11, 28, 56);
-	.card__image {
-		> img {
-		position: relative;
-		z-index: 10;
-		.transition1(all; 0.4s; ease-out);
-		}
-		&:hover {
-		> img {
-			.translate(-100%; 0%; 0deg);
+		@card9: rgb(11, 28, 56);
+		.card__image {
+			> img {
+				position: relative;
+				z-index: 10;
+				.transition1(all; 0.4s; ease-out);
+			}
+			&:hover {
+				> img {
+					.translate(-100%; 0%; 0deg);
+				}
+				.overlay {
+					.translate(0%; 0%; 0deg);
+				}
+			}
 		}
 		.overlay {
-			.translate(0%; 0%; 0deg);
+			background-color: @card9;
+			z-index: 1;
+			.translate(100%; 0%; 0deg);
+			.transition1(all; 0.4s; ease-out);
 		}
-		}
-	}
-	.overlay {
-		background-color: @card9;
-		z-index: 1;
-		.translate(100%; 0%; 0deg);
-		.transition1(all; 0.4s; ease-out);
-	}
 	}
 
 	// - - - - - - - - - - - Card 16 - - - - - - - - - - - -
@@ -1568,10 +1568,38 @@ h2 {
 
 	// - - - - - - - - - - - Card 18 - - - - - - - - - - - -
 	&--18 {
-	.mask {
-		background: linear-gradient(#451d7e, #1c247c);
+		.mask {
+			background: linear-gradient(#451d7e, #1c247c);
+		}
 	}
+
+	// - - - - - - - - - - - Card 19 - - - - - - - - - - - -
+	&--19 {
+		@card19: #6873ea;
+		.card__image {
+			> img {
+				position: relative;
+				z-index: 10;
+				.transition1(all; 0.4s; ease-out);
+			}
+			&:hover {
+				> img {
+					.translate(-100%; 0%; 0deg);
+				}
+				.overlay {
+					.translate(0%; 0%; 0deg);
+				}
+			}
+		}
+		.overlay {
+			background-color: @card19;
+			z-index: 1;
+			.translate(100%; 0%; 0deg);
+			.transition1(all; 0.4s; ease-out);
+		}
 	}
+
+	// - - - - - - - - - - - Cards end - - - - - - - - - - - -
 
 	&__title {
 		height: 55px;
