@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "./static/css/main.b9d09fc1.chunk.css",
+    "main.js": "./static/js/main.314227b2.chunk.js",
+    "main.js.map": "./static/js/main.314227b2.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.81cd7cb3.js",
+    "runtime~main.js.map": "./static/js/runtime~main.81cd7cb3.js.map",
+    "static/css/2.ed4a10d6.chunk.css": "./static/css/2.ed4a10d6.chunk.css",
+    "static/js/2.56a163df.chunk.js": "./static/js/2.56a163df.chunk.js",
+    "static/js/2.56a163df.chunk.js.map": "./static/js/2.56a163df.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.8c9429c9c511b0d061e5df11bbaf793f.js": "./precache-manifest.8c9429c9c511b0d061e5df11bbaf793f.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.ed4a10d6.chunk.css.map": "./static/css/2.ed4a10d6.chunk.css.map",
+    "static/css/main.b9d09fc1.chunk.css.map": "./static/css/main.b9d09fc1.chunk.css.map",
+    "static/media/Home.scss": "./static/media/slick.f97e3bbf.svg"
+  }
+}

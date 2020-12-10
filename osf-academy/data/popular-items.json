@@ -1,0 +1,66 @@
+
+
+{
+  "cards":
+  [
+    {
+      "id": "4rhu4",
+      "content": "Kristina Dam Oak Table With White Marble Top",
+      "price": 799.55,
+      "img" : "./images/card_4.png"
+    },
+    {
+      "id": "8cy3r",
+      "content": "Hay - About A Lounge",
+      "content2": "Chair AAL 93",
+      "price": 659.55,
+      "img" : "./images/card_11.png"
+    },
+    {
+      "id": "3r8u4f",
+      "content": "TORY DESK CALENDAR",
+      "price": 410.99,
+      "img" : "./images/card_5.png",
+      "contentMargin": "15px 0 15px 0"
+    },
+    {
+      "id": "3fj6k",
+      "content": "Vitra Cork Stool B, Cork - Design",
+      "content2": "Within Reach",
+      "price": 299.99,
+      "img" : "./images/card_6.png"
+    }
+  ],
+  "categoryCards":
+  [
+    {
+      "id": "3tg5dg",
+      "content": "Activate Facial Mask and Charcoal",
+      "content2": "Soap",
+      "price": 129.55,
+      "img": "./images/card_9.png"
+    },
+    {
+      "id": "33rsg",
+      "content": "Vitra Cork Stool B, Cork - Design",
+      "content2": "Within Reach",
+      "price": 299.99,
+      "img": "./images/card_12.png"
+    },
+    {
+      "id": "1fs34",
+      "content": "Hay - About A Lounge",
+      "content2": "Chair AAL 93",
+      "price": 659.55,
+      "img": "./images/card_6.png"
+    },
+    {
+      "id": "ffuf5",
+      "content": "TORY DESK CALENDAR",
+      "content2": "",
+      "price": 410.99,
+      "img": "./images/card_5.png",
+      "contentMargin": "15px 0 15px 0"
+    }
+  ]
+}
