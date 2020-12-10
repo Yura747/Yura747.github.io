@@ -1579,7 +1579,8 @@ h2 span.animated {
 }
 .card--12 .card__image,
 .card--1 .card__image,
-.card--3 .card__image {
+.card--3 .card__image,
+.card--20 .card__image {
   color: #fff;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -1596,14 +1597,16 @@ h2 span.animated {
 }
 .card--12 .card__image img,
 .card--1 .card__image img,
-.card--3 .card__image img {
+.card--3 .card__image img,
+.card--20 .card__image img {
   -webkit-transition: all 0.35s ease;
   -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 .card--12 .card__image::before,
 .card--1 .card__image::before,
-.card--3 .card__image::before {
+.card--3 .card__image::before,
+.card--20 .card__image::before {
   content: '';
   position: absolute;
   height: 0;
@@ -1616,7 +1619,8 @@ h2 span.animated {
 }
 .card--12 .card__image::after,
 .card--1 .card__image::after,
-.card--3 .card__image::after {
+.card--3 .card__image::after,
+.card--20 .card__image::after {
   content: '';
   position: absolute;
   height: 0;
@@ -1629,17 +1633,20 @@ h2 span.animated {
 }
 .card--12 .card__image:hover::before,
 .card--1 .card__image:hover::before,
-.card--3 .card__image:hover::before {
+.card--3 .card__image:hover::before,
+.card--20 .card__image:hover::before {
   height: 50%;
 }
 .card--12 .card__image:hover::after,
 .card--1 .card__image:hover::after,
-.card--3 .card__image:hover::after {
+.card--3 .card__image:hover::after,
+.card--20 .card__image:hover::after {
   height: 50%;
 }
 .card--12 .card__image:hover .overlay,
 .card--1 .card__image:hover .overlay,
-.card--3 .card__image:hover .overlay {
+.card--3 .card__image:hover .overlay,
+.card--20 .card__image:hover .overlay {
   opacity: 1;
   -webkit-transition-delay: 0.21s;
   -moz-transition-delay: 0.21s;
@@ -1649,7 +1656,8 @@ h2 span.animated {
 }
 .card--12 .overlay,
 .card--1 .overlay,
-.card--3 .overlay {
+.card--3 .overlay,
+.card--20 .overlay {
   opacity: 0;
   z-index: 1;
   -webkit-transition: all 0.35s ease;
@@ -1889,6 +1897,18 @@ h2 span.animated {
   -webkit-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
+}
+.card--20 .card__image {
+  background-color: #011847;
+}
+.card--20 .card__image::before {
+  background: #011847;
+}
+.card--20 .card__image::after {
+  background: #011847;
+}
+.card--20 .overlay {
+  background-color: #011847;
 }
 .card__title {
   height: 55px;
