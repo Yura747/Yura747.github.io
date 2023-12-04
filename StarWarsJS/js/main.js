@@ -10,6 +10,7 @@ const starWarsPeople = {
     await fetch(url, {
       method: 'GET',
       headers: {
+        'Access-Control-Allow-Origin':'*',
         "Content-Type": "application/json",
         "X-Requested-With": "XMLHttpRequest",
         requireHeader : []
@@ -96,7 +97,7 @@ search.addEventListener('click', () => {
   loader.classList.add('show');
 
   try {
-    starWarsPeople.getPages(apiURL);
+    starWarsPeople.getPages(`${proxyurl}${apiURL}`);
   } catch(error) {
     console.log(error);
   }
