@@ -1,18 +1,3 @@
-
-/*
-    ********************************
-    **                            **
-    **          LESSON 27         **
-    **                            **
-    ********************************
-
-    ! Тема:  xhr, fetch, promise, asyncawait
-
-	TODO:
-	Берем публичный апи (можно взять из дз по jQuery Ajax) и переписываем на нормальный js
-
-*/
-
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const apiURL = 'https://swapi.dev/api/people/';
 const promises = [];
@@ -21,32 +6,28 @@ const search = document.querySelector('.search');
 const loader = document.querySelector('.loader');
 
 const starWarsPeople = {
-	getPages(url) {
-    try {
-      fetch(url, {
-        method: 'GET',
-        headers: {
-          "Content-Type": "application/json",
-          "X-Requested-With": "XMLHttpRequest",
-          requireHeader : []
-        },
-      })
-        .then(response => response.json())
-        .then(data => {
-          let pages = Math.ceil(data.count / data.results.length);
-          for (var i = 0; i < pages; i++) {
-            promises.push(starWarsPeople.getPeople(`${url}?page=${(i + 1)}`));
-          }
-          Promise.all(promises)
-          .then(function(result) {
-            loader.classList.remove('show');
-            starWarsPeople.createTemplate(result);
-          });
-        })
-      .catch(console.error);
-    } catch(error) {
-      console.log(error);
-    }
+	async getPages(url) {
+    await fetch(url, {
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json",
+        "X-Requested-With": "XMLHttpRequest",
+        requireHeader : []
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      let pages = Math.ceil(data.count / data.results.length);
+      for (var i = 0; i < pages; i++) {
+        promises.push(starWarsPeople.getPeople(`${url}?page=${(i + 1)}`));
+      }
+      Promise.all(promises)
+      .then(function(result) {
+        loader.classList.remove('show');
+        starWarsPeople.createTemplate(result);
+      });
+    })
+    .catch(console.error);
   },
   getPeople(url) {
     return new Promise(function(resolve, reject) {
@@ -113,7 +94,12 @@ const starWarsPeople = {
 }
 search.addEventListener('click', () => {
   loader.classList.add('show');
-  starWarsPeople.getPages(`${proxyurl}${apiURL}`);
+
+  try {
+    starWarsPeople.getPages(apiURL);
+  } catch(error) {
+    console.log(error);
+  }
 });
 
 
